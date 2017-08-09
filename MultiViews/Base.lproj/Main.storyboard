@@ -705,6 +705,14 @@
                                     <action selector="testView1:" target="XfG-lQ-9wD" id="aaT-RN-PJm"/>
                                 </connections>
                             </button>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-dA-U2S">
+                                <rect key="frame" x="18" y="65" width="216" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="20" maxValue="150" doubleValue="20" tickMarkPosition="above" sliderType="linear" id="Fml-py-5dQ"/>
+                                <connections>
+                                    <action selector="viewOneLineEnd:" target="XfG-lQ-9wD" id="fEl-za-Ypr"/>
+                                </connections>
+                            </slider>
                         </subviews>
                     </view>
                     <connections>
