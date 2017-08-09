@@ -9,10 +9,12 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @IBOutlet weak var Veiw_1_xib: NSView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+        
         // Do any additional setup after loading the view.
     }
 
@@ -23,5 +25,9 @@ class ViewController: NSViewController {
     }
 
 
+    @IBAction func testView1(_ sender: NSButton) {
+        
+        Veiw_1_xib.setNeedsDisplay(Veiw_1_xib.bounds) //see print statement in draw rect
+    }
 }
 
