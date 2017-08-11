@@ -8,16 +8,16 @@
 
 import Cocoa
 
-
+ let omni: PolarPattern = PolarPattern(pressureOp: 1, pressureGrad: 0, gain: 1, orientation: 0)
 
 class ViewController: NSViewController {
-    @IBOutlet weak var Veiw_1_xib: View_1!  // notice that the outlet makes this xib element a sub of View_1
+    @IBOutlet weak var Veiw_1_xib: OmniView_1!  // notice that the outlet makes this xib element a sub of View_1
 
     override func viewDidLoad() {
         super.viewDidLoad()
        
         
-        let omni: PolarPattern = PolarPattern(pressureOp: 1, pressureGrad: 0, gain: 1, orientation: 0)
+       
         
         print(omni.sensitivityValues)
         

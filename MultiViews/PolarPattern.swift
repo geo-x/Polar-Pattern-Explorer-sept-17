@@ -29,7 +29,7 @@ class PolarPattern: NSObject {
         micOrientationAngle = orientation
         
      //calculate sensitivity values and load up array for further use
-        
+
         for i in 0...359 {
         
             let radianValue: Float = i.degreesToRadians

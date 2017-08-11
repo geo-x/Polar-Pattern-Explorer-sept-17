@@ -686,7 +686,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView identifier="veiw1XibIndentity" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-Zc-7nf" customClass="View_1" customModule="MultiViews" customModuleProvider="target">
+                            <customView identifier="OmniVeiw1XibIndentity" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-Zc-7nf" customClass="OmniView_1" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="20" y="137" width="220" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
