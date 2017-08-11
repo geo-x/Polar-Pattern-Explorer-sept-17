@@ -14,6 +14,7 @@
 		5E342AC81F3AC2BE007FA265 /* MultiViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AC71F3AC2BE007FA265 /* MultiViewsTests.swift */; };
 		5E342AD31F3AC2BE007FA265 /* MultiViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AD21F3AC2BE007FA265 /* MultiViewsUITests.swift */; };
 		5E342AE11F3AC358007FA265 /* View_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AE01F3AC358007FA265 /* View_1.swift */; };
+		5EF6B6521F3D2B9100496F7D /* PolarPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5E342AD21F3AC2BE007FA265 /* MultiViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiViewsUITests.swift; sourceTree = "<group>"; };
 		5E342AD41F3AC2BE007FA265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E342AE01F3AC358007FA265 /* View_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View_1.swift; sourceTree = "<group>"; };
+		5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				5E342AB51F3AC2BE007FA265 /* AppDelegate.swift */,
 				5E342AB71F3AC2BE007FA265 /* ViewController.swift */,
 				5E342AE01F3AC358007FA265 /* View_1.swift */,
+				5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */,
 				5E342AB91F3AC2BE007FA265 /* Assets.xcassets */,
 				5E342ABB1F3AC2BE007FA265 /* Main.storyboard */,
 				5E342ABE1F3AC2BE007FA265 /* Info.plist */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E342AB81F3AC2BE007FA265 /* ViewController.swift in Sources */,
+				5EF6B6521F3D2B9100496F7D /* PolarPattern.swift in Sources */,
 				5E342AB61F3AC2BE007FA265 /* AppDelegate.swift in Sources */,
 				5E342AE11F3AC358007FA265 /* View_1.swift in Sources */,
 			);
@@ -502,6 +506,7 @@
 				5E342AD91F3AC2BE007FA265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E342ADA1F3AC2BE007FA265 /* Build configuration list for PBXNativeTarget "MultiViewsTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +515,7 @@
 				5E342ADC1F3AC2BE007FA265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E342ADD1F3AC2BE007FA265 /* Build configuration list for PBXNativeTarget "MultiViewsUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +524,7 @@
 				5E342ADF1F3AC2BE007FA265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

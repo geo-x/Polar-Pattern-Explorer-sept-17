@@ -17,6 +17,10 @@ class ViewController: NSViewController {
         super.viewDidLoad()
        
         
+        let omni: PolarPattern = PolarPattern(pressureOp: 1, pressureGrad: 0, gain: 1, orientation: 0)
+        
+        print(omni.sensitivityValues)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -35,7 +39,8 @@ class ViewController: NSViewController {
     
     @IBAction func viewOneLineEnd(_ sender: NSSlider) {
         
-        Veiw_1_xib.endPoint = CGFloat(sender.floatValue)
+        //Veiw_1_xib.endPoint = CGFloat(sender.floatValue)
+         Swift.print(sender.floatValue)
         Veiw_1_xib.setNeedsDisplay(Veiw_1_xib.bounds)
             }
 }
