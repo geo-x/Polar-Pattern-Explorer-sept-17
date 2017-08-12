@@ -18,6 +18,7 @@ class PolarPattern: NSObject {
     var micOrientationAngle:Int
     var sensitivityValues = [Float](repeating: 0.0, count: 360)
     
+    
     //microphone methods
     
     init( pressureOp: Float, pressureGrad: Float, gain: Float, orientation: Int )   {
@@ -28,7 +29,7 @@ class PolarPattern: NSObject {
         micGain = gain
         micOrientationAngle = orientation
         
-     //calculate sensitivity values and load up array for further use
+     //calculate raw sensitivity values and load up array for further use
 
         for i in 0...359 {
         

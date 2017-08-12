@@ -12,14 +12,14 @@ class OmniView_1: NSView {
     
    var endPoint: CGFloat = 20
     
-    var testColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.2)
+    var testColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.08) //background cartesian
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
         let viewRect: NSRect = self.bounds
         
-        let scaleFactor:Int = 50 // multiplier for calculated sensitivity which ranges from 0 to 1
+        let scaleFactor:Int = 140 // multiplier for calculated sensitivity which ranges from 0 to 1
         let centreOfView: CGPoint = CGPoint(x:self.bounds.width / 2 , y: self.bounds.height / 2)
         
         var thisOmniArrayValue: CGFloat = CGFloat((omni.sensitivityValues [0]) as Float) //get zero index value for use in start point
@@ -56,7 +56,7 @@ class OmniView_1: NSView {
         }
 //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         
-        var testColor2: NSColor = NSColor(hue: 0.338, saturation: 1, brightness: 1, alpha: 1)
+        var testColor2: NSColor = NSColor(hue: 0.5, saturation: 0.405, brightness: 0.71, alpha: 1)
         omniContext?.setStrokeColor(testColor2.cgColor)
         omniContext?.addPath(omniPath)
         omniContext?.strokePath()
