@@ -16,14 +16,13 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
-       
-        
+
         print(omni.sensitivityValues)
         
-        // Do any additional setup after loading the view.
+        
     }
-
+//x-x-x--x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
@@ -39,7 +38,7 @@ class ViewController: NSViewController {
     
     @IBAction func viewOneLineEnd(_ sender: NSSlider) {
         
-        //Veiw_1_xib.endPoint = CGFloat(sender.floatValue)
+        Veiw_1_xib.endPoint = CGFloat(sender.floatValue)
          Swift.print(sender.floatValue)
         Veiw_1_xib.setNeedsDisplay(Veiw_1_xib.bounds)
             }

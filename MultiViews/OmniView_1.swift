@@ -8,10 +8,13 @@
 
 import Cocoa
 
+
+@IBDesignable
+
 class OmniView_1: NSView {
     
-   var endPoint: CGFloat = 20
     
+    var endPoint: CGFloat = 20
     var testColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.08) //background cartesian
     
     override func draw(_ dirtyRect: NSRect) {
@@ -20,21 +23,25 @@ class OmniView_1: NSView {
         let viewRect: NSRect = self.bounds
         
         let scaleFactor:Int = 140 // multiplier for calculated sensitivity which ranges from 0 to 1
+        
         let centreOfView: CGPoint = CGPoint(x:self.bounds.width / 2 , y: self.bounds.height / 2)
         
         var thisOmniArrayValue: CGFloat = CGFloat((omni.sensitivityValues [0]) as Float) //get zero index value for use in start point
+        
         var omniStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y)
         
+        //draw axis and grid x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         
+        drawGraphGrid()
         
-        
-        let axisStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: centreOfView.y + CGFloat(scaleFactor))
         
         
         Swift.print("view 1 updated")
        
         self.layer?.backgroundColor = testColor
+        Swift.print("self is \(self)")
         
+               
         let omniContext = NSGraphicsContext.current()?.cgContext
         let omniPath = CGMutablePath()   //changed from NSBezierPath()
     
@@ -49,7 +56,7 @@ class OmniView_1: NSView {
             
           thisOmniArrayValue = CGFloat((omni.sensitivityValues [i]) as Float)
          
-          var nextPoint: CGPoint = CGPoint(x: axisStartPoint.x + thisAngle, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y )  //
+          var nextPoint: CGPoint = CGPoint(x: self.bounds.origin.x + thisAngle, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y )  //
             
           omniPath.addLine(to: nextPoint)
         
@@ -74,5 +81,33 @@ class OmniView_1: NSView {
         
         // Drawing code here.
     }
+   
+    func drawGraphGrid (){
+        
+        let axisContext = NSGraphicsContext.current()?.cgContext
+        
+        let axisStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: self.bounds.size.height / 2 )
+        
+        let axisEndPoint: CGPoint = CGPoint(x:self.bounds.origin.x + self.bounds.width , y: self.bounds.size.height / 2 )
+        
+        let axisPath = CGMutablePath()
+        
+        axisPath.move(to: axisStartPoint)
+        
+        axisPath.addLine(to: axisEndPoint )
+        
+        (axisContext)!.saveGState()
+        let axisColor1: NSColor = NSColor(hue: 0.0, saturation: 0.0, brightness: 0.0, alpha: 1)
+        axisContext?.setLineWidth(0.5)
+        axisContext?.setStrokeColor(axisColor1.cgColor)
+        axisContext?.addPath(axisPath)
+        axisContext?.strokePath()
+        (axisContext)!.restoreGState()
+
+        self.setNeedsDisplay(self.bounds)
+        
+    }
+    
+    
     
 }
