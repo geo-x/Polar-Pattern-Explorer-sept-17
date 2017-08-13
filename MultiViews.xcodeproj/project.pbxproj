@@ -81,7 +81,6 @@
 			children = (
 				5E342AB41F3AC2BE007FA265 /* MultiViews */,
 				5E342AC61F3AC2BE007FA265 /* MultiViewsTests */,
-				5E342AD11F3AC2BE007FA265 /* MultiViewsUITests */,
 				5E342AB31F3AC2BE007FA265 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +112,7 @@
 		5E342AC61F3AC2BE007FA265 /* MultiViewsTests */ = {
 			isa = PBXGroup;
 			children = (
+				5E342AD11F3AC2BE007FA265 /* MultiViewsUITests */,
 				5E342AC71F3AC2BE007FA265 /* MultiViewsTests.swift */,
 				5E342AC91F3AC2BE007FA265 /* Info.plist */,
 			);
@@ -125,7 +125,8 @@
 				5E342AD21F3AC2BE007FA265 /* MultiViewsUITests.swift */,
 				5E342AD41F3AC2BE007FA265 /* Info.plist */,
 			);
-			path = MultiViewsUITests;
+			name = MultiViewsUITests;
+			path = ../MultiViewsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
