@@ -11,7 +11,13 @@ import Cocoa
 
 //@IBDesignable
 
+
+
+
 class OmniView_1: NSView {
+
+  var omniViewPosition: NSPoint?
+  
     
     
     var endPoint: CGFloat = 20 //used in slider testing
@@ -21,6 +27,8 @@ class OmniView_1: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
+        omniViewPosition = self.frame.origin
+        Swift.print("xxxxxxxxxxxxxx\(omniViewPosition!)")
         
         let scaleFactor:Int = 150 // multiplier for calculated sensitivity which ranges from 0 to 1
         
@@ -135,7 +143,7 @@ class OmniView_1: NSView {
             
         }
         
-        for i in stride(from: 0, to: xDivisions, by: 6){
+        for i in stride(from: 0, through: xDivisions, by: 6){
             
             axisPath.move(to: NSPoint(x: ((self.bounds.width / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y))
             
