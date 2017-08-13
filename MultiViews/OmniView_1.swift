@@ -9,18 +9,18 @@
 import Cocoa
 
 
-@IBDesignable
+//@IBDesignable
 
 class OmniView_1: NSView {
     
     
-    var endPoint: CGFloat = 20
+    var endPoint: CGFloat = 20 //used in slider testing
+    
     var testColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.08) //background cartesian
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        let viewRect: NSRect = self.bounds
         
         let scaleFactor:Int = 140 // multiplier for calculated sensitivity which ranges from 0 to 1
         
@@ -28,7 +28,7 @@ class OmniView_1: NSView {
         
         var thisOmniArrayValue: CGFloat = CGFloat((omni.sensitivityValues [0]) as Float) //get zero index value for use in start point
         
-        var omniStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y)
+        let omniStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y)
         
         //draw axis and grid x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         
@@ -48,7 +48,7 @@ class OmniView_1: NSView {
         omniPath.move(to: omniStartPoint)
         Swift.print(" omni startpoint \(omniStartPoint)")
         
-//x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+        //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         // note the loop starts at 1 as the zero index holds the start value for initial move for path
         
         for i in 1...359 {
@@ -56,14 +56,14 @@ class OmniView_1: NSView {
             
           thisOmniArrayValue = CGFloat((omni.sensitivityValues [i]) as Float)
          
-          var nextPoint: CGPoint = CGPoint(x: self.bounds.origin.x + thisAngle, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y )  //
+          let nextPoint: CGPoint = CGPoint(x: self.bounds.origin.x + thisAngle, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y )  //
             
           omniPath.addLine(to: nextPoint)
         
         }
 //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         
-        var testColor2: NSColor = NSColor(hue: 0.5, saturation: 0.405, brightness: 0.71, alpha: 1)
+        let testColor2: NSColor = NSColor(hue: 0.5, saturation: 0.405, brightness: 0.71, alpha: 1)
         omniContext?.setStrokeColor(testColor2.cgColor)
         omniContext?.addPath(omniPath)
         omniContext?.strokePath()
@@ -84,27 +84,44 @@ class OmniView_1: NSView {
    
     func drawGraphGrid (){
         
-        let axisContext = NSGraphicsContext.current()?.cgContext
+        let divisions:Int = 22
         
-        let axisStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: self.bounds.size.height / 2 )
         
-        let axisEndPoint: CGPoint = CGPoint(x:self.bounds.origin.x + self.bounds.width , y: self.bounds.size.height / 2 )
-        
-        let axisPath = CGMutablePath()
-        
-        axisPath.move(to: axisStartPoint)
-        
-        axisPath.addLine(to: axisEndPoint )
-        
-        (axisContext)!.saveGState()
-        let axisColor1: NSColor = NSColor(hue: 0.0, saturation: 0.0, brightness: 0.0, alpha: 1)
-        axisContext?.setLineWidth(0.5)
-        axisContext?.setStrokeColor(axisColor1.cgColor)
-        axisContext?.addPath(axisPath)
-        axisContext?.strokePath()
-        (axisContext)!.restoreGState()
+        var axisPath = NSBezierPath()
 
-        self.setNeedsDisplay(self.bounds)
+        for i in 0...divisions {
+        axisPath.move(to: NSPoint(x:self.bounds.origin.x, y: (self.bounds.size.height / CGFloat(divisions)) * CGFloat(i) ) )
+        
+        axisPath.line(to: NSPoint(x: self.bounds.origin.x + self.bounds.width, y: (self.bounds.size.height / CGFloat(divisions)) * CGFloat(i) ) )
+        
+        }
+        let color = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.5, alpha: 1)
+        color.setStroke()
+        
+        axisPath.lineWidth = 0.5
+        axisPath.stroke()
+        
+//        let axisContext = NSGraphicsContext.current()?.cgContext
+//        
+//        let axisStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: self.bounds.size.height / 2 )
+//        
+//        let axisEndPoint: CGPoint = CGPoint(x:self.bounds.origin.x + self.bounds.width , y: self.bounds.size.height / 2 )
+//        
+//        let axisPath = CGMutablePath()
+//        
+//        axisPath.move(to: axisStartPoint)
+//        
+//        axisPath.addLine(to: axisEndPoint )
+//        
+//        (axisContext)!.saveGState()
+//        let axisColor1: NSColor = NSColor(hue: 0.0, saturation: 0.0, brightness: 0.0, alpha: 1)
+//        axisContext?.setLineWidth(0.5)
+//        axisContext?.setStrokeColor(axisColor1.cgColor)
+//        axisContext?.addPath(axisPath)
+//        axisContext?.strokePath()
+//        (axisContext)!.restoreGState()
+//
+//        self.setNeedsDisplay(self.bounds)
         
     }
     
