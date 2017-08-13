@@ -22,7 +22,7 @@ class OmniView_1: NSView {
         super.draw(dirtyRect)
         
         
-        let scaleFactor:Int = 140 // multiplier for calculated sensitivity which ranges from 0 to 1
+        let scaleFactor:Int = 150 // multiplier for calculated sensitivity which ranges from 0 to 1
         
         let centreOfView: CGPoint = CGPoint(x:self.bounds.width / 2 , y: self.bounds.height / 2)
         
@@ -84,28 +84,33 @@ class OmniView_1: NSView {
    
     func drawGraphGrid (){
         
-        let divisions:Int = 22
+        let yDivisions:Int = 22 // 20 plus 1 space at top and bottom
+        let xDivisions:Int = 24  //15 degrees each
         
         
         var axisPath = NSBezierPath()
 
-        for i in 0...divisions {
-        axisPath.move(to: NSPoint(x:self.bounds.origin.x, y: (self.bounds.size.height / CGFloat(divisions)) * CGFloat(i) ) )
+        for i in 0...yDivisions {
+        axisPath.move(to: NSPoint(x:self.bounds.origin.x, y: (self.bounds.size.height / CGFloat(yDivisions)) * CGFloat(i) ) )
         
-        axisPath.line(to: NSPoint(x: self.bounds.origin.x + self.bounds.width, y: (self.bounds.size.height / CGFloat(divisions)) * CGFloat(i) ) )
+        axisPath.line(to: NSPoint(x: self.bounds.origin.x + self.bounds.width, y: (self.bounds.size.height / CGFloat(yDivisions)) * CGFloat(i) ) )
         
         }
-        let color = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.5, alpha: 1)
+        //let color = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.5, alpha: 1)
+        let color:NSColor = NSColor(white: 1.0, alpha: 0.8)
         color.setStroke()
         
         axisPath.lineWidth = 0.5
         axisPath.stroke()
         
+        
+        
+        
 //        let axisContext = NSGraphicsContext.current()?.cgContext
 //        
 //        let axisStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: self.bounds.size.height / 2 )
 //        
-//        let axisEndPoint: CGPoint = CGPoint(x:self.bounds.origin.x + self.bounds.width , y: self.bounds.size.height / 2 )
+//        let axisEndPoint: CGPoint = CGPoint(x:self.bounds.origin.x + self.bounds.width , y: self.bounds.size.height /
 //        
 //        let axisPath = CGMutablePath()
 //        

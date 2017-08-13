@@ -688,7 +688,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W3V-Ya-XOK">
-                                <rect key="frame" x="110" y="210" width="81" height="32"/>
+                                <rect key="frame" x="126" y="167" width="81" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Test" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Mwh-fv-Nwi">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -698,22 +698,22 @@
                                     <action selector="testView1:" target="XfG-lQ-9wD" id="aaT-RN-PJm"/>
                                 </connections>
                             </button>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iv5-6K-YQu" customClass="MainView_1" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="520" y="309" width="360" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                            <customView identifier="veiw1XibIndentity" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-Zc-7nf" customClass="OmniView_1" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="27" y="267" width="360" height="330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-dA-U2S">
-                                <rect key="frame" x="68" y="278" width="216" height="19"/>
+                                <rect key="frame" x="72" y="232" width="216" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="20" maxValue="75" doubleValue="20" tickMarkPosition="above" sliderType="linear" id="Fml-py-5dQ"/>
                                 <connections>
                                     <action selector="viewOneLineEnd:" target="XfG-lQ-9wD" id="fEl-za-Ypr"/>
                                 </connections>
                             </slider>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iv5-6K-YQu" customClass="MainView_1" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="520" y="309" width="360" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
-                            <customView identifier="veiw1XibIndentity" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-Zc-7nf" customClass="OmniView_1" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="20" y="309" width="360" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
                         </subviews>
                     </view>
                     <connections>
@@ -722,7 +722,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411" y="783.5"/>
+            <point key="canvasLocation" x="249" y="713"/>
         </scene>
     </scenes>
 </document>
