@@ -126,7 +126,7 @@ class OmniView_1: NSView {
         
         axisPath.line(to: NSPoint(x: self.bounds.origin.x , y: self.bounds.origin.y + self.bounds.size.height ))
         
-        var i = 0
+        
         for i in stride(from: 0, to: yDivisions, by: 5) {
             
            axisPath.move(to: NSPoint(x:self.bounds.origin.x, y: (self.bounds.height / CGFloat(yDivisions)) * CGFloat(i) + CGFloat(self.bounds.height / CGFloat(yDivisions)))  )
@@ -135,6 +135,12 @@ class OmniView_1: NSView {
             
         }
         
+        for i in stride(from: 0, to: xDivisions, by: 6){
+            
+            axisPath.move(to: NSPoint(x: ((self.bounds.width / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y))
+            
+            axisPath.line(to: NSPoint(x: ((self.bounds.width / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y + self.bounds.size.height ))
+        }
         
         
         
