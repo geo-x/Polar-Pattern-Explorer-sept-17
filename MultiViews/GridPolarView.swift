@@ -28,31 +28,53 @@ class GridPolarView: NSView {
         
        
         
-         let sensitivityGrid = NSBezierPath()
         
+       // draw angle divisions on polar grid ..see stride for angle division
         
+       let angleGrid = NSBezierPath()
         
        for i in stride(from: 0, through: 359, by: 15){
             
                 let radianValue: Float = i.degreesToRadians
             
-                sensitivityGrid.move(to: centreOfView)
+                angleGrid.move(to: centreOfView)
             
               var nextPoint = NSPoint(x: CGFloat(scaleFactor + 15) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(scaleFactor + 15) * CGFloat(cos(radianValue)) + centreOfView.y )
            
-               sensitivityGrid.line(to: nextPoint)
+               angleGrid.line(to: nextPoint)
             
-            Swift.print("nextpoint is \(nextPoint)")
+        
             }
         
+        // draw sensetivity divisions on polar grid
+        let sensitivityGrid = NSBezierPath()
+        sensitivityGrid.appendArc(withCenter: centreOfView, radius: CGFloat(scaleFactor + 15), startAngle: 0, endAngle: 360)
         
-        
+        for i in stride(from: 0, through: 330, by: 15){
+            
+          sensitivityGrid.appendArc(withCenter: centreOfView, radius: CGFloat(scaleFactor + 15 - i), startAngle: 0, endAngle: 360)
+            
+            
+        }
+
+  
         // stroke them
         var gridColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.4)
        
         gridColor.setStroke()
+        angleGrid.lineWidth = 0.5
+        angleGrid.stroke()
+        
+       
+        
+        
+        gridColor.setStroke()
         sensitivityGrid.lineWidth = 0.5
         sensitivityGrid.stroke()
+        
+        
+        
+        
         
         // Drawing code here.
     }
