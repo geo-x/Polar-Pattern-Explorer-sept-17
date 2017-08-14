@@ -38,13 +38,10 @@ class CartesianView: NSView {
         
         let omniStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y)
         
-        //draw axis and grid x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
-        
-        //drawGraphGrid()
+       
         
         
-        
-        Swift.print("view 1 updated")
+        //Swift.print("view 1 updated") for testing
        
         self.layer?.backgroundColor = testColor
         Swift.print("self is \(self)")

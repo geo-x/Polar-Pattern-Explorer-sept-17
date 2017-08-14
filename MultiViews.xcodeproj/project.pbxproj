@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1295EE1F4145DF00C261F5 /* GridPolarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1295ED1F4145DF00C261F5 /* GridPolarView.swift */; };
 		5E342AB61F3AC2BE007FA265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AB51F3AC2BE007FA265 /* AppDelegate.swift */; };
 		5E342AB81F3AC2BE007FA265 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AB71F3AC2BE007FA265 /* ViewController.swift */; };
 		5E342ABA1F3AC2BE007FA265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E342AB91F3AC2BE007FA265 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E1295ED1F4145DF00C261F5 /* GridPolarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPolarView.swift; sourceTree = "<group>"; };
 		5E342AB21F3AC2BE007FA265 /* MultiViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E342AB51F3AC2BE007FA265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E342AB71F3AC2BE007FA265 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,8 +104,9 @@
 			children = (
 				5E342AB51F3AC2BE007FA265 /* AppDelegate.swift */,
 				5E342AB71F3AC2BE007FA265 /* ViewController.swift */,
-				5E342AE01F3AC358007FA265 /* CartesianView.swift */,
 				5E8694401F411600000B94ED /* GridCartesianView.swift */,
+				5E1295ED1F4145DF00C261F5 /* GridPolarView.swift */,
+				5E342AE01F3AC358007FA265 /* CartesianView.swift */,
 				5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */,
 				5E342AB91F3AC2BE007FA265 /* Assets.xcassets */,
 				5E342ABB1F3AC2BE007FA265 /* Main.storyboard */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E342AB81F3AC2BE007FA265 /* ViewController.swift in Sources */,
+				5E1295EE1F4145DF00C261F5 /* GridPolarView.swift in Sources */,
 				5EF6B6521F3D2B9100496F7D /* PolarPattern.swift in Sources */,
 				5E342AB61F3AC2BE007FA265 /* AppDelegate.swift in Sources */,
 				5E8694411F411600000B94ED /* GridCartesianView.swift in Sources */,
