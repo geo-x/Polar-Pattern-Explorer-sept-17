@@ -80,32 +80,11 @@ class GridCartesianView: NSView {
         axisPath.lineWidth = 0.5
         axisPath.stroke()
         
+        //x-x-x-x-x-x-x-x-x-x--x
+        //border
+        self.layer?.borderWidth = 1
+        self.layer?.borderColor = NSColor.black.cgColor
         
-        
-        
-        
-        
-        //        let axisContext = NSGraphicsContext.current()?.cgContext
-        //
-        //        let axisStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: self.bounds.size.height / 2 )
-        //
-        //        let axisEndPoint: CGPoint = CGPoint(x:self.bounds.origin.x + self.bounds.width , y: self.bounds.size.height /
-        //
-        //        let gridPath = CGMutablePath()
-        //
-        //        gridPath.move(to: axisStartPoint)
-        //
-        //        gridPath.addLine(to: axisEndPoint )
-        //
-        //        (axisContext)!.saveGState()
-        //        let axisColor1: NSColor = NSColor(hue: 0.0, saturation: 0.0, brightness: 0.0, alpha: 1)
-        //        axisContext?.setLineWidth(0.5)
-        //        axisContext?.setStrokeColor(axisColor1.cgColor)
-        //        axisContext?.addPath(gridPath)
-        //        axisContext?.strokePath()
-        //        (axisContext)!.restoreGState()
-        //
-        //        self.setNeedsDisplay(self.bounds)
         
     }
     
