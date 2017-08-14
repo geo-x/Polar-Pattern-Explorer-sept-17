@@ -68,21 +68,13 @@ class CartesianView: NSView {
         }
 //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         
-        let testColor2: NSColor = NSColor(hue: 0.5, saturation: 0.405, brightness: 0.71, alpha: 1)
+        let testColor2: NSColor = NSColor(hue: 0.5, saturation: 0.8, brightness: 0.71, alpha: 1)
         omniContext?.setStrokeColor(testColor2.cgColor)
         omniContext?.addPath(omniPath)
         omniContext?.strokePath()
         
-        //omniPath.line(to: CGPoint(x: 200, y: 200))
-        //omniPath.stroke()
-
-        
-        
-        
-//        let myPath = NSBezierPath()
-//        myPath.move(to: CGPoint(x: 20, y: 20))    //myPath.moveToPoint(CGPoint(x: 20, y: 20))
-//        myPath.line(to: CGPoint(x: 200, y: endPoint))
-//        myPath.stroke()
+        // round the view corners
+        self.layer?.cornerRadius = 15
         
         // Drawing code here.
     }
