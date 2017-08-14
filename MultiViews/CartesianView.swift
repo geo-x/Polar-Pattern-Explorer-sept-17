@@ -22,7 +22,7 @@ class CartesianView: NSView {
     
     var endPoint: CGFloat = 20 //used in slider testing
     
-    var testColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.08) //background cartesian
+    //var testColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.08) //background cartesian
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -43,14 +43,17 @@ class CartesianView: NSView {
         
         //Swift.print("view 1 updated") for testing
        
-        self.layer?.backgroundColor = testColor
+        //self.layer?.backgroundColor = testColor
         Swift.print("self is \(self)")
         
                
-        let omniContext = NSGraphicsContext.current()?.cgContext
-        let omniPath = CGMutablePath()   //changed from NSBezierPath()
+        _ = NSGraphicsContext.current()?.cgContext
+        
+        let omniPath = NSBezierPath()
+        
     
         omniPath.move(to: omniStartPoint)
+        
         Swift.print(" omni startpoint \(omniStartPoint)")
         
         //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
@@ -63,15 +66,16 @@ class CartesianView: NSView {
          
           let nextPoint: CGPoint = CGPoint(x: self.bounds.origin.x + thisAngle, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y )  //
             
-          omniPath.addLine(to: nextPoint)
+          omniPath.line(to: nextPoint)
         
         }
 //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         
-        let testColor2: NSColor = NSColor(hue: 0.5, saturation: 0.8, brightness: 0.71, alpha: 1)
-        omniContext?.setStrokeColor(testColor2.cgColor)
-        omniContext?.addPath(omniPath)
-        omniContext?.strokePath()
+        let gridColor = NSColor(calibratedHue: 0.5, saturation: 0.8, brightness: 0.8, alpha: 1)
+        
+        gridColor.setStroke()
+        omniPath.lineWidth = 2
+        omniPath.stroke()
         
         // round the view corners
         self.layer?.cornerRadius = 15

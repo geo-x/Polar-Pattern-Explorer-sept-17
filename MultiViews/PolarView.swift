@@ -30,14 +30,15 @@ class PolarView: NSView {
             
             //omniPath.move(to: centreOfView)
             
-            var nextPoint = NSPoint(x: CGFloat(scaleFactor ) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(scaleFactor ) * CGFloat(cos(radianValue)) + centreOfView.y )
+            let nextPoint = NSPoint(x: CGFloat(scaleFactor ) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(scaleFactor ) * CGFloat(cos(radianValue)) + centreOfView.y )
             
             omniPath.line(to: nextPoint)
             
         }
 
-        let axisColor = NSColor(hue: 0.5, saturation: 0.8, brightness: 0.71, alpha: 1)
-        axisColor.setStroke()
+        let gridColor = NSColor(calibratedHue: 0.5, saturation: 0.8, brightness: 0.8, alpha: 1)
+        
+        gridColor.setStroke()
         omniPath.lineWidth = 2
         omniPath.stroke()
         

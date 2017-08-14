@@ -8,21 +8,22 @@
 
 import Cocoa
 
- var testColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.08) //background cartesian
+ 
 
 
 class GridPolarView: NSView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-
+        
+        self.layer?.backgroundColor = testColor
         
         let scaleFactor:Int = 150 // multiplier for calculated sensitivity which ranges from 0 to 1
         
         let centreOfView: CGPoint = CGPoint(x:self.bounds.width / 2 , y: self.bounds.height / 2)
  
         
-        self.layer?.backgroundColor = testColor
+        
         
 //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
         
@@ -36,7 +37,7 @@ class GridPolarView: NSView {
             
                 angleGrid.move(to: centreOfView)
             
-              var nextPoint = NSPoint(x: CGFloat(scaleFactor + 15) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(scaleFactor + 15) * CGFloat(cos(radianValue)) + centreOfView.y )
+              let nextPoint = NSPoint(x: CGFloat(scaleFactor + 15) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(scaleFactor + 15) * CGFloat(cos(radianValue)) + centreOfView.y )
            
                angleGrid.line(to: nextPoint)
             
@@ -57,7 +58,7 @@ class GridPolarView: NSView {
 
         //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x-x
         // stroke them
-        var gridColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.4)
+        let gridColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.4)
        
         gridColor.setStroke()
         angleGrid.lineWidth = 0.5
@@ -79,7 +80,7 @@ class GridPolarView: NSView {
             
             angleAxis.move(to: centreOfView)
             
-            var nextPoint = NSPoint(x: CGFloat(scaleFactor + 15) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(scaleFactor + 15) * CGFloat(cos(radianValue)) + centreOfView.y )
+            let nextPoint = NSPoint(x: CGFloat(scaleFactor + 15) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(scaleFactor + 15) * CGFloat(cos(radianValue)) + centreOfView.y )
             
             angleAxis.line(to: nextPoint)
             

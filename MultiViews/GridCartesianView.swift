@@ -8,10 +8,14 @@
 
 import Cocoa
 
+
+
 class GridCartesianView: NSView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
+        
+        self.layer?.backgroundColor = testColor
 
         
         let yDivisions:Int = 22 // 20 plus 1 space at top and bottom
@@ -35,15 +39,14 @@ class GridCartesianView: NSView {
             
             gridPath.line(to: NSPoint(x: ((self.bounds.width / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y + self.bounds.size.height ))
             
-            let test1:NSPoint = NSPoint(x: ((self.bounds.origin.x / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y)
-            let test2:NSPoint = NSPoint(x: ((self.bounds.origin.x / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y + self.bounds.height )
-            
+            //let test1:NSPoint = NSPoint(x: ((self.bounds.origin.x / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y)
+            //let test2:NSPoint = NSPoint(x: ((self.bounds.origin.x / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y + self.bounds.height )
             //Swift.print(" line from \(test1) to \(test2) i is \(i)")
             
         }
         
         // stroke them
-        var gridColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.4)
+        let gridColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.4)
         //let gridColor:NSColor = NSColor(white: 1.0, alpha: 0.8)
         gridColor.setStroke()
         gridPath.lineWidth = 0.5
