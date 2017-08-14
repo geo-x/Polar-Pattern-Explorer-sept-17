@@ -85,7 +85,8 @@ class GridCartesianView: NSView {
         self.layer?.borderWidth = 1
         self.layer?.borderColor = NSColor.black.cgColor
         
-        
+        // round the view corners
+         self.layer?.cornerRadius = 15
     }
     
 

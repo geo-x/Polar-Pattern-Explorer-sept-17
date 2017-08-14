@@ -12,13 +12,15 @@ import Cocoa
 
 class ViewController: NSViewController {
     @IBOutlet weak var cartesianView: CartesianView!
+
+    
        override func viewDidLoad() {
         super.viewDidLoad()
        
 
         print(omni.sensitivityValues)
-        
-        
+    
+       
     }
 //x-x-x--x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
     
