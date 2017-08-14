@@ -9,6 +9,7 @@
 import Cocoa
 
 
+@IBDesignable
 
 class GridCartesianView: NSView {
 

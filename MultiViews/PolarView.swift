@@ -9,6 +9,8 @@
 import Cocoa
 var scaleFactor:Int = 150
 
+@IBDesignable
+
 class PolarView: NSView {
 
     var startAngle:Float = 0.degreesToRadians
