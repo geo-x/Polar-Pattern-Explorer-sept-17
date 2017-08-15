@@ -35,7 +35,7 @@ class PolarView: NSView {
             let thisOmniArrayValue = CGFloat((omni.sensitivityValues [i]) as Float)
             let nextPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * thisOmniArrayValue ) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * thisOmniArrayValue ) * CGFloat(cos(radianValue)) + centreOfView.y )
             
-            //let nextPoint = NSPoint(x: CGFloat(scaleFactor ) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(scaleFactor ) * CGFloat(cos(radianValue)) + centreOfView.y )
+           
             
             omniPath.line(to: nextPoint)
             

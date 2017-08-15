@@ -39,9 +39,30 @@ class ViewController: NSViewController {
     
     @IBAction func viewOneLineEnd(_ sender: NSSlider) {
         
-        cartesianView.endPoint = CGFloat(sender.floatValue)
+        omni.micOrientationAngle = Int(sender.floatValue)
+        var valuesTempArray = omni.sensitivityValues
+        var jCounter:Int = 0
+        
+        for i in omni.micOrientationAngle ... 359 {
+        valuesTempArray[jCounter] = omni.sensitivityValues[i]
+        jCounter = jCounter + 1
+        }
+        
+        for i in 0 ... omni.micOrientationAngle - 1 {
+            valuesTempArray[jCounter] = omni.sensitivityValues[i]
+            jCounter = jCounter + 1
+        }
+        
+        
+        omni.sensitivityValues = valuesTempArray
+        Swift.print(" valuesTempArray = \(valuesTempArray)")
+        
          Swift.print(sender.floatValue)
         cartesianView.setNeedsDisplay(cartesianView.bounds)
+        
             }
 }
 
+//omni.micOrientationAngle = CGFloat(sender.floatValue)
+//Swift.print(sender.floatValue)
+//cartesianView.setNeedsDisplay(cartesianView.bounds)
