@@ -13,6 +13,7 @@ import Cocoa
 class ViewController: NSViewController {
     @IBOutlet weak var cartesianView: CartesianView!
 
+    @IBOutlet weak var polarView: PolarView!
     
        override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +60,7 @@ class ViewController: NSViewController {
         
          Swift.print(sender.floatValue)
         cartesianView.setNeedsDisplay(cartesianView.bounds)
-        
+        polarView.setNeedsDisplay(polarView.bounds)
             }
 }
 
