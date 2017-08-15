@@ -8,7 +8,7 @@
 
 import Cocoa
 
- let omni: PolarPattern = PolarPattern(pressureOp: 0.5, pressureGrad: 0.5, gain: 1, orientation: 0)
+ var omni: PolarPattern = PolarPattern(pressureOp: 0.5, pressureGrad: 0.5, gain: 1, orientation: 0)
 
 class ViewController: NSViewController {
     @IBOutlet weak var cartesianView: CartesianView!
@@ -41,22 +41,16 @@ class ViewController: NSViewController {
     @IBAction func viewOneLineEnd(_ sender: NSSlider) {
         
         omni.micOrientationAngle = Int(sender.floatValue)
-        var valuesTempArray = omni.sensitivityValues
-        var jCounter:Int = 0
         
-        for i in omni.micOrientationAngle ... 359 {
-        valuesTempArray[jCounter] = omni.sensitivityValues[i]
-        jCounter = jCounter + 1
-        }
-        
-        for i in 0 ... omni.micOrientationAngle - 1 {
-            valuesTempArray[jCounter] = omni.sensitivityValues[i]
-            jCounter = jCounter + 1
-        }
+        let slice1: ArraySlice<Float> = omni.sensitivityValues [omni.micOrientationAngle ... 359]
+        let slice2: ArraySlice<Float> = omni.sensitivityValues [ 0 ..< omni.micOrientationAngle]
         
         
-        omni.sensitivityValues = valuesTempArray
-        Swift.print(" valuesTempArray = \(valuesTempArray)")
+        omni.sensitivityValues.removeAll(keepingCapacity: true)
+        var tempArray:ArraySlice = slice1 + slice2
+        omni.sensitivityValues = Array(tempArray)
+        
+        
         
          Swift.print(sender.floatValue)
         cartesianView.setNeedsDisplay(cartesianView.bounds)
@@ -67,3 +61,23 @@ class ViewController: NSViewController {
 //omni.micOrientationAngle = CGFloat(sender.floatValue)
 //Swift.print(sender.floatValue)
 //cartesianView.setNeedsDisplay(cartesianView.bounds)
+
+
+//var valuesTempArray = omni.sensitivityValues
+//
+//var jCounter:Int = 0
+//
+//for i in omni.micOrientationAngle ... 359 {
+//    valuesTempArray[jCounter] = omni.sensitivityValues[i]
+//    jCounter = jCounter + 1
+//}
+//
+//
+//for i in 0 ... omni.micOrientationAngle + 1 {
+//    valuesTempArray[jCounter] = omni.sensitivityValues[i]
+//    jCounter = jCounter + 1
+//}
+//jCounter = 0
+//
+//omni.sensitivityValues = valuesTempArray
+//Swift.print(" valuesTempArray = \(valuesTempArray)")

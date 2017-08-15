@@ -719,7 +719,7 @@
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-dA-U2S">
                                 <rect key="frame" x="98" y="157" width="216" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="20" maxValue="75" doubleValue="20" tickMarkPosition="above" sliderType="linear" id="Fml-py-5dQ"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="Fml-py-5dQ"/>
                                 <connections>
                                     <action selector="viewOneLineEnd:" target="XfG-lQ-9wD" id="fEl-za-Ypr"/>
                                 </connections>
