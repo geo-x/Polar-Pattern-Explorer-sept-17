@@ -27,8 +27,6 @@ class CartesianView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        omniViewPosition = self.frame.origin
-        Swift.print("xxxxxxxxxxxxxx\(omniViewPosition!)")
         
         let scaleFactor:Int = 150 // multiplier for calculated sensitivity which ranges from 0 to 1
         
@@ -44,7 +42,7 @@ class CartesianView: NSView {
         //Swift.print("view 1 updated") for testing
        
         //self.layer?.backgroundColor = testColor
-        Swift.print("self is \(self)")
+        //Swift.print("self is \(self)")
         
                
         _ = NSGraphicsContext.current()?.cgContext

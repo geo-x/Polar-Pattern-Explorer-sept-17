@@ -19,7 +19,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
        
 
-        print(omni.sensitivityValues)
+        //print(omni.sensitivityValues)
     
        
     }
@@ -47,37 +47,13 @@ class ViewController: NSViewController {
         
         
         omni.sensitivityValues.removeAll(keepingCapacity: true)
-        var tempArray:ArraySlice = slice1 + slice2
-        omni.sensitivityValues = Array(tempArray)
+         omni.sensitivityValues = Array(slice1 + slice2)
         
-        
-        
-         Swift.print(sender.floatValue)
+
         cartesianView.setNeedsDisplay(cartesianView.bounds)
         polarView.setNeedsDisplay(polarView.bounds)
+        
+        Swift.print(" omni orientation slider = \(sender.floatValue)")
             }
 }
 
-//omni.micOrientationAngle = CGFloat(sender.floatValue)
-//Swift.print(sender.floatValue)
-//cartesianView.setNeedsDisplay(cartesianView.bounds)
-
-
-//var valuesTempArray = omni.sensitivityValues
-//
-//var jCounter:Int = 0
-//
-//for i in omni.micOrientationAngle ... 359 {
-//    valuesTempArray[jCounter] = omni.sensitivityValues[i]
-//    jCounter = jCounter + 1
-//}
-//
-//
-//for i in 0 ... omni.micOrientationAngle + 1 {
-//    valuesTempArray[jCounter] = omni.sensitivityValues[i]
-//    jCounter = jCounter + 1
-//}
-//jCounter = 0
-//
-//omni.sensitivityValues = valuesTempArray
-//Swift.print(" valuesTempArray = \(valuesTempArray)")

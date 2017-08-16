@@ -728,7 +728,6 @@
                     </view>
                     <connections>
                         <outlet property="cartesianView" destination="aYr-Zc-7nf" id="ZLy-o3-Vbj"/>
-                        <outlet property="gridcartesianview" destination="aYr-Zc-7nf" id="g6d-x5-Nme"/>
                         <outlet property="polarView" destination="Uhy-Ht-jdX" id="7ZD-Pt-S59"/>
                     </connections>
                 </viewController>

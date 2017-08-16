@@ -12,8 +12,11 @@ var scaleFactor:Int = 150
 @IBDesignable
 
 class PolarView: NSView {
+    
+    
 
-    var startAngle:Float = 0.degreesToRadians
+    var startAngle:Float = omni.micOrientationAngle.degreesToRadians
+    
     
     
     override func draw(_ dirtyRect: NSRect) {

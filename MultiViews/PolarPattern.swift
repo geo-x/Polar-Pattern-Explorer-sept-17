@@ -16,7 +16,8 @@ class PolarPattern: NSObject {
     var pressureComponent : Float
     var micGain:Float
     var micOrientationAngle:Int
-    var sensitivityValues = [Float](repeating: 0.0, count: 360)
+    var rawSensitivityValues = [Float](repeating: 0.0, count: 360) // based on micGain = 1 , and micOrientation  = 0 degrees
+    var sensitivityValues = [Float](repeating: 0.0, count: 360)  //current values reflecting gain and orientation varaibles
     
     
     //microphone methods
@@ -34,11 +35,23 @@ class PolarPattern: NSObject {
         for i in 0...359 {
         
             let radianValue: Float = i.degreesToRadians
-            sensitivityValues[i] = (pressureOp + (cos(radianValue) * pressureGrad)) * gain
+            rawSensitivityValues[i] = (pressureOp + (cos(radianValue) * pressureGrad)) 
         }
     
-    
         
+        let multiplier = micGain
+        
+        for i in 0...rawSensitivityValues.count - 1{
+            sensitivityValues[i] = rawSensitivityValues[i] * multiplier
+        }
+        
+        let slice1: ArraySlice<Float> = sensitivityValues [micOrientationAngle ... 359]
+        let slice2: ArraySlice<Float> = sensitivityValues [ 0 ..< micOrientationAngle]
+        
+        
+        sensitivityValues.removeAll(keepingCapacity: true)
+        var tempArray:ArraySlice = slice1 + slice2
+        sensitivityValues = Array(tempArray)
         
     }
     
@@ -51,3 +64,7 @@ extension Int {
     var degreesToRadians: Float { return Float(self) * .pi / 180 }
 }
 
+
+//let values = [20, 2, 3]
+//let doubles = values.map { $0 * 2 }
+//let triples = values.map { $0 * 3
