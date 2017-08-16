@@ -8,7 +8,7 @@
 
 import Cocoa
 
- var omni: PolarPattern = PolarPattern(pressureOp: 0.5, pressureGrad: 0.5, gain: 1, orientation: 135)
+ var omni: PolarPattern = PolarPattern(pressureOp: 0.0, pressureGrad: 1.0, gain: 1, orientation: 0)
 
 class ViewController: NSViewController {
     @IBOutlet weak var cartesianView: CartesianView!

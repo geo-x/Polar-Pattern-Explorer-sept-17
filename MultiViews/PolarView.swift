@@ -32,6 +32,8 @@ class PolarView: NSView {
             
             
         omniPath.move(to: firstPoint)
+
+Swift.print(" first point -> \(firstPoint)")
         
 //        omniPath.move(to: NSPoint(x: CGFloat(scaleFactor ) * CGFloat(sin(startAngle)) + centreOfView.x  , y: CGFloat(scaleFactor ) * CGFloat(cos(startAngle)) + centreOfView.y ))
         
@@ -47,7 +49,8 @@ class PolarView: NSView {
            
             
             omniPath.line(to: nextPoint)
-            
+           
+ Swift.print(" for point \(i) -> \(nextPoint)")
         }
 
         let omniColor = NSColor(calibratedHue: 0.5, saturation: 0.8, brightness: 0.8, alpha: 1)

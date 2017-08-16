@@ -64,6 +64,8 @@ Swift.print(" omni startpoint \(omniStartPoint)")
           let nextPoint: CGPoint = CGPoint(x: self.bounds.origin.x + thisAngle, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y )  //
             
           omniPath.line(to: nextPoint)
+            
+//Swift.print(nextPoint)
         
         }
 //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
