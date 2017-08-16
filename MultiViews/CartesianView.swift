@@ -36,8 +36,7 @@ class CartesianView: NSView {
         
         let omniStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y)
         
-       
-        
+Swift.print(" thisOmniArrayValue from cart view is \(thisOmniArrayValue)")
         
         //Swift.print("view 1 updated") for testing
        
@@ -52,7 +51,7 @@ class CartesianView: NSView {
     
         omniPath.move(to: omniStartPoint)
         
-        Swift.print(" omni startpoint \(omniStartPoint)")
+Swift.print(" omni startpoint \(omniStartPoint)")
         
         //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         // note the loop starts at 1 as the zero index holds the start value for initial move for path
@@ -69,14 +68,18 @@ class CartesianView: NSView {
         }
 //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         
-        let gridColor = NSColor(calibratedHue: 0.5, saturation: 0.8, brightness: 0.8, alpha: 1)
+        let omniColor = NSColor(calibratedHue: 0.5, saturation: 0.8, brightness: 0.8, alpha: 1)
         
-        gridColor.setStroke()
+        omniColor.setStroke()
         omniPath.lineWidth = 2
         omniPath.stroke()
         
         // round the view corners
         self.layer?.cornerRadius = 15
+        
+        
+        Swift.print(" omni.micOrientationAngle from cart view is \(omni.micOrientationAngle)")
+
         
         // Drawing code here.
     }

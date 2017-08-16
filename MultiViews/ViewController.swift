@@ -8,7 +8,7 @@
 
 import Cocoa
 
- var omni: PolarPattern = PolarPattern(pressureOp: 0.5, pressureGrad: 0.5, gain: 1, orientation: 0)
+ var omni: PolarPattern = PolarPattern(pressureOp: 0.5, pressureGrad: 0.5, gain: 1, orientation: 135)
 
 class ViewController: NSViewController {
     @IBOutlet weak var cartesianView: CartesianView!
@@ -42,8 +42,8 @@ class ViewController: NSViewController {
         
         omni.micOrientationAngle = Int(sender.floatValue)
         
-        let slice1: ArraySlice<Float> = omni.sensitivityValues [omni.micOrientationAngle ... 359]
-        let slice2: ArraySlice<Float> = omni.sensitivityValues [ 0 ..< omni.micOrientationAngle]
+        let slice1: ArraySlice<Float> = omni.rawSensitivityValues [omni.micOrientationAngle ... 359]
+        let slice2: ArraySlice<Float> = omni.rawSensitivityValues [ 0 ..< omni.micOrientationAngle]
         
         
         omni.sensitivityValues.removeAll(keepingCapacity: true)
@@ -54,6 +54,7 @@ class ViewController: NSViewController {
         polarView.setNeedsDisplay(polarView.bounds)
         
         Swift.print(" omni orientation slider = \(sender.floatValue)")
+        Swift.print(" omni.micOrientationAngle is \(omni.micOrientationAngle)")
             }
 }
 
