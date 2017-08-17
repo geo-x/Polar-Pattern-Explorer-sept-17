@@ -36,22 +36,17 @@ class CartesianView: NSView {
         
         let omniStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: thisOmniArrayValue * CGFloat(scaleFactor) + centreOfView.y)
         
-Swift.print(" thisOmniArrayValue from cart view is \(thisOmniArrayValue)")
-        
-        //Swift.print("view 1 updated") for testing
-       
-        //self.layer?.backgroundColor = testColor
-        //Swift.print("self is \(self)")
+
         
                
-        _ = NSGraphicsContext.current()?.cgContext
+        //_ = NSGraphicsContext.current()?.cgContext
         
         let omniPath = NSBezierPath()
         
     
         omniPath.move(to: omniStartPoint)
         
-Swift.print(" omni startpoint \(omniStartPoint)")
+//Swift.print(" omni startpoint \(omniStartPoint)")
         
         //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         // note the loop starts at 1 as the zero index holds the start value for initial move for path
@@ -80,7 +75,7 @@ Swift.print(" omni startpoint \(omniStartPoint)")
         self.layer?.cornerRadius = 15
         
         
-        Swift.print(" omni.micOrientationAngle from cart view is \(omni.micOrientationAngle)")
+//Swift.print(" omni.micOrientationAngle from cart view is \(omni.micOrientationAngle)")
 
         
         // Drawing code here.

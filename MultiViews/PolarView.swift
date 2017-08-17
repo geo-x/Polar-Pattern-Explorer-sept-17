@@ -33,24 +33,22 @@ class PolarView: NSView {
             
         omniPath.move(to: firstPoint)
 
-Swift.print(" first point -> \(firstPoint)")
+//Swift.print(" first point -> \(firstPoint)")
         
-//        omniPath.move(to: NSPoint(x: CGFloat(scaleFactor ) * CGFloat(sin(startAngle)) + centreOfView.x  , y: CGFloat(scaleFactor ) * CGFloat(cos(startAngle)) + centreOfView.y ))
         
         for i in stride(from: 1, through: 359, by: 1){
             
             let radianValue: Float = i.degreesToRadians
+        
+            let thisOmniArrayValue = CGFloat(abs((omni.sensitivityValues [i]) as Float))
             
-            //omniPath.move(to: centreOfView)
-            
-            let thisOmniArrayValue = CGFloat((omni.sensitivityValues [i]) as Float)
             let nextPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * thisOmniArrayValue ) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * thisOmniArrayValue ) * CGFloat(cos(radianValue)) + centreOfView.y )
-            
-           
-            
+
             omniPath.line(to: nextPoint)
            
- Swift.print(" for point \(i) -> \(nextPoint)")
+// Swift.print(" for point \(i) -> \(nextPoint)")
+// Swift.print("------------cos radian value \(CGFloat(cos(radianValue)))")
+// Swift.print("------------this omniArrayValue \(thisOmniArrayValue)")
         }
 
         let omniColor = NSColor(calibratedHue: 0.5, saturation: 0.8, brightness: 0.8, alpha: 1)
