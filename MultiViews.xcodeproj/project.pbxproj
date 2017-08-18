@@ -15,6 +15,8 @@
 		5E342AC81F3AC2BE007FA265 /* MultiViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AC71F3AC2BE007FA265 /* MultiViewsTests.swift */; };
 		5E342AD31F3AC2BE007FA265 /* MultiViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AD21F3AC2BE007FA265 /* MultiViewsUITests.swift */; };
 		5E342AE11F3AC358007FA265 /* CartesianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AE01F3AC358007FA265 /* CartesianView.swift */; };
+		5E78E1F01F464FF100BCB9AB /* cartesianViewBi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1EF1F464FF100BCB9AB /* cartesianViewBi.swift */; };
+		5E78E1F21F46601000BCB9AB /* PolarViewBi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1F11F46601000BCB9AB /* PolarViewBi.swift */; };
 		5E8694411F411600000B94ED /* GridCartesianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8694401F411600000B94ED /* GridCartesianView.swift */; };
 		5EB16C721F41B6B700FA7882 /* PolarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB16C711F41B6B700FA7882 /* PolarView.swift */; };
 		5EF6B6521F3D2B9100496F7D /* PolarPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */; };
@@ -52,6 +54,8 @@
 		5E342AD21F3AC2BE007FA265 /* MultiViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiViewsUITests.swift; sourceTree = "<group>"; };
 		5E342AD41F3AC2BE007FA265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E342AE01F3AC358007FA265 /* CartesianView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartesianView.swift; sourceTree = "<group>"; };
+		5E78E1EF1F464FF100BCB9AB /* cartesianViewBi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cartesianViewBi.swift; sourceTree = "<group>"; };
+		5E78E1F11F46601000BCB9AB /* PolarViewBi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarViewBi.swift; sourceTree = "<group>"; };
 		5E8694401F411600000B94ED /* GridCartesianView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCartesianView.swift; sourceTree = "<group>"; };
 		5EB16C711F41B6B700FA7882 /* PolarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarView.swift; sourceTree = "<group>"; };
 		5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarPattern.swift; sourceTree = "<group>"; };
@@ -108,8 +112,10 @@
 				5E342AB71F3AC2BE007FA265 /* ViewController.swift */,
 				5E8694401F411600000B94ED /* GridCartesianView.swift */,
 				5E342AE01F3AC358007FA265 /* CartesianView.swift */,
+				5E78E1EF1F464FF100BCB9AB /* cartesianViewBi.swift */,
 				5E1295ED1F4145DF00C261F5 /* GridPolarView.swift */,
 				5EB16C711F41B6B700FA7882 /* PolarView.swift */,
+				5E78E1F11F46601000BCB9AB /* PolarViewBi.swift */,
 				5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */,
 				5E342AB91F3AC2BE007FA265 /* Assets.xcassets */,
 				5E342ABB1F3AC2BE007FA265 /* Main.storyboard */,
@@ -271,11 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E78E1F01F464FF100BCB9AB /* cartesianViewBi.swift in Sources */,
 				5E342AB81F3AC2BE007FA265 /* ViewController.swift in Sources */,
 				5E1295EE1F4145DF00C261F5 /* GridPolarView.swift in Sources */,
 				5EB16C721F41B6B700FA7882 /* PolarView.swift in Sources */,
 				5EF6B6521F3D2B9100496F7D /* PolarPattern.swift in Sources */,
 				5E342AB61F3AC2BE007FA265 /* AppDelegate.swift in Sources */,
+				5E78E1F21F46601000BCB9AB /* PolarViewBi.swift in Sources */,
 				5E8694411F411600000B94ED /* GridCartesianView.swift in Sources */,
 				5E342AE11F3AC358007FA265 /* CartesianView.swift in Sources */,
 			);

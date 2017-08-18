@@ -50,7 +50,7 @@ class PolarPattern: NSObject {
         
         
         sensitivityValues.removeAll(keepingCapacity: true)
-        var tempArray:ArraySlice = slice1 + slice2
+        let tempArray:ArraySlice = slice1 + slice2
         sensitivityValues = Array(tempArray)
         
     }
