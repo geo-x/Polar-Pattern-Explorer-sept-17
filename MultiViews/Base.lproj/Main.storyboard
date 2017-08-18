@@ -701,6 +701,10 @@
                                 <rect key="frame" x="575" y="200" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BgT-a2-cAU" userLabel="polarViewRes" customClass="PolarViewRes" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="575" y="200" width="360" height="330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-sd-AEu" userLabel="cartesianGridView" customClass="GridCartesianView" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="80" y="200" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -728,20 +732,33 @@
                                     <action selector="testView1:" target="XfG-lQ-9wD" id="aaT-RN-PJm"/>
                                 </connections>
                             </button>
-                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-dA-U2S">
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-dA-U2S" userLabel="mic1_oreintation">
                                 <rect key="frame" x="98" y="157" width="216" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" sliderType="linear" id="Fml-py-5dQ"/>
                                 <connections>
-                                    <action selector="viewOneLineEnd:" target="XfG-lQ-9wD" id="fEl-za-Ypr"/>
+                                    <action selector="mic_1_orientation:" target="XfG-lQ-9wD" id="QrU-H2-u3r"/>
+                                </connections>
+                            </slider>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-ki-bgb" userLabel="mic2_oreintation">
+                                <rect key="frame" x="98" y="117" width="216" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" sliderType="linear" id="cFu-Py-dTW"/>
+                                <connections>
+                                    <action selector="mic_2_orientation:" target="XfG-lQ-9wD" id="B3X-us-CiV"/>
                                 </connections>
                             </slider>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="cartesianView" destination="aYr-Zc-7nf" id="ZLy-o3-Vbj"/>
+                        <outlet property="cartesianViewBi" destination="May-mV-Dar" id="kjJ-Sr-VF5"/>
                         <outlet property="cartesianViewRes" destination="JBf-Ky-GGN" id="b5j-ua-dZc"/>
+                        <outlet property="mic_1_oreintation" destination="0V2-dA-U2S" id="LdW-FP-zFV"/>
+                        <outlet property="mic_2_orinetation" destination="9Ij-ki-bgb" id="EhD-XN-w5U"/>
                         <outlet property="polarView" destination="Uhy-Ht-jdX" id="7ZD-Pt-S59"/>
+                        <outlet property="polarViewBi" destination="6Se-ID-l2Y" id="Rdc-il-5KC"/>
+                        <outlet property="polarViewRes" destination="BgT-a2-cAU" id="rhk-h3-mQs"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
