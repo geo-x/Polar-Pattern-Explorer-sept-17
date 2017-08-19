@@ -39,7 +39,7 @@ class PolarPattern: NSObject {
         }
     
         
-        let multiplier = micGain
+        let multiplier = micGain 
         
         for i in 0...rawSensitivityValues.count - 1{
             sensitivityValues[i] = rawSensitivityValues[i] * multiplier

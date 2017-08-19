@@ -9,7 +9,7 @@
 import Cocoa
 
  //Create PolarPattern instances - omni, bidirectional, resultant
- var omni: PolarPattern = PolarPattern(pressureOp: 0.0, pressureGrad: 1.0, gain: 0.5, orientation: 0)
+ var omni: PolarPattern = PolarPattern(pressureOp: 1.0, pressureGrad: 0, gain: 0.5, orientation: 0)
  var biDirectional: PolarPattern = PolarPattern(pressureOp: 0.0, pressureGrad: 1.0, gain: 0.5, orientation: 0)
 
 class ViewController: NSViewController {
@@ -21,6 +21,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var polarView: PolarView!
     @IBOutlet weak var polarViewBi: PolarViewBi!
     @IBOutlet weak var polarViewRes: PolarViewRes!
+    
+    @IBOutlet weak var omniComponentSliderOut: NSSlider!
+    @IBOutlet weak var biComponentSliderOut: NSSlider!
     
     
        override func viewDidLoad() {
@@ -46,6 +49,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func mic_1_orientation(_ sender: NSSlider) {
+        
         omni.micOrientationAngle = Int(sender.floatValue)
         
         let slice1: ArraySlice<Float> = omni.rawSensitivityValues [omni.micOrientationAngle ... 359]
@@ -60,8 +64,9 @@ class ViewController: NSViewController {
         polarView.setNeedsDisplay(polarView.bounds)
         cartesianViewRes.setNeedsDisplay(cartesianViewRes.bounds)
         polarViewRes.setNeedsDisplay(polarViewRes.bounds)
-    
     }
+    
+
 
     @IBAction func mic_2_orientation(_ sender: NSSlider) {
         
@@ -81,10 +86,43 @@ class ViewController: NSViewController {
             polarViewRes.setNeedsDisplay(polarViewRes.bounds)
     }
  
+    
+    @IBAction func radioPatternSelected(_ sender: NSButton) {
+        
+        print(Float(sender.identifier!)!)
+    }
+    
+    @IBAction func omniComponentSlider(_ sender: NSSlider) {
+        
+        omni.micGain =  sender.floatValue
+        biDirectional.micGain = 1.0 - omni.micGain
+        biComponentSliderOut.floatValue = biDirectional.micGain
+        
+        Swift.print(" biDirectional micGain = \(biDirectional.micGain)")
+        
+        //recalculate arrays
+        omni.sensitivityValues = omni.rawSensitivityValues
+        omni.sensitivityValues = omni.sensitivityValues.map { $0 * omni.micGain }
+        
+        biDirectional.sensitivityValues =  biDirectional.rawSensitivityValues
+        biDirectional.sensitivityValues = biDirectional.sensitivityValues.map { $0 * biDirectional.micGain}
+        
+        cartesianView.setNeedsDisplay(cartesianView.bounds)
+        polarView.setNeedsDisplay(polarView.bounds)
+        cartesianViewRes.setNeedsDisplay(cartesianViewRes.bounds)
+        polarViewRes.setNeedsDisplay(polarViewRes.bounds)
+        cartesianViewBi.setNeedsDisplay(cartesianViewBi.bounds)
+        polarViewBi.setNeedsDisplay(polarViewBi.bounds)
+    }
+    @IBAction func biComponentSlider(_ sender: NSSlider) {
+        
+//        biDirectional.pressureComponent =  sender.floatValue
+//        omni.pressureComponent = 1 - biDirectional.pressureComponent
+//        omniComponentSliderOut.floatValue = omni.pressureComponent
 
-    
-    
-    
+        
+    }
+
 }
 
 
