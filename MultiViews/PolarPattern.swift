@@ -15,7 +15,13 @@ class PolarPattern: NSObject {
     var pressureGradientComponent: Float
     var pressureComponent : Float
     var micGain:Float
-    var micOrientationAngle:Int
+    var micOrientationAngle:Int {
+        didSet{
+            //micOrientationAngle = micOrientationAngle - oldValue
+        }
+    }
+    
+    
     var rawSensitivityValues = [Float](repeating: 0.0, count: 360) // based on micGain = 1 , and micOrientation  = 0 degrees
     var sensitivityValues = [Float](repeating: 0.0, count: 360)  //current values reflecting gain and orientation varaibles
     
