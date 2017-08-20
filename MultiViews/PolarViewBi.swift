@@ -28,7 +28,9 @@ class PolarViewBi: NSView {
         let biDirectionalPath = NSBezierPath()
         
         let startBiDirectionalArrayValue = CGFloat((biDirectional.sensitivityValues [0]) as Float)
-        let firstPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * startBiDirectionalArrayValue ) * 0 + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * startBiDirectionalArrayValue ) * 1 + centreOfView.y)
+//        let firstPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * startBiDirectionalArrayValue ) * 0 + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * startBiDirectionalArrayValue ) * 1 + centreOfView.y)
+        
+        let firstPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * CGFloat(abs((biDirectional.sensitivityValues [0]) as Float)) ) * CGFloat(sin(0.0)) + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * CGFloat(abs((biDirectional.sensitivityValues [0]) as Float)) ) * CGFloat(cos(0.0)) + centreOfView.y )
         
         
         biDirectionalPath.move(to: firstPoint)
