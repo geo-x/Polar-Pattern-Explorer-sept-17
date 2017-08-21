@@ -710,6 +710,10 @@
                                 <rect key="frame" x="80" y="297" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9T-i5-N7h" userLabel="cartesianDrag" customClass="CartesianDrag" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="80" y="297" width="360" height="330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-Zc-7nf" userLabel="cartesianView" customClass="CartesianView" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="80" y="297" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>

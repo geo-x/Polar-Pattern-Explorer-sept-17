@@ -88,13 +88,20 @@ class ViewController: NSViewController {
     }
  
     
+    //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+    //x-x-x-x-x-x- Preset Radio Buttons x-x-x-x-x-x-x-x-x-x-x
+    
     @IBAction func radioPatternSelected(_ sender: NSButton) {
+        
+        omniComponentSliderOut.floatValue = Float(sender.identifier!)!
+        omniComponentSlider(omniComponentSliderOut)  //code is same for  both sliders so programatically trigger the other sliders action : )
+
         
         print(Float(sender.identifier!)!)
     }
     
     //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
-    //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+    //x-x-x-x-x  Omni and Bi Sliders  x-x-x-x-x-x-x-x-x-x-x-x
     
     @IBAction func omniComponentSlider(_ sender: NSSlider) {
         
@@ -150,7 +157,7 @@ class ViewController: NSViewController {
         biDirectional.micGain =  sender.floatValue
         omni.micGain = 1.0 - biDirectional.micGain
         omniComponentSliderOut.floatValue = omni.micGain
-       omniComponentSlider(omniComponentSliderOut)  //code is same for  both sliders so programatically trigger the other sliders action : )
+        omniComponentSlider(omniComponentSliderOut)  //code is same for  both sliders so programatically trigger the other sliders action : )
         
     }
 
