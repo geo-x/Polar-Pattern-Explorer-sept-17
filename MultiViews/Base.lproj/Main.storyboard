@@ -742,7 +742,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Omnidirectional" bezelStyle="regularSquare" imagePosition="left" inset="2" id="W8L-2L-Szb">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="system" size="12"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="Tho-2k-bm5"/>
@@ -753,7 +753,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Subcardioid" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Uwc-ZW-rcD">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="system" size="12"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="Qfn-BW-ovV"/>
@@ -764,7 +764,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Supercardioid" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zFf-Jc-OJK">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="system" size="12"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="Jrh-SI-hgj"/>
@@ -775,7 +775,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Hypercardioid" bezelStyle="regularSquare" imagePosition="left" inset="2" id="wXN-vM-Ws8">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="system" size="12"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="Hkm-vu-MpJ"/>
@@ -784,9 +784,9 @@
                                         <button identifier="0.0" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qYK-F3-QjZ">
                                             <rect key="frame" x="14" y="19" width="125" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="radio" title="Bidirectional" bezelStyle="regularSquare" imagePosition="left" inset="2" id="2zb-1m-nKc">
+                                            <buttonCell key="cell" type="radio" title="Bi-Directional" bezelStyle="regularSquare" imagePosition="left" inset="2" id="2zb-1m-nKc">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="system" size="12"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="FDe-SI-OJN"/>
@@ -797,7 +797,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Cardioid" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="O1b-OM-PoI">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="system" size="12"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="opB-6v-iU8"/>
@@ -836,20 +836,28 @@
                             <slider identifier="omSlider" horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4G-nX-nFF">
                                 <rect key="frame" x="270" y="45" width="19" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <size key="offset" width="3" height="0.0"/>
+                                    <color key="color" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </shadow>
                                 <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="E8s-zA-HoB"/>
                                 <connections>
                                     <action selector="omniComponentSlider:" target="XfG-lQ-9wD" id="WZQ-9H-mKq"/>
                                 </connections>
                             </slider>
-                            <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-on-b8q">
+                            <slider wantsLayer="YES" horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-on-b8q">
                                 <rect key="frame" x="330" y="45" width="19" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <size key="offset" width="3" height="0.0"/>
+                                    <color key="color" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </shadow>
                                 <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="2Vf-IX-usY"/>
                                 <connections>
                                     <action selector="biComponentSlider:" target="XfG-lQ-9wD" id="70K-LJ-zIy"/>
                                 </connections>
                             </slider>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-cE-pAJ">
+                            <textField identifier="PGValue" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-cE-pAJ">
                                 <rect key="frame" x="330" y="20" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0.5" id="Szg-GO-Az0">
@@ -858,10 +866,46 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-Mn-sz5">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfj-Pa-b84">
+                                <rect key="frame" x="270" y="231" width="37" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="P" id="4mH-6c-xHa">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField identifier="PValue" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-Mn-sz5">
                                 <rect key="frame" x="270" y="20" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0.5" id="CmK-Q2-zLq">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlI-Cr-z5u">
+                                <rect key="frame" x="270" y="213" width="37" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="omni" id="V5H-AT-mTj">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbK-zB-xnA">
+                                <rect key="frame" x="330" y="213" width="37" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="fig 8" id="Dc6-r9-NoH">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1H-bw-UU9">
+                                <rect key="frame" x="330" y="231" width="37" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="PG" id="huT-Pj-9rk">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -871,6 +915,7 @@
                     </view>
                     <connections>
                         <outlet property="biComponentSliderOut" destination="Atj-on-b8q" id="xhs-2w-ir6"/>
+                        <outlet property="biFaderLabel" destination="qDl-cE-pAJ" id="KXZ-L2-GVm"/>
                         <outlet property="biRadio" destination="qYK-F3-QjZ" id="MEQ-96-wiq"/>
                         <outlet property="cardRadio" destination="Qex-re-7J9" id="VcH-1z-Qah"/>
                         <outlet property="cartesianView" destination="aYr-Zc-7nf" id="ZLy-o3-Vbj"/>
@@ -878,6 +923,7 @@
                         <outlet property="cartesianViewRes" destination="JBf-Ky-GGN" id="b5j-ua-dZc"/>
                         <outlet property="hyperRadio" destination="qYd-Fc-biN" id="wpm-24-gOG"/>
                         <outlet property="omniComponentSliderOut" destination="M4G-nX-nFF" id="fVG-Tp-l77"/>
+                        <outlet property="omniFaderLabel" destination="rQ1-Mn-sz5" id="jzo-G4-Nsq"/>
                         <outlet property="omniRadio" destination="jJz-N8-OAl" id="Nju-e1-8VL"/>
                         <outlet property="polarView" destination="Uhy-Ht-jdX" id="7ZD-Pt-S59"/>
                         <outlet property="polarViewBi" destination="6Se-ID-l2Y" id="Rdc-il-5KC"/>

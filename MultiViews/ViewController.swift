@@ -39,6 +39,13 @@ class ViewController: NSViewController {
     @IBOutlet weak var hyperRadio: NSButton!
     @IBOutlet weak var biRadio: NSButton!
     
+    @IBOutlet weak var omniFaderLabel: NSTextField!
+    
+    @IBOutlet weak var biFaderLabel: NSTextField!
+    
+    
+    
+    
     
        override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,6 +135,8 @@ class ViewController: NSViewController {
         
       pointerFeedback = CGFloat(sender.floatValue)
         
+        
+        
         if radioButtonPressed == false {
             omniRadio.state = 0
             subRadio.state = 0
@@ -141,6 +150,11 @@ class ViewController: NSViewController {
         omni.micGain =  sender.floatValue
         biDirectional.micGain = 1.0 - omni.micGain
         biComponentSliderOut.floatValue = biDirectional.micGain
+        
+        // update labels
+        omniFaderLabel.stringValue = String("\(omni.micGain)")
+        biFaderLabel.stringValue = String("\(biDirectional.micGain)")
+
         
         Swift.print(" biDirectional micGain = \(biDirectional.micGain)")
         //Swift.print
