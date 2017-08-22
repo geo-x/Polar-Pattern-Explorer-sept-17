@@ -51,7 +51,7 @@ class PolarView: NSView {
 // Swift.print("------------this omniArrayValue \(thisOmniArrayValue)")
         }
 
-        let omniColor = NSColor(calibratedHue: 0.5, saturation: 0.8, brightness: 0.8, alpha: 1)
+        //let omniColor = NSColor(calibratedHue: 0.5, saturation: 0.8, brightness: 0.8, alpha: 1)
         
         omniColor.setStroke()
         omniPath.lineWidth = 2

@@ -58,7 +58,7 @@ class GridPolarView: NSView {
 
         //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x-x
         // stroke them
-        let gridColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.4)
+        //let gridColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.4)
        
         gridColor.setStroke()
         angleGrid.lineWidth = 0.5
@@ -102,7 +102,7 @@ class GridPolarView: NSView {
         //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         //x-x-x-x-x-x- stroke axis highlights
         
-        let axisColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 1)
+        //let axisColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 1)
         axisColor.setStroke()
         angleAxis.lineWidth = 0.5
         angleAxis.stroke()

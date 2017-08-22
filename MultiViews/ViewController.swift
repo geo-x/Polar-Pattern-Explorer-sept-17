@@ -8,6 +8,8 @@
 
 import Cocoa
 
+var radioButtonPressed: Bool = true
+
  //Create PolarPattern instances - omni, bidirectional, resultant
  var omni: PolarPattern = PolarPattern(pressureOp: 1.0, pressureGrad: 0, gain: 0.5, orientation: 0)
  var biDirectional: PolarPattern = PolarPattern(pressureOp: 0.0, pressureGrad: 1.0, gain: 0.5, orientation: 0)
@@ -24,6 +26,14 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var omniComponentSliderOut: NSSlider!
     @IBOutlet weak var biComponentSliderOut: NSSlider!
+    
+    //Radio Button Outlets
+    @IBOutlet weak var omniRadio: NSButton!
+    @IBOutlet weak var subRadio: NSButton!
+    @IBOutlet weak var cardRadio: NSButton!
+    @IBOutlet weak var superRadio: NSButton!
+    @IBOutlet weak var hyperRadio: NSButton!
+    @IBOutlet weak var biRadio: NSButton!
     
     
        override func viewDidLoad() {
@@ -93,9 +103,15 @@ class ViewController: NSViewController {
     
     @IBAction func radioPatternSelected(_ sender: NSButton) {
         
+        radioButtonPressed = true
+        
         omniComponentSliderOut.floatValue = Float(sender.identifier!)!
         omniComponentSlider(omniComponentSliderOut)  //code is same for  both sliders so programatically trigger the other sliders action : )
 
+
+        //if sender.state == 0 { sender.state = 0} else { sender.state = 1}
+        
+        
         
         print(Float(sender.identifier!)!)
     }
@@ -105,11 +121,25 @@ class ViewController: NSViewController {
     
     @IBAction func omniComponentSlider(_ sender: NSSlider) {
         
+        //cardRadio.isEnabled = false
+        //cardRadio.state = 0
+        
+        if radioButtonPressed == false {
+            omniRadio.state = 0
+            subRadio.state = 0
+            cardRadio.state = 0
+            superRadio.state = 0
+            hyperRadio.state = 0
+            biRadio.state = 0
+            
+        }
+  
         omni.micGain =  sender.floatValue
         biDirectional.micGain = 1.0 - omni.micGain
         biComponentSliderOut.floatValue = biDirectional.micGain
         
         Swift.print(" biDirectional micGain = \(biDirectional.micGain)")
+        //Swift.print
         
         //------recalculate arrays-----
         
@@ -151,6 +181,8 @@ class ViewController: NSViewController {
         polarViewRes.setNeedsDisplay(polarViewRes.bounds)
         cartesianViewBi.setNeedsDisplay(cartesianViewBi.bounds)
         polarViewBi.setNeedsDisplay(polarViewBi.bounds)
+        
+        radioButtonPressed = false
     }
     @IBAction func biComponentSlider(_ sender: NSSlider) {
         
@@ -160,7 +192,8 @@ class ViewController: NSViewController {
         omniComponentSlider(omniComponentSliderOut)  //code is same for  both sliders so programatically trigger the other sliders action : )
         
     }
-
+  
+    
 }
 
 //@IBAction func mic_1_orientation(_ sender: NSSlider) {

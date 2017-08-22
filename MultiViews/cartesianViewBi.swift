@@ -55,7 +55,7 @@ class cartesianViewBi: NSView {
         }
         //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         
-        let biDirectionalColor = NSColor(calibratedHue: 0.8, saturation: 0.9, brightness: 0.8, alpha: 1)
+        //let biDirectionalColor = NSColor(calibratedHue: 0.8, saturation: 0.9, brightness: 0.8, alpha: 1)
         
         biDirectionalColor.setStroke()
        biDirectionalPath.lineWidth = 2

@@ -63,7 +63,7 @@ class CartesianViewRes: NSView {
         }
         //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
         
-        let resultantlColor = NSColor(calibratedHue: 0.1, saturation: 0.9, brightness: 0.8, alpha: 1)
+        //let resultantlColor = NSColor(calibratedHue: 0.1, saturation: 0.9, brightness: 0.8, alpha: 1)
         
         resultantlColor.setStroke()
         resultantPath.lineWidth = 2
