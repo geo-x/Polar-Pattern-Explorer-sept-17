@@ -16,6 +16,7 @@
 		5E342AD31F3AC2BE007FA265 /* MultiViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AD21F3AC2BE007FA265 /* MultiViewsUITests.swift */; };
 		5E342AE11F3AC358007FA265 /* CartesianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AE01F3AC358007FA265 /* CartesianView.swift */; };
 		5E732A751F4A4BD9000680AE /* CartesianDrag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E732A741F4A4BD9000680AE /* CartesianDrag.swift */; };
+		5E732A771F4BCB69000680AE /* PresetPointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E732A761F4BCB69000680AE /* PresetPointerView.swift */; };
 		5E78E1F01F464FF100BCB9AB /* cartesianViewBi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1EF1F464FF100BCB9AB /* cartesianViewBi.swift */; };
 		5E78E1F21F46601000BCB9AB /* PolarViewBi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1F11F46601000BCB9AB /* PolarViewBi.swift */; };
 		5E78E1F41F467A3300BCB9AB /* CartesianViewRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1F31F467A3300BCB9AB /* CartesianViewRes.swift */; };
@@ -58,6 +59,7 @@
 		5E342AD41F3AC2BE007FA265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E342AE01F3AC358007FA265 /* CartesianView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartesianView.swift; sourceTree = "<group>"; };
 		5E732A741F4A4BD9000680AE /* CartesianDrag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartesianDrag.swift; sourceTree = "<group>"; };
+		5E732A761F4BCB69000680AE /* PresetPointerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetPointerView.swift; sourceTree = "<group>"; };
 		5E78E1EF1F464FF100BCB9AB /* cartesianViewBi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cartesianViewBi.swift; sourceTree = "<group>"; };
 		5E78E1F11F46601000BCB9AB /* PolarViewBi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarViewBi.swift; sourceTree = "<group>"; };
 		5E78E1F31F467A3300BCB9AB /* CartesianViewRes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartesianViewRes.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				5E78E1F11F46601000BCB9AB /* PolarViewBi.swift */,
 				5E78E1F51F46AE7600BCB9AB /* PolarViewRes.swift */,
 				5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */,
+				5E732A761F4BCB69000680AE /* PresetPointerView.swift */,
 				5E342AB91F3AC2BE007FA265 /* Assets.xcassets */,
 				5E342ABB1F3AC2BE007FA265 /* Main.storyboard */,
 				5E342ABE1F3AC2BE007FA265 /* Info.plist */,
@@ -292,6 +295,7 @@
 				5E1295EE1F4145DF00C261F5 /* GridPolarView.swift in Sources */,
 				5EB16C721F41B6B700FA7882 /* PolarView.swift in Sources */,
 				5EF6B6521F3D2B9100496F7D /* PolarPattern.swift in Sources */,
+				5E732A771F4BCB69000680AE /* PresetPointerView.swift in Sources */,
 				5E342AB61F3AC2BE007FA265 /* AppDelegate.swift in Sources */,
 				5E78E1F41F467A3300BCB9AB /* CartesianViewRes.swift in Sources */,
 				5E78E1F21F46601000BCB9AB /* PolarViewBi.swift in Sources */,

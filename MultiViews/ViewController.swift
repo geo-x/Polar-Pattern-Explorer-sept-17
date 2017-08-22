@@ -19,10 +19,14 @@ class ViewController: NSViewController {
     @IBOutlet weak var cartesianViewBi: cartesianViewBi!
     @IBOutlet weak var cartesianViewRes: CartesianViewRes!
     
+    @IBOutlet weak var presetPointerView: PresetPointerView!
 
     @IBOutlet weak var polarView: PolarView!
     @IBOutlet weak var polarViewBi: PolarViewBi!
     @IBOutlet weak var polarViewRes: PolarViewRes!
+    
+    
+    
     
     @IBOutlet weak var omniComponentSliderOut: NSSlider!
     @IBOutlet weak var biComponentSliderOut: NSSlider!
@@ -121,8 +125,8 @@ class ViewController: NSViewController {
     
     @IBAction func omniComponentSlider(_ sender: NSSlider) {
         
-        //cardRadio.isEnabled = false
-        //cardRadio.state = 0
+        
+      pointerFeedback = CGFloat(sender.floatValue)
         
         if radioButtonPressed == false {
             omniRadio.state = 0
@@ -181,6 +185,7 @@ class ViewController: NSViewController {
         polarViewRes.setNeedsDisplay(polarViewRes.bounds)
         cartesianViewBi.setNeedsDisplay(cartesianViewBi.bounds)
         polarViewBi.setNeedsDisplay(polarViewBi.bounds)
+        presetPointerView.setNeedsDisplay(presetPointerView.bounds)
         
         radioButtonPressed = false
     }
