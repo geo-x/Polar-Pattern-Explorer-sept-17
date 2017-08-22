@@ -13,6 +13,7 @@ var pointerStartPoint: NSPoint?
 var range: CGFloat = 180.0
 var pointerFeedback: CGFloat = 0.5
 
+@IBDesignable
 
 class PresetPointerView: NSView {
 
@@ -27,7 +28,7 @@ class PresetPointerView: NSView {
         
         var pointerNextPoint = __CGPointApplyAffineTransform(pointerStartPoint!, transform)
         
-        Swift.print("feedback = \(pointerFeedback)")
+        
         
         let cursorShape = NSBezierPath()
         cursorShape.move(to:pointerStartPoint!)
@@ -56,13 +57,10 @@ class PresetPointerView: NSView {
         cursorShape.close()
         
         
-        //let dragCircle = NSBezierPath()
-        //dragCircle.appendOval(in: NSRect(origin: centreOfDragCircle, size: CGSize(width: 10, height: 10)))
+       
         
-        //let cursorColor = NSColor(calibratedHue: 0.9, saturation: 1.0, brightness: 1.0, alpha: 1.0)
-        
-        cursorColor.setStroke()
-        cursorColor.setFill()
+        pointerColor.setStroke()
+        pointerColor.setFill()
         cursorShape.lineWidth = 2.0
         cursorShape.stroke()
         

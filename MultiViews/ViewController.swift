@@ -64,10 +64,7 @@ class ViewController: NSViewController {
     }
 
 
-    @IBAction func testView1(_ sender: NSButton) {
-        
-        cartesianView.setNeedsDisplay(cartesianView.bounds) //see print statement in draw rect
-    }
+  
     
     @IBAction func mic_1_orientation(_ sender: NSSlider) {
         
@@ -152,12 +149,22 @@ class ViewController: NSViewController {
         biComponentSliderOut.floatValue = biDirectional.micGain
         
         // update labels
-        omniFaderLabel.stringValue = String("\(omni.micGain)")
-        biFaderLabel.stringValue = String("\(biDirectional.micGain)")
+        let formatter = NumberFormatter()
+       
+       
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        formatter.minimumIntegerDigits = 1
+        formatter.roundingMode = .down
+        let omniLabel = formatter.string(from: NSNumber(value: omni.micGain))
+        let biLabel = formatter.string(from: NSNumber(value: biDirectional.micGain))
+        
+        omniFaderLabel.stringValue = omniLabel!
+        biFaderLabel.stringValue = biLabel!
 
         
-        Swift.print(" biDirectional micGain = \(biDirectional.micGain)")
-        //Swift.print
+        
+       
         
         //------recalculate arrays-----
         

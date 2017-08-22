@@ -33,7 +33,7 @@ class PolarViewRes: NSView {
         let resultantPath = NSBezierPath()
         
         let startResultantArrayValue = CGFloat((resultantArray [0]) as Float)
-        let firstPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * startResultantArrayValue ) * 0 + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * startResultantArrayValue ) * 1 + centreOfView.y)
+        let firstPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * abs(startResultantArrayValue) ) * 0 + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * startResultantArrayValue ) * 1 + centreOfView.y)
         
         
         resultantPath.move(to: firstPoint)
@@ -47,7 +47,7 @@ class PolarViewRes: NSView {
             
             let thisResultantArrayValue = CGFloat(abs((resultantArray [i]) as Float))
             
-            let nextPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * thisResultantArrayValue ) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * thisResultantArrayValue ) * CGFloat(cos(radianValue)) + centreOfView.y )
+            let nextPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * abs(thisResultantArrayValue) ) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * abs(thisResultantArrayValue) ) * CGFloat(cos(radianValue)) + centreOfView.y )
             
             resultantPath.line(to: nextPoint)
             
