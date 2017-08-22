@@ -687,51 +687,51 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MultiViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="805"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="769"/>
                         <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjq-YG-Pmf" userLabel="polarGridView" customClass="GridPolarView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="388" width="360" height="330"/>
+                                <rect key="frame" x="575" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BgT-a2-cAU" userLabel="polarViewRes" customClass="PolarViewRes" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="388" width="360" height="330"/>
+                                <rect key="frame" x="575" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uhy-Ht-jdX" userLabel="polarView" customClass="PolarView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="388" width="360" height="330"/>
+                                <rect key="frame" x="575" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Se-ID-l2Y" userLabel="polarViewBi" customClass="PolarViewBi" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="388" width="360" height="330"/>
+                                <rect key="frame" x="575" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-sd-AEu" userLabel="cartesianGridView" customClass="GridCartesianView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="388" width="360" height="330"/>
+                                <rect key="frame" x="80" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9T-i5-N7h" userLabel="cartesianDrag" customClass="CartesianDrag" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="388" width="360" height="330"/>
+                                <rect key="frame" x="80" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBf-Ky-GGN" userLabel="cartesianViewRes" customClass="CartesianViewRes" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="388" width="360" height="330"/>
+                                <rect key="frame" x="80" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-Zc-7nf" userLabel="cartesianView" customClass="CartesianView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="388" width="360" height="330"/>
+                                <rect key="frame" x="80" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="May-mV-Dar" userLabel="cartesianViewBi" customClass="cartesianViewBi" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="388" width="360" height="330"/>
+                                <rect key="frame" x="80" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Yy-GB-tLB" userLabel="presetPointerView" customClass="PresetPointerView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="58" y="129" width="45" height="196"/>
+                                <rect key="frame" x="58" y="93" width="45" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="XkC-ed-CXh">
-                                <rect key="frame" x="77" y="107" width="154" height="243"/>
+                                <rect key="frame" x="77" y="71" width="154" height="243"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="zlo-rU-F6B">
                                     <rect key="frame" x="1" y="1" width="152" height="227"/>
@@ -742,7 +742,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Omnidirectional" bezelStyle="regularSquare" imagePosition="left" inset="2" id="W8L-2L-Szb">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="Tho-2k-bm5"/>
@@ -753,7 +753,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Subcardioid" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Uwc-ZW-rcD">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="Qfn-BW-ovV"/>
@@ -764,7 +764,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Supercardioid" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zFf-Jc-OJK">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="Jrh-SI-hgj"/>
@@ -775,7 +775,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Hypercardioid" bezelStyle="regularSquare" imagePosition="left" inset="2" id="wXN-vM-Ws8">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="Hkm-vu-MpJ"/>
@@ -786,7 +786,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Bi-Directional" bezelStyle="regularSquare" imagePosition="left" inset="2" id="2zb-1m-nKc">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="FDe-SI-OJN"/>
@@ -797,7 +797,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="radio" title="Cardioid" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="O1b-OM-PoI">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system" size="12"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="radioPatternSelected:" target="XfG-lQ-9wD" id="opB-6v-iU8"/>
@@ -807,7 +807,7 @@
                                 </view>
                             </box>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-dA-U2S" userLabel="mic1_orientation">
-                                <rect key="frame" x="78" y="74" width="216" height="19"/>
+                                <rect key="frame" x="78" y="38" width="216" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" sliderType="linear" id="Fml-py-5dQ"/>
                                 <connections>
@@ -815,7 +815,7 @@
                                 </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-ki-bgb" userLabel="mic2_orientation">
-                                <rect key="frame" x="78" y="34" width="216" height="19"/>
+                                <rect key="frame" x="78" y="-2" width="216" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" sliderType="linear" id="cFu-Py-dTW"/>
                                 <connections>
@@ -823,31 +823,23 @@
                                 </connections>
                             </slider>
                             <slider identifier="omSlider" horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4G-nX-nFF">
-                                <rect key="frame" x="270" y="136" width="19" height="171"/>
+                                <rect key="frame" x="270" y="100" width="19" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <shadow key="shadow" blurRadius="1">
-                                    <size key="offset" width="3" height="0.0"/>
-                                    <color key="color" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </shadow>
                                 <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="E8s-zA-HoB"/>
                                 <connections>
                                     <action selector="omniComponentSlider:" target="XfG-lQ-9wD" id="WZQ-9H-mKq"/>
                                 </connections>
                             </slider>
                             <slider wantsLayer="YES" horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-on-b8q">
-                                <rect key="frame" x="330" y="136" width="19" height="171"/>
+                                <rect key="frame" x="330" y="100" width="19" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <shadow key="shadow" blurRadius="1">
-                                    <size key="offset" width="3" height="0.0"/>
-                                    <color key="color" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                </shadow>
                                 <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="2Vf-IX-usY"/>
                                 <connections>
                                     <action selector="biComponentSlider:" target="XfG-lQ-9wD" id="70K-LJ-zIy"/>
                                 </connections>
                             </slider>
                             <textField identifier="PGValue" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-cE-pAJ">
-                                <rect key="frame" x="330" y="111" width="37" height="17"/>
+                                <rect key="frame" x="330" y="75" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0.50" id="Szg-GO-Az0">
                                     <font key="font" metaFont="system"/>
@@ -856,7 +848,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfj-Pa-b84">
-                                <rect key="frame" x="277" y="322" width="37" height="17"/>
+                                <rect key="frame" x="275" y="286" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="P" id="4mH-6c-xHa">
                                     <font key="font" metaFont="system"/>
@@ -865,16 +857,16 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1H-bw-UU9">
-                                <rect key="frame" x="330" y="322" width="37" height="17"/>
+                                <rect key="frame" x="330" y="286" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="PG" id="huT-Pj-9rk">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="G" id="huT-Pj-9rk">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField identifier="PValue" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-Mn-sz5">
-                                <rect key="frame" x="270" y="111" width="37" height="17"/>
+                                <rect key="frame" x="270" y="75" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0.50" id="CmK-Q2-zLq">
                                     <font key="font" metaFont="system"/>
@@ -883,7 +875,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlI-Cr-z5u">
-                                <rect key="frame" x="270" y="304" width="37" height="17"/>
+                                <rect key="frame" x="267" y="268" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="omni" id="V5H-AT-mTj">
                                     <font key="font" metaFont="system" size="10"/>
@@ -892,7 +884,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbK-zB-xnA">
-                                <rect key="frame" x="330" y="304" width="37" height="17"/>
+                                <rect key="frame" x="325" y="268" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="fig 8" id="Dc6-r9-NoH">
                                     <font key="font" metaFont="system" size="10"/>
@@ -901,7 +893,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6e-ox-eyf">
-                                <rect key="frame" x="213" y="735" width="132" height="17"/>
+                                <rect key="frame" x="194" y="699" width="132" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Cartesian Graph" id="f4v-lf-ZMb">
                                     <font key="font" metaFont="system"/>
@@ -910,10 +902,28 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMM-Fy-6NN">
-                                <rect key="frame" x="710" y="735" width="122" height="17"/>
+                                <rect key="frame" x="694" y="699" width="122" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Polar Graph" id="Ant-ze-Fpe">
                                     <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWd-Qi-PLX">
+                                <rect key="frame" x="517" y="247" width="205" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="General Polar Equation" id="LqZ-Dq-4fc">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t8-Ks-33E">
+                                <rect key="frame" x="517" y="217" width="237" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S = P + G * cos(⍺)" id="VC1-lg-Rod">
+                                    <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -929,9 +939,11 @@
                         <outlet property="cartesianViewBi" destination="May-mV-Dar" id="kjJ-Sr-VF5"/>
                         <outlet property="cartesianViewRes" destination="JBf-Ky-GGN" id="b5j-ua-dZc"/>
                         <outlet property="hyperRadio" destination="qYd-Fc-biN" id="wpm-24-gOG"/>
+                        <outlet property="omniCellOutlet" destination="E8s-zA-HoB" id="7Ke-BI-ZHr"/>
                         <outlet property="omniComponentSliderOut" destination="M4G-nX-nFF" id="fVG-Tp-l77"/>
                         <outlet property="omniFaderLabel" destination="rQ1-Mn-sz5" id="jzo-G4-Nsq"/>
                         <outlet property="omniRadio" destination="jJz-N8-OAl" id="Nju-e1-8VL"/>
+                        <outlet property="omniSlideOutlet" destination="M4G-nX-nFF" id="yo6-xo-8zi"/>
                         <outlet property="polarView" destination="Uhy-Ht-jdX" id="7ZD-Pt-S59"/>
                         <outlet property="polarViewBi" destination="6Se-ID-l2Y" id="Rdc-il-5KC"/>
                         <outlet property="polarViewRes" destination="BgT-a2-cAU" id="rhk-h3-mQs"/>
@@ -942,7 +954,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="391.5"/>
+            <point key="canvasLocation" x="66" y="373.5"/>
         </scene>
     </scenes>
 </document>
