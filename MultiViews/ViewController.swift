@@ -8,13 +8,28 @@
 
 import Cocoa
 
+
+
+
+
+
+
 var radioButtonPressed: Bool = true
 
  //Create PolarPattern instances - omni, bidirectional, resultant
  var omni: PolarPattern = PolarPattern(pressureOp: 1.0, pressureGrad: 0, gain: 0.5, orientation: 0)
  var biDirectional: PolarPattern = PolarPattern(pressureOp: 0.0, pressureGrad: 1.0, gain: 0.5, orientation: 0)
 
+
+
+
+
+
 class ViewController: NSViewController {
+    
+    
+    
+        
     
     
     @IBOutlet weak var omniSlideOutlet: NSSlider!
@@ -26,6 +41,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var cartesianView: CartesianView!
     @IBOutlet weak var cartesianViewBi: cartesianViewBi!
     @IBOutlet weak var cartesianViewRes: CartesianViewRes!
+    @IBOutlet weak var cartesianDragView: CartesianDrag!
     
     @IBOutlet weak var presetPointerView: PresetPointerView!
 
@@ -228,6 +244,19 @@ class ViewController: NSViewController {
     }
   
     
+    
 }
 
 
+
+//@IBAction func dragCartesianAngle(_ sender: NSPanGestureRecognizer) {
+//    
+//    Swift.print("dragging")
+//    
+//    let t = sender.translation(in: cartesianDragView)
+//    sender.view?.frame = NSOffsetRect((sender.view?.frame)!, t.x, 0)
+//    sender.setTranslation(NSZeroPoint, in: nil)
+//    Swift.print(t.x)
+//    
+//    
+//}

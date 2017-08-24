@@ -12,6 +12,9 @@ import Cocoa
 @IBDesignable
 
 class GridCartesianView: NSView {
+    
+   
+    
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)

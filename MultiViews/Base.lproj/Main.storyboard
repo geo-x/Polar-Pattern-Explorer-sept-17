@@ -710,10 +710,6 @@
                                 <rect key="frame" x="80" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9T-i5-N7h" userLabel="cartesianDrag" customClass="CartesianDrag" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="352" width="360" height="330"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBf-Ky-GGN" userLabel="cartesianViewRes" customClass="CartesianViewRes" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="80" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -724,6 +720,10 @@
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="May-mV-Dar" userLabel="cartesianViewBi" customClass="cartesianViewBi" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="80" y="352" width="360" height="330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9T-i5-N7h" userLabel="cartesianDrag" customClass="CartesianDrag" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="60" y="332" width="400" height="370"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Yy-GB-tLB" userLabel="presetPointerView" customClass="PresetPointerView" customModule="MultiViews" customModuleProvider="target">
@@ -910,7 +910,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWd-Qi-PLX">
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWd-Qi-PLX">
                                 <rect key="frame" x="517" y="247" width="205" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="General Polar Equation" id="LqZ-Dq-4fc">
@@ -919,7 +919,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t8-Ks-33E">
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t8-Ks-33E">
                                 <rect key="frame" x="517" y="217" width="237" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S = P + G * cos(⍺)" id="VC1-lg-Rod">
@@ -935,6 +935,7 @@
                         <outlet property="biFaderLabel" destination="qDl-cE-pAJ" id="KXZ-L2-GVm"/>
                         <outlet property="biRadio" destination="qYK-F3-QjZ" id="MEQ-96-wiq"/>
                         <outlet property="cardRadio" destination="Qex-re-7J9" id="VcH-1z-Qah"/>
+                        <outlet property="cartesianDragView" destination="b9T-i5-N7h" id="uMt-7f-4d2"/>
                         <outlet property="cartesianView" destination="aYr-Zc-7nf" id="ZLy-o3-Vbj"/>
                         <outlet property="cartesianViewBi" destination="May-mV-Dar" id="kjJ-Sr-VF5"/>
                         <outlet property="cartesianViewRes" destination="JBf-Ky-GGN" id="b5j-ua-dZc"/>
