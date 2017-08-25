@@ -30,12 +30,11 @@ class ViewController: NSViewController {
     
    
     
-    @IBOutlet weak var omniSlideOutlet: NSSlider!
-    @IBOutlet weak var omniCellOutlet: NSSliderCell!
     
     
     
     
+    // View Outlets
     @IBOutlet weak var cartesianView: CartesianView!
     @IBOutlet weak var cartesianViewBi: cartesianViewBi!
     @IBOutlet weak var cartesianViewRes: CartesianViewRes!
@@ -49,7 +48,7 @@ class ViewController: NSViewController {
     
     
     
-    
+    // Slider outlets  - to update slider positions
     @IBOutlet weak var omniComponentSliderOut: NSSlider!
     @IBOutlet weak var biComponentSliderOut: NSSlider!
     
@@ -61,8 +60,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var hyperRadio: NSButton!
     @IBOutlet weak var biRadio: NSButton!
     
-    @IBOutlet weak var omniFaderLabel: NSTextField!
     
+    // Label Outlets
+    @IBOutlet weak var omniFaderLabel: NSTextField!
     @IBOutlet weak var biFaderLabel: NSTextField!
     
     
@@ -87,6 +87,10 @@ class ViewController: NSViewController {
 
 
   
+    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    //XXXXXXXXXXXXX   Actions    XXXXXXXXXXXXXXXXX
+    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    
     
     @IBAction func mic_1_orientation(_ sender: NSSlider) {
         
@@ -107,7 +111,7 @@ class ViewController: NSViewController {
         //Swift.print(biDirectional.micOrientationAngle.didSet)
     }
     
-
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
     @IBAction func mic_2_orientation(_ sender: NSSlider) {
         
@@ -183,11 +187,7 @@ class ViewController: NSViewController {
         
         omniFaderLabel.stringValue = omniLabel!
         biFaderLabel.stringValue = biLabel!
-
-        
-        
-       
-        
+     
         //------recalculate arrays-----
         
          //update omni mic values
@@ -232,6 +232,10 @@ class ViewController: NSViewController {
         
         radioButtonPressed = false
     }
+    
+    
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    
     @IBAction func biComponentSlider(_ sender: NSSlider) {
         
         biDirectional.micGain =  sender.floatValue
@@ -241,20 +245,25 @@ class ViewController: NSViewController {
         
     }
   
+  //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     
+//    @IBAction func angleInputText(_ sender: NSTextField) {
+//        
+//       let alert = NSAlert()
+//        alert.messageText = "Angle entered"
+//        alert.runModal()
+//        
+//        Swift.print(sender.stringValue)
+//    }
+    
+    @IBAction func angleInputText(_ sender: NSTextField) {
+        Swift.print(sender.stringValue)
+        Swift.print(testShapeLayer.position.x)
+        testShapeLayer.position.x = CGFloat(sender.floatValue)
+        
+    }
     
 }
 
 
 
-//@IBAction func dragCartesianAngle(_ sender: NSPanGestureRecognizer) {
-//    
-//    Swift.print("dragging")
-//    
-//    let t = sender.translation(in: cartesianDragView)
-//    sender.view?.frame = NSOffsetRect((sender.view?.frame)!, t.x, 0)
-//    sender.setTranslation(NSZeroPoint, in: nil)
-//    Swift.print(t.x)
-//    
-//    
-//}

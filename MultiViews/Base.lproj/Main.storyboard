@@ -926,15 +926,6 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChO-ON-Eic" userLabel="angle input field">
-                                            <rect key="frame" x="164" y="20" width="50" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ZWc-Xi-opz">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t8-Ks-33E">
                                             <rect key="frame" x="18" y="113" width="237" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -998,6 +989,18 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-Ik-qmk">
+                                            <rect key="frame" x="172" y="17" width="96" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="pw1-HQ-1QN">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="angleInputText:" target="XfG-lQ-9wD" id="PAY-e2-May"/>
+                                            </connections>
+                                        </textField>
                                     </subviews>
                                 </view>
                             </box>
@@ -1013,11 +1016,9 @@
                         <outlet property="cartesianViewBi" destination="May-mV-Dar" id="kjJ-Sr-VF5"/>
                         <outlet property="cartesianViewRes" destination="JBf-Ky-GGN" id="b5j-ua-dZc"/>
                         <outlet property="hyperRadio" destination="qYd-Fc-biN" id="wpm-24-gOG"/>
-                        <outlet property="omniCellOutlet" destination="E8s-zA-HoB" id="7Ke-BI-ZHr"/>
                         <outlet property="omniComponentSliderOut" destination="M4G-nX-nFF" id="fVG-Tp-l77"/>
                         <outlet property="omniFaderLabel" destination="rQ1-Mn-sz5" id="jzo-G4-Nsq"/>
                         <outlet property="omniRadio" destination="jJz-N8-OAl" id="Nju-e1-8VL"/>
-                        <outlet property="omniSlideOutlet" destination="M4G-nX-nFF" id="yo6-xo-8zi"/>
                         <outlet property="polarView" destination="Uhy-Ht-jdX" id="7ZD-Pt-S59"/>
                         <outlet property="polarViewBi" destination="6Se-ID-l2Y" id="Rdc-il-5KC"/>
                         <outlet property="polarViewRes" destination="BgT-a2-cAU" id="rhk-h3-mQs"/>

@@ -13,12 +13,13 @@ import Cocoa
 
 
 
-
+let testShapeLayer = CAShapeLayer()
 
 class CartesianDrag: NSView {
     
     
-   
+    
+    
     override func mouseDown(with event: NSEvent) {
         Swift.print("mousedown")
     }
@@ -45,7 +46,7 @@ class CartesianDrag: NSView {
         Swift.print(self)
         
         
-       let testShapeLayer = CAShapeLayer()
+       //let testShapeLayer = CAShapeLayer()
         
         // The Bezier path that we made needs to be converted to
         // a CGPath before it can be used on a layer.
@@ -67,12 +68,12 @@ class CartesianDrag: NSView {
         
         
         
-        let myLayer = CATextLayer()
-        myLayer.frame = CGRect(x: 0, y: 0, width: 300, height: 40)
-        myLayer.backgroundColor = NSColor.blue.cgColor
-        myLayer.string = "Hello"
-        self.layer?.addSublayer(myLayer)
-        
+//        let myLayer = CATextLayer()
+//        myLayer.frame = CGRect(x: 0, y: 0, width: 300, height: 40)
+//        myLayer.backgroundColor = NSColor.blue.cgColor
+//        myLayer.string = "Hello"
+//        self.layer?.addSublayer(myLayer)
+//        
      
 
         
