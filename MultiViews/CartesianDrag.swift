@@ -13,41 +13,31 @@ import Cocoa
 
 
 
-var mouseStartPoint: CGPoint = CGPoint(x: 0, y: 0)
+
 
 class CartesianDrag: NSView {
     
     
    
+    override func mouseDown(with event: NSEvent) {
+        Swift.print("mousedown")
+    }
+    override func keyDown(with event: NSEvent) {
+        
+        
+            Swift.print("key pressed")
+       
+    }
     
-//    override func mouseDown(with event: NSEvent){
-//        
-//        mouseStartPoint = event.locationInWindow
-// 
-//    }
-//    
-//
-//
-//       override func mouseDragged(with event: NSEvent){
-//        
-//        var pointInView = event.locationInWindow
-//        
-//        
-//       //layer?.frame = NSOffsetRect((layer?.frame)!, pointInView.x, 0)
-//        
-//        layer?.position = NSPoint(x: (layer?.position.x)! + mouseStartPoint.x - pointInView.x, y: 300.0)
-//        //Swift.print(pointInView.x)
-//    }
-//   
+    
     
     let cursorShape = NSBezierPath()
     var dragCircle = NSBezierPath()
     
-//    override func awakeFromNib() {
-//        wantsLayer = true
-//    }
+    override func awakeFromNib() {  // not sure this is needed works without it
+        wantsLayer = true
+    }
     
-   
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -72,34 +62,16 @@ class CartesianDrag: NSView {
         testShapeLayer.position = CGPoint(x: 0, y: 0)
         
          self.layer?.addSublayer(testShapeLayer)
+        Swift.print(testShapeLayer)
         
         
         
-//        
-//        
-//        let myLayer = CALayer()
-//        myLayer.frame = CGRect(x: 0, y: 0, width: 300, height: 40)
-//        myLayer.backgroundColor = NSColor.blue.cgColor
-//        //myLayer.string = "Hello"
-//        self.layer?.addSublayer(myLayer)
-//        
-//        
-//        
-//
-//       
-//        
-//        
-//
-//        cursorColor.setStroke()
-//        cursorColor.setFill()
-//      
-//       let shapePath = createBezierPath()
-//       shapePath.lineWidth = 2
-//       shapePath.stroke()
-//       shapePath.fill()
         
-        // Drawing code here.
-        
+        let myLayer = CATextLayer()
+        myLayer.frame = CGRect(x: 0, y: 0, width: 300, height: 40)
+        myLayer.backgroundColor = NSColor.blue.cgColor
+        myLayer.string = "Hello"
+        self.layer?.addSublayer(myLayer)
         
      
 

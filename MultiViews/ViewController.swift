@@ -28,9 +28,7 @@ var radioButtonPressed: Bool = true
 class ViewController: NSViewController {
     
     
-    
-        
-    
+   
     
     @IBOutlet weak var omniSlideOutlet: NSSlider!
     @IBOutlet weak var omniCellOutlet: NSSliderCell!
@@ -73,7 +71,7 @@ class ViewController: NSViewController {
     
        override func viewDidLoad() {
         super.viewDidLoad()
-       
+       //view.window?.makeFirstResponder(self)  // Harry Ng day 43 video
 
 //print(omni.sensitivityValues)
     

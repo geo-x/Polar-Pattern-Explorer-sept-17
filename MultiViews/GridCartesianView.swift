@@ -15,6 +15,10 @@ class GridCartesianView: NSView {
     
    
     
+    
+    func someFunction(name: String) -> Bool {
+        return false
+    }
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
