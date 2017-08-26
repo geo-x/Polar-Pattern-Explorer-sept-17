@@ -68,6 +68,8 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var PcomponentLabel: NSTextField!
     @IBOutlet weak var GcomponentLabel: NSTextField!
+    @IBOutlet weak var angleLabel: NSTextField!
+    @IBOutlet weak var resultLabel: NSTextField!
     
     
     
@@ -186,12 +188,17 @@ class ViewController: NSViewController {
         formatter.minimumFractionDigits = 2
         formatter.minimumIntegerDigits = 1
         formatter.roundingMode = .down
+        
         let omniLabel = formatter.string(from: NSNumber(value: omni.micGain))
         let biLabel = formatter.string(from: NSNumber(value: biDirectional.micGain))
         
         omniFaderLabel.stringValue = omniLabel!
         biFaderLabel.stringValue = biLabel!
-     
+        PcomponentLabel.stringValue = omniLabel!
+        GcomponentLabel.stringValue = biLabel!
+        
+        
+        
         //------recalculate arrays-----
         
          //update omni mic values
@@ -265,6 +272,17 @@ class ViewController: NSViewController {
         Swift.print(testShapeLayer.position.x)
         testShapeLayer.position.x = CGFloat(sender.floatValue)
         rotationAngle = sender.floatValue
+        
+        let formatter = NumberFormatter()
+        formatter.minimumIntegerDigits = 1
+        formatter.maximumFractionDigits = 0
+        
+        let angleForLabel = formatter.string(from:(sender.floatValue as NSNumber))
+        
+        angleLabel.stringValue = angleForLabel!
+        
+        //angleLabel.stringValue = String(sender.floatValue)
+        
         
         // cartesianDragView doesn't need set needs display call because CALayer is called in this event handler??
         //cartesianDragView.setNeedsDisplay(cartesianDragView.bounds)

@@ -987,10 +987,19 @@
                                                 <action selector="angleInputText:" target="XfG-lQ-9wD" id="PAY-e2-May"/>
                                             </connections>
                                         </textField>
-                                        <textField identifier="angleLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCL-qe-0PF" userLabel="GcomponentLabel">
-                                            <rect key="frame" x="184" y="71" width="29" height="17"/>
+                                        <textField identifier="angleLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCL-qe-0PF" userLabel="angleLabel">
+                                            <rect key="frame" x="184" y="72" width="29" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="360" id="iOj-vA-fRb" userLabel="360">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="iOj-vA-fRb" userLabel="360">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField identifier="angleLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yap-YV-EoO" userLabel="resultLabel">
+                                            <rect key="frame" x="242" y="72" width="29" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.00" id="8VQ-ZX-wS4" userLabel="360">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1004,6 +1013,7 @@
                     <connections>
                         <outlet property="GcomponentLabel" destination="VEY-EY-w7h" id="qJM-xy-c9j"/>
                         <outlet property="PcomponentLabel" destination="shc-NY-Cdg" id="t28-oq-8cD"/>
+                        <outlet property="angleLabel" destination="xCL-qe-0PF" id="eBM-4c-Q6Z"/>
                         <outlet property="biComponentSliderOut" destination="Atj-on-b8q" id="xhs-2w-ir6"/>
                         <outlet property="biFaderLabel" destination="qDl-cE-pAJ" id="KXZ-L2-GVm"/>
                         <outlet property="biRadio" destination="qYK-F3-QjZ" id="MEQ-96-wiq"/>
@@ -1021,6 +1031,7 @@
                         <outlet property="polarViewBi" destination="6Se-ID-l2Y" id="Rdc-il-5KC"/>
                         <outlet property="polarViewRes" destination="BgT-a2-cAU" id="rhk-h3-mQs"/>
                         <outlet property="presetPointerView" destination="0Yy-GB-tLB" id="dJW-Zr-jYh"/>
+                        <outlet property="resultLabel" destination="yap-YV-EoO" id="tzg-4D-srD"/>
                         <outlet property="subRadio" destination="wa2-A0-AEK" id="65N-Bg-4zW"/>
                         <outlet property="superRadio" destination="Emc-WU-9MK" id="0CM-ZG-Gxr"/>
                     </connections>
