@@ -66,6 +66,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var omniFaderLabel: NSTextField!
     @IBOutlet weak var biFaderLabel: NSTextField!
     
+    @IBOutlet weak var PcomponentLabel: NSTextField!
+    @IBOutlet weak var GcomponentLabel: NSTextField!
+    
     
     
     
