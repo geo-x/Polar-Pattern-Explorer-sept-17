@@ -45,6 +45,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var polarView: PolarView!
     @IBOutlet weak var polarViewBi: PolarViewBi!
     @IBOutlet weak var polarViewRes: PolarViewRes!
+    @IBOutlet weak var polarDragView: PolarDragView!
     
     
     
@@ -260,7 +261,12 @@ class ViewController: NSViewController {
         Swift.print(sender.stringValue)
         Swift.print(testShapeLayer.position.x)
         testShapeLayer.position.x = CGFloat(sender.floatValue)
+        rotationAngle = sender.floatValue
         
+        // cartesianDragView doesn't need set needs display call because CALayer is called in this event handler??
+        //cartesianDragView.setNeedsDisplay(cartesianDragView.bounds)
+        
+        polarDragView.setNeedsDisplay(polarDragView.bounds)
     }
     
 }

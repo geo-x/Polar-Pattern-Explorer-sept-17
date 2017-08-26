@@ -20,15 +20,7 @@ class CartesianDrag: NSView {
     
     
     
-    override func mouseDown(with event: NSEvent) {
-        Swift.print("mousedown")
-    }
-    override func keyDown(with event: NSEvent) {
-        
-        
-            Swift.print("key pressed")
-       
-    }
+
     
     
     
@@ -43,7 +35,7 @@ class CartesianDrag: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        Swift.print(self)
+        //Swift.print(self)
         
         
        //let testShapeLayer = CAShapeLayer()
@@ -63,7 +55,7 @@ class CartesianDrag: NSView {
         testShapeLayer.position = CGPoint(x: 0, y: 0)
         
          self.layer?.addSublayer(testShapeLayer)
-        Swift.print(testShapeLayer)
+        //Swift.print(testShapeLayer)
         
         
         
