@@ -997,7 +997,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField identifier="angleLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yap-YV-EoO" userLabel="resultLabel">
-                                            <rect key="frame" x="242" y="72" width="29" height="17"/>
+                                            <rect key="frame" x="239" y="72" width="37" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.00" id="8VQ-ZX-wS4" userLabel="360">
                                                 <font key="font" metaFont="system"/>

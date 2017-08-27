@@ -9,7 +9,11 @@
 import Cocoa
 
 
-@IBDesignable
+//@IBDesignable
+
+var resultantArray: Array = [Float](repeating: 0.0, count: 360)
+
+
 
 class CartesianViewRes: NSView {
 
@@ -21,7 +25,7 @@ class CartesianViewRes: NSView {
         
         let centreOfView: CGPoint = CGPoint(x:self.bounds.width / 2 , y: self.bounds.height / 2)
         
-        var resultantArray: Array = [Float](repeating: 0.0, count: 360)
+        
         
         for i in 0...359{
             
@@ -30,7 +34,7 @@ class CartesianViewRes: NSView {
             
         }
         
-        var thisResultantArrayValue: CGFloat = CGFloat((resultantArray [0]) as Float) //get zero index value for use in start point
+       var thisResultantArrayValue: CGFloat = CGFloat((resultantArray [0]) as Float) //get zero index value for use in start point
         
         let resulatantStartPoint: CGPoint = CGPoint(x:self.bounds.origin.x, y: thisResultantArrayValue * CGFloat(scaleFactor) + centreOfView.y)
         
@@ -77,6 +81,13 @@ class CartesianViewRes: NSView {
         
         
         // Drawing code here.
+//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+        
+        let name = Notification.Name(rawValue:"orientBiNotification")
+        NotificationCenter.default.post(name: name, object: nil)
+        
+        
+//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
     }
 
     

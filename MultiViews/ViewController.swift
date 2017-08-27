@@ -10,9 +10,12 @@ import Cocoa
 
 
 
+//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 
 
 
+
+//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 
 var radioButtonPressed: Bool = true
 
@@ -24,13 +27,10 @@ var radioButtonPressed: Bool = true
 
 
 
-
 class ViewController: NSViewController {
     
     
-   
-    
-    
+
     
     
     
@@ -77,9 +77,28 @@ class ViewController: NSViewController {
     
        override func viewDidLoad() {
         super.viewDidLoad()
-       //view.window?.makeFirstResponder(self)  // Harry Ng day 43 video
-
-//print(omni.sensitivityValues)
+        
+        //ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name(rawValue:"orientBiNotification"), object: nil, queue: nil) {notification in
+            Swift.print("notified")
+            
+            
+            let resultFormatter = NumberFormatter()
+            resultFormatter.minimumIntegerDigits = 1
+            resultFormatter.maximumFractionDigits = 2
+            
+            let resultForLabel = resultFormatter.string(from:NSNumber(value: resultantArray[Int(self.angleLabel.stringValue)!] ))
+            //let resultForLabel = resultFormatter.string(from:NSNumber(value: resultantArray[Int(biDirectional.micOrientationAngle)] ))
+            self.resultLabel.stringValue = resultForLabel!
+            
+            
+            
+            //self.resultLabel.stringValue = String(resultantArray[Int(biDirectional.micOrientationAngle)])
+        }
+        
+        
+        //ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
     
        
     }
@@ -135,7 +154,8 @@ class ViewController: NSViewController {
             polarViewBi.setNeedsDisplay(polarView.bounds)
             cartesianViewRes.setNeedsDisplay(cartesianViewRes.bounds)
             polarViewRes.setNeedsDisplay(polarViewRes.bounds)
-    }
+        
+             }
  
     
     //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
@@ -242,6 +262,8 @@ class ViewController: NSViewController {
         presetPointerView.setNeedsDisplay(presetPointerView.bounds)
         
         radioButtonPressed = false
+        
+        
     }
     
     
@@ -281,14 +303,21 @@ class ViewController: NSViewController {
         
         angleLabel.stringValue = angleForLabel!
         
-        //angleLabel.stringValue = String(sender.floatValue)
         
+        let resultFormatter = NumberFormatter()
+        resultFormatter.minimumIntegerDigits = 1
+        resultFormatter.maximumFractionDigits = 2
         
-        // cartesianDragView doesn't need set needs display call because CALayer is called in this event handler??
-        //cartesianDragView.setNeedsDisplay(cartesianDragView.bounds)
+        let resultForLabel = resultFormatter.string(from:NSNumber(value: resultantArray[Int(sender.floatValue)] ))
+        resultLabel.stringValue = resultForLabel!
+        //resultLabel.stringValue = String(resultantArray[Int(sender.floatValue)])
+        
+      
         
         polarDragView.setNeedsDisplay(polarDragView.bounds)
     }
+    
+    
     
 }
 

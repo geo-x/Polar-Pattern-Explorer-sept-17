@@ -17,7 +17,7 @@
 		5E342AE11F3AC358007FA265 /* CartesianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AE01F3AC358007FA265 /* CartesianView.swift */; };
 		5E732A751F4A4BD9000680AE /* CartesianDrag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E732A741F4A4BD9000680AE /* CartesianDrag.swift */; };
 		5E732A771F4BCB69000680AE /* PresetPointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E732A761F4BCB69000680AE /* PresetPointerView.swift */; };
-		5E78E1F01F464FF100BCB9AB /* cartesianViewBi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1EF1F464FF100BCB9AB /* cartesianViewBi.swift */; };
+		5E78E1F01F464FF100BCB9AB /* CartesianViewBi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1EF1F464FF100BCB9AB /* CartesianViewBi.swift */; };
 		5E78E1F21F46601000BCB9AB /* PolarViewBi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1F11F46601000BCB9AB /* PolarViewBi.swift */; };
 		5E78E1F41F467A3300BCB9AB /* CartesianViewRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1F31F467A3300BCB9AB /* CartesianViewRes.swift */; };
 		5E78E1F61F46AE7600BCB9AB /* PolarViewRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78E1F51F46AE7600BCB9AB /* PolarViewRes.swift */; };
@@ -61,7 +61,7 @@
 		5E342AE01F3AC358007FA265 /* CartesianView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartesianView.swift; sourceTree = "<group>"; };
 		5E732A741F4A4BD9000680AE /* CartesianDrag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartesianDrag.swift; sourceTree = "<group>"; };
 		5E732A761F4BCB69000680AE /* PresetPointerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetPointerView.swift; sourceTree = "<group>"; };
-		5E78E1EF1F464FF100BCB9AB /* cartesianViewBi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cartesianViewBi.swift; sourceTree = "<group>"; };
+		5E78E1EF1F464FF100BCB9AB /* CartesianViewBi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartesianViewBi.swift; sourceTree = "<group>"; };
 		5E78E1F11F46601000BCB9AB /* PolarViewBi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarViewBi.swift; sourceTree = "<group>"; };
 		5E78E1F31F467A3300BCB9AB /* CartesianViewRes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartesianViewRes.swift; sourceTree = "<group>"; };
 		5E78E1F51F46AE7600BCB9AB /* PolarViewRes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarViewRes.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				5E8694401F411600000B94ED /* GridCartesianView.swift */,
 				5E732A741F4A4BD9000680AE /* CartesianDrag.swift */,
 				5E342AE01F3AC358007FA265 /* CartesianView.swift */,
-				5E78E1EF1F464FF100BCB9AB /* cartesianViewBi.swift */,
+				5E78E1EF1F464FF100BCB9AB /* CartesianViewBi.swift */,
 				5E78E1F31F467A3300BCB9AB /* CartesianViewRes.swift */,
 				5E1295ED1F4145DF00C261F5 /* GridPolarView.swift */,
 				5EB16C711F41B6B700FA7882 /* PolarView.swift */,
@@ -293,7 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E78E1F61F46AE7600BCB9AB /* PolarViewRes.swift in Sources */,
-				5E78E1F01F464FF100BCB9AB /* cartesianViewBi.swift in Sources */,
+				5E78E1F01F464FF100BCB9AB /* CartesianViewBi.swift in Sources */,
 				5E342AB81F3AC2BE007FA265 /* ViewController.swift in Sources */,
 				5E1295EE1F4145DF00C261F5 /* GridPolarView.swift in Sources */,
 				5EB16C721F41B6B700FA7882 /* PolarView.swift in Sources */,
