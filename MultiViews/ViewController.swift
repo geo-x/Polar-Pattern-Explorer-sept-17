@@ -24,8 +24,18 @@ var radioButtonPressed: Bool = true
  var biDirectional: PolarPattern = PolarPattern(pressureOp: 0.0, pressureGrad: 1.0, gain: 0.5, orientation: 0)
 
 
-
-
+open class CustomLabel : NSTextField {
+    @IBInspectable open var characterSpacing:CGFloat = 1 {
+        didSet {
+            let attributedString = NSMutableAttributedString(string: self.stringValue)
+            attributedString.addAttribute(NSKernAttributeName, value: self.characterSpacing, range: NSRange(location: 0, length: attributedString.length))
+            
+            self.attributedStringValue = attributedString
+            
+        }
+        
+    }
+}
 
 class ViewController: NSViewController {
     
@@ -71,12 +81,19 @@ class ViewController: NSViewController {
     @IBOutlet weak var angleLabel: NSTextField!
     @IBOutlet weak var resultLabel: NSTextField!
     
-    
+    // cartesian grid labels
+    @IBOutlet weak var sensitivityAxis: NSTextField!
     
     
     
        override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+      sensitivityAxis.frameRotation = 90
+        sensitivityAxis = CustomLabel()
+        
+     
         
         //ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
         

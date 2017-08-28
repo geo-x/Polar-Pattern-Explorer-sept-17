@@ -1008,6 +1008,20 @@
                                     </subviews>
                                 </view>
                             </box>
+                            <textField identifier="sensitivityAxis" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uT-dJ-YuC" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="70" y="403" width="259" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RELATIVE SENSITIVITY" id="N7M-KA-gNj">
+                                    <font key="font" metaFont="system" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -1032,6 +1046,7 @@
                         <outlet property="polarViewRes" destination="BgT-a2-cAU" id="rhk-h3-mQs"/>
                         <outlet property="presetPointerView" destination="0Yy-GB-tLB" id="dJW-Zr-jYh"/>
                         <outlet property="resultLabel" destination="yap-YV-EoO" id="tzg-4D-srD"/>
+                        <outlet property="sensitivityAxis" destination="4uT-dJ-YuC" id="LRE-T2-eLX"/>
                         <outlet property="subRadio" destination="wa2-A0-AEK" id="65N-Bg-4zW"/>
                         <outlet property="superRadio" destination="Emc-WU-9MK" id="0CM-ZG-Gxr"/>
                     </connections>
