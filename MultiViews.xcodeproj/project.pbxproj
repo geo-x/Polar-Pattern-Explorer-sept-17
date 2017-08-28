@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E1295EE1F4145DF00C261F5 /* GridPolarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1295ED1F4145DF00C261F5 /* GridPolarView.swift */; };
+		5E1BE94F1F53DD3400DF8C98 /* a song for jennifer.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E1BE94E1F53DC3600DF8C98 /* a song for jennifer.ttf */; };
 		5E342AB61F3AC2BE007FA265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AB51F3AC2BE007FA265 /* AppDelegate.swift */; };
 		5E342AB81F3AC2BE007FA265 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E342AB71F3AC2BE007FA265 /* ViewController.swift */; };
 		5E342ABA1F3AC2BE007FA265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E342AB91F3AC2BE007FA265 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		5E1295ED1F4145DF00C261F5 /* GridPolarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPolarView.swift; sourceTree = "<group>"; };
+		5E1BE94E1F53DC3600DF8C98 /* a song for jennifer.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "a song for jennifer.ttf"; sourceTree = "<group>"; };
 		5E342AB21F3AC2BE007FA265 /* MultiViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E342AB51F3AC2BE007FA265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E342AB71F3AC2BE007FA265 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E1BE94D1F53DB5E00DF8C98 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		5E342AA91F3AC2BE007FA265 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +137,7 @@
 				5E78E1EF1F464FF100BCB9AB /* CartesianViewBi.swift */,
 				5E78E1F31F467A3300BCB9AB /* CartesianViewRes.swift */,
 				5E1295ED1F4145DF00C261F5 /* GridPolarView.swift */,
+				5E1BE94E1F53DC3600DF8C98 /* a song for jennifer.ttf */,
 				5EB16C711F41B6B700FA7882 /* PolarView.swift */,
 				5E78E1F11F46601000BCB9AB /* PolarViewBi.swift */,
 				5E78E1F51F46AE7600BCB9AB /* PolarViewRes.swift */,
@@ -136,6 +146,7 @@
 				5E732A761F4BCB69000680AE /* PresetPointerView.swift */,
 				5EE0BCE71F53A67B00BA3A34 /* CustomLabel.swift */,
 				5E342AB91F3AC2BE007FA265 /* Assets.xcassets */,
+				5E1BE94D1F53DB5E00DF8C98 /* Resources */,
 				5E342ABB1F3AC2BE007FA265 /* Main.storyboard */,
 				5E342ABE1F3AC2BE007FA265 /* Info.plist */,
 			);
@@ -271,6 +282,7 @@
 			files = (
 				5E342ABA1F3AC2BE007FA265 /* Assets.xcassets in Resources */,
 				5E342ABD1F3AC2BE007FA265 /* Main.storyboard in Resources */,
+				5E1BE94F1F53DD3400DF8C98 /* a song for jennifer.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

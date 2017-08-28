@@ -79,7 +79,7 @@ class ViewController: NSViewController {
         
         
       sensitivityAxis.frameRotation = 90
-        sensitivityAxis = CustomLabel()
+        //sensitivityAxis = CustomLabel()
         
      
         

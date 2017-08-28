@@ -63,7 +63,7 @@ class GridCartesianView: NSView {
         // now axis highlights
         
         let axisPath = NSBezierPath() //grid and axis lines
-        axisPath.move(to: NSPoint(x: self.bounds.origin.x  , y: self.bounds.origin.y))
+        axisPath.move(to: NSPoint(x: self.bounds.origin.x  , y: self.bounds.origin.y ))
         
         axisPath.line(to: NSPoint(x: self.bounds.origin.x , y: self.bounds.origin.y + self.bounds.size.height ))
         
@@ -78,9 +78,9 @@ class GridCartesianView: NSView {
         
         for i in stride(from: 0, through: xDivisions, by: 6){
             
-            axisPath.move(to: NSPoint(x: ((self.bounds.width / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y))
+            axisPath.move(to: NSPoint(x: ((self.bounds.width / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y + 15))
             
-            axisPath.line(to: NSPoint(x: ((self.bounds.width / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y + self.bounds.size.height ))
+            axisPath.line(to: NSPoint(x: ((self.bounds.width / CGFloat(xDivisions)) * CGFloat(i)) , y: self.bounds.origin.y + self.bounds.size.height - 15  ))
         }
         
         
@@ -88,7 +88,7 @@ class GridCartesianView: NSView {
         
         //let axisColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 1)
         axisColor.setStroke()
-        axisPath.lineWidth = 0.5
+        axisPath.lineWidth = 0.75
         axisPath.stroke()
         
         //x-x-x-x-x-x-x-x-x-x--x
