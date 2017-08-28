@@ -24,6 +24,7 @@
 		5E8694411F411600000B94ED /* GridCartesianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8694401F411600000B94ED /* GridCartesianView.swift */; };
 		5EB16C721F41B6B700FA7882 /* PolarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB16C711F41B6B700FA7882 /* PolarView.swift */; };
 		5EE0BCE01F50DFD600BA3A34 /* PolarDragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0BCDF1F50DFD600BA3A34 /* PolarDragView.swift */; };
+		5EE0BCE81F53A67B00BA3A34 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0BCE71F53A67B00BA3A34 /* CustomLabel.swift */; };
 		5EF6B6521F3D2B9100496F7D /* PolarPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		5E8694401F411600000B94ED /* GridCartesianView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCartesianView.swift; sourceTree = "<group>"; };
 		5EB16C711F41B6B700FA7882 /* PolarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarView.swift; sourceTree = "<group>"; };
 		5EE0BCDF1F50DFD600BA3A34 /* PolarDragView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarDragView.swift; sourceTree = "<group>"; };
+		5EE0BCE71F53A67B00BA3A34 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomLabel.swift; path = ../CustomLabel.swift; sourceTree = "<group>"; };
 		5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				5EE0BCDF1F50DFD600BA3A34 /* PolarDragView.swift */,
 				5EF6B6511F3D2B9100496F7D /* PolarPattern.swift */,
 				5E732A761F4BCB69000680AE /* PresetPointerView.swift */,
+				5EE0BCE71F53A67B00BA3A34 /* CustomLabel.swift */,
 				5E342AB91F3AC2BE007FA265 /* Assets.xcassets */,
 				5E342ABB1F3AC2BE007FA265 /* Main.storyboard */,
 				5E342ABE1F3AC2BE007FA265 /* Info.plist */,
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E78E1F61F46AE7600BCB9AB /* PolarViewRes.swift in Sources */,
+				5EE0BCE81F53A67B00BA3A34 /* CustomLabel.swift in Sources */,
 				5E78E1F01F464FF100BCB9AB /* CartesianViewBi.swift in Sources */,
 				5E342AB81F3AC2BE007FA265 /* ViewController.swift in Sources */,
 				5E1295EE1F4145DF00C261F5 /* GridPolarView.swift in Sources */,
