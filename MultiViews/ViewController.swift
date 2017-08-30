@@ -44,6 +44,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var polarViewBi: PolarViewBi!
     @IBOutlet weak var polarViewRes: PolarViewRes!
     @IBOutlet weak var polarDragView: PolarDragView!
+    @IBOutlet weak var omniAxisPointerView: OmniAxisPointer!
     
     
     
@@ -138,6 +139,9 @@ class ViewController: NSViewController {
         polarView.setNeedsDisplay(polarView.bounds)
         cartesianViewRes.setNeedsDisplay(cartesianViewRes.bounds)
         polarViewRes.setNeedsDisplay(polarViewRes.bounds)
+        
+        omniAngle = sender.floatValue
+        omniAxisPointerView.setNeedsDisplay(omniAxisPointerView.bounds)
         //Swift.print(biDirectional.micOrientationAngle.didSet)
     }
     

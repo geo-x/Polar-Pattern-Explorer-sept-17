@@ -1229,6 +1229,7 @@
                         <outlet property="cartesianViewBi" destination="May-mV-Dar" id="kjJ-Sr-VF5"/>
                         <outlet property="cartesianViewRes" destination="JBf-Ky-GGN" id="b5j-ua-dZc"/>
                         <outlet property="hyperRadio" destination="qYd-Fc-biN" id="wpm-24-gOG"/>
+                        <outlet property="omniAxisPointerView" destination="mD8-Bh-Nxo" id="Tbc-By-YIf"/>
                         <outlet property="omniComponentSliderOut" destination="M4G-nX-nFF" id="fVG-Tp-l77"/>
                         <outlet property="omniFaderLabel" destination="rQ1-Mn-sz5" id="jzo-G4-Nsq"/>
                         <outlet property="omniRadio" destination="jJz-N8-OAl" id="Nju-e1-8VL"/>

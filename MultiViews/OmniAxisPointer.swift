@@ -9,7 +9,7 @@
 import Cocoa
 
 let omniPointerLayer = CAShapeLayer()
-
+var omniAngle:Float = 0
 
 
 
@@ -23,9 +23,13 @@ class OmniAxisPointer: NSView {
         super.draw(dirtyRect)
         
         
+        // note uses extension below to convert NSBesier to GCPath
+        omniPointerLayer.path = createBezierPath().CGPath
+        
         centrePoint.x = CGFloat(frame.size.width) / 2.0
         centrePoint.y = CGFloat(frame.size.height) / 2.0
         omniPointerLayer.path = createBezierPath().CGPath
+        
         omniPointerLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         omniPointerLayer.position = CGPoint(x: centrePoint.x, y: centrePoint.y)
         omniPointerLayer.bounds = NSRect(x: 0, y: 0, width: 360, height: 330)
@@ -34,6 +38,10 @@ class OmniAxisPointer: NSView {
         omniPointerLayer.strokeColor = NSColor.green.cgColor
         omniPointerLayer.fillColor = NSColor.green.cgColor
         omniPointerLayer.lineWidth = 2.0
+        
+        omniPointerLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(Int(omniAngle).degreesToRadians) ))
+        
+        
 
         self.layer?.addSublayer(omniPointerLayer)
         
