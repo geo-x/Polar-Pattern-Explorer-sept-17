@@ -687,67 +687,53 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MultiViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="839"/>
                         <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mD8-Bh-Nxo" userLabel="omniAxisPointerView" customClass="OmniAxisPointer" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="352" width="360" height="330"/>
+                                <rect key="frame" x="575" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjq-YG-Pmf" userLabel="polarGridView" customClass="GridPolarView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="352" width="360" height="330"/>
+                                <rect key="frame" x="575" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BgT-a2-cAU" userLabel="polarViewRes" customClass="PolarViewRes" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="352" width="360" height="330"/>
+                                <rect key="frame" x="575" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uhy-Ht-jdX" userLabel="polarView" customClass="PolarView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="352" width="360" height="330"/>
+                                <rect key="frame" x="575" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Se-ID-l2Y" userLabel="polarViewBi" customClass="PolarViewBi" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="352" width="360" height="330"/>
+                                <rect key="frame" x="575" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9V1-hZ-nnZ" userLabel="polarDrag" customClass="PolarDragView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="352" width="360" height="330"/>
+                                <rect key="frame" x="575" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-sd-AEu" userLabel="cartesianGridView" customClass="GridCartesianView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="352" width="360" height="330"/>
+                                <rect key="frame" x="80" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBf-Ky-GGN" userLabel="cartesianViewRes" customClass="CartesianViewRes" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="352" width="360" height="330"/>
+                                <rect key="frame" x="80" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-Zc-7nf" userLabel="cartesianView" customClass="CartesianView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="352" width="360" height="330"/>
+                                <rect key="frame" x="80" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="May-mV-Dar" userLabel="cartesianViewBi" customClass="cartesianViewBi" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="352" width="360" height="330"/>
+                                <rect key="frame" x="80" y="422" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9T-i5-N7h" userLabel="cartesianDrag" customClass="CartesianDrag" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="60" y="332" width="400" height="370"/>
+                                <rect key="frame" x="60" y="402" width="400" height="370"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <textField identifier="angleOfArrivalLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-Se-Nbt" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
-                                        <rect key="frame" x="121" y="0.0" width="196" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ANGLE OF ARRIVAL" id="DOk-4T-TpC">
-                                            <font key="font" size="9" name="Avenir-Book"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
                                     <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" transparent="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pl4-Au-tDQ" userLabel="angles cart">
                                         <rect key="frame" x="-3" y="-4" width="398" height="73"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -881,6 +867,20 @@
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
+                                                <textField identifier="angleOfArrivalLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-Se-Nbt" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
+                                                    <rect key="frame" x="136" y="0.0" width="196" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ANGLE OF ARRIVAL" id="DOk-4T-TpC">
+                                                        <font key="font" size="9" name="Avenir-Book"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
                                             </subviews>
                                         </view>
                                     </box>
@@ -923,11 +923,11 @@
                                 </subviews>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Yy-GB-tLB" userLabel="presetPointerView" customClass="PresetPointerView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="58" y="93" width="45" height="196"/>
+                                <rect key="frame" x="58" y="163" width="45" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="XkC-ed-CXh">
-                                <rect key="frame" x="77" y="71" width="154" height="243"/>
+                                <rect key="frame" x="77" y="141" width="154" height="243"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="zlo-rU-F6B">
                                     <rect key="frame" x="1" y="1" width="152" height="227"/>
@@ -1003,7 +1003,7 @@
                                 </view>
                             </box>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-dA-U2S" userLabel="mic1_orientation">
-                                <rect key="frame" x="78" y="38" width="216" height="19"/>
+                                <rect key="frame" x="78" y="108" width="216" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" sliderType="linear" id="Fml-py-5dQ"/>
                                 <connections>
@@ -1011,7 +1011,7 @@
                                 </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-ki-bgb" userLabel="mic2_orientation">
-                                <rect key="frame" x="78" y="-2" width="216" height="19"/>
+                                <rect key="frame" x="78" y="68" width="216" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" sliderType="linear" id="cFu-Py-dTW"/>
                                 <connections>
@@ -1019,7 +1019,7 @@
                                 </connections>
                             </slider>
                             <slider identifier="omSlider" horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4G-nX-nFF">
-                                <rect key="frame" x="270" y="100" width="19" height="171"/>
+                                <rect key="frame" x="270" y="170" width="19" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="E8s-zA-HoB"/>
                                 <connections>
@@ -1027,7 +1027,7 @@
                                 </connections>
                             </slider>
                             <slider wantsLayer="YES" horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Atj-on-b8q">
-                                <rect key="frame" x="330" y="100" width="19" height="171"/>
+                                <rect key="frame" x="330" y="170" width="19" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="2Vf-IX-usY"/>
                                 <connections>
@@ -1035,7 +1035,7 @@
                                 </connections>
                             </slider>
                             <textField identifier="PGValue" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-cE-pAJ">
-                                <rect key="frame" x="330" y="75" width="37" height="17"/>
+                                <rect key="frame" x="330" y="145" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0.50" id="Szg-GO-Az0">
                                     <font key="font" metaFont="system"/>
@@ -1044,7 +1044,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfj-Pa-b84">
-                                <rect key="frame" x="275" y="286" width="37" height="17"/>
+                                <rect key="frame" x="275" y="356" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="P" id="4mH-6c-xHa">
                                     <font key="font" metaFont="system"/>
@@ -1053,7 +1053,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1H-bw-UU9">
-                                <rect key="frame" x="330" y="286" width="37" height="17"/>
+                                <rect key="frame" x="330" y="356" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="G" id="huT-Pj-9rk">
                                     <font key="font" metaFont="system"/>
@@ -1062,7 +1062,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField identifier="PValue" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-Mn-sz5">
-                                <rect key="frame" x="270" y="75" width="37" height="17"/>
+                                <rect key="frame" x="270" y="145" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="0.50" id="CmK-Q2-zLq">
                                     <font key="font" metaFont="system"/>
@@ -1071,7 +1071,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlI-Cr-z5u">
-                                <rect key="frame" x="267" y="268" width="37" height="17"/>
+                                <rect key="frame" x="267" y="338" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="omni" id="V5H-AT-mTj">
                                     <font key="font" metaFont="system" size="10"/>
@@ -1080,16 +1080,16 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbK-zB-xnA">
-                                <rect key="frame" x="325" y="268" width="37" height="17"/>
+                                <rect key="frame" x="332" y="338" width="37" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="fig 8" id="Dc6-r9-NoH">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Bi" id="Dc6-r9-NoH">
                                     <font key="font" metaFont="system" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6e-ox-eyf">
-                                <rect key="frame" x="194" y="692" width="132" height="24"/>
+                                <rect key="frame" x="194" y="762" width="132" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Cartesian Graph" id="f4v-lf-ZMb">
                                     <font key="font" size="14" name="Avenir-Book"/>
@@ -1098,7 +1098,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField identifier="sensitivityAxis" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uT-dJ-YuC" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="75" y="408" width="259" height="17"/>
+                                <rect key="frame" x="75" y="478" width="259" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RELATIVE SENSITIVITY" allowsEditingTextAttributes="YES" id="N7M-KA-gNj">
                                     <font key="font" size="9" name="Avenir-Book"/>
@@ -1112,7 +1112,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMM-Fy-6NN">
-                                <rect key="frame" x="694" y="692" width="122" height="23"/>
+                                <rect key="frame" x="694" y="762" width="122" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Polar Graph" id="Ant-ze-Fpe">
                                     <font key="font" size="14" name="Avenir-Book"/>
@@ -1121,7 +1121,7 @@
                                 </textFieldCell>
                             </textField>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" titlePosition="belowTop" translatesAutoresizingMaskIntoConstraints="NO" id="p15-bl-vwA">
-                                <rect key="frame" x="613" y="24" width="285" height="263"/>
+                                <rect key="frame" x="613" y="94" width="285" height="263"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="uEZ-b1-YVx">
                                     <rect key="frame" x="1" y="1" width="283" height="245"/>
@@ -1223,6 +1223,34 @@
                                     </subviews>
                                 </view>
                             </box>
+                            <textField identifier="angleOfArrivalLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-gf-MkF" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="98" y="98" width="196" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Omni Orientation Angle" id="Rpg-9b-nai">
+                                    <font key="font" size="10" name="Avenir-Book"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField identifier="angleOfArrivalLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5S-Rk-RdK" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="98" y="60" width="196" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bi Orientation Angle" id="mUt-T0-mQe">
+                                    <font key="font" size="10" name="Avenir-Book"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -1256,7 +1284,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66" y="373.5"/>
+            <point key="canvasLocation" x="66" y="408.5"/>
         </scene>
     </scenes>
 </document>

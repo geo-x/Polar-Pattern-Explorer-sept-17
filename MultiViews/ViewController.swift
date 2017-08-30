@@ -86,7 +86,7 @@ class ViewController: NSViewController {
         //**********************************************************************************************
     
         
-        let symbolLabelAtrributed = NSMutableAttributedString(string: "where \n S = sensitivity \n P = Pressure operated component\n G = Pressure gradient component\n ⍺ = Angle of arrival")
+        let symbolLabelAtrributed = NSMutableAttributedString(string: "where:- \n S = Sensitivity \n P = Pressure operated component\n G = Pressure gradient component\n ⍺ = Angle of arrival")
         
         let paragraphStyle = NSMutableParagraphStyle()
         
