@@ -11,13 +11,14 @@ import Cocoa
 let cursorShapeLayer = CAShapeLayer()
 var rotationAngle: Float = 0
 
-var centrePoint = NSPoint(x: 0, y: 0)
+//var centrePoint = NSPoint(x: 0, y: 0)
 
 class PolarDragView: NSView {
     
+    var centrePoint = NSPoint(x: 0, y: 0)
     
-    let cursorShape = NSBezierPath()
-    var dragCircle = NSBezierPath()
+    //let cursorShape = NSBezierPath()
+    //var dragCircle = NSBezierPath()
     
 
     override func draw(_ dirtyRect: NSRect) {

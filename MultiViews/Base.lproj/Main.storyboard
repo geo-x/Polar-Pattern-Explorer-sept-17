@@ -710,6 +710,10 @@
                                 <rect key="frame" x="575" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mD8-Bh-Nxo" userLabel="omniAxisPointerView" customClass="OmniAxisPointer" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="575" y="352" width="360" height="330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-sd-AEu" userLabel="cartesianGridView" customClass="GridCartesianView" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="80" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>

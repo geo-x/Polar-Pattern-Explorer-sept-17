@@ -17,7 +17,7 @@
                BlueprintIdentifier = "5E342AB11F3AC2BE007FA265"
                BuildableName = "MultiViews.app"
                BlueprintName = "MultiViews"
-               ReferencedContainer = "container:MultiViews.xcodeproj">
+               ReferencedContainer = "container:Polar Pattern.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "5E342AC21F3AC2BE007FA265"
                BuildableName = "MultiViewsTests.xctest"
                BlueprintName = "MultiViewsTests"
-               ReferencedContainer = "container:MultiViews.xcodeproj">
+               ReferencedContainer = "container:Polar Pattern.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "5E342ACD1F3AC2BE007FA265"
                BuildableName = "MultiViewsUITests.xctest"
                BlueprintName = "MultiViewsUITests"
-               ReferencedContainer = "container:MultiViews.xcodeproj">
+               ReferencedContainer = "container:Polar Pattern.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "5E342AB11F3AC2BE007FA265"
             BuildableName = "MultiViews.app"
             BlueprintName = "MultiViews"
-            ReferencedContainer = "container:MultiViews.xcodeproj">
+            ReferencedContainer = "container:Polar Pattern.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "5E342AB11F3AC2BE007FA265"
             BuildableName = "MultiViews.app"
             BlueprintName = "MultiViews"
-            ReferencedContainer = "container:MultiViews.xcodeproj">
+            ReferencedContainer = "container:Polar Pattern.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "5E342AB11F3AC2BE007FA265"
             BuildableName = "MultiViews.app"
             BlueprintName = "MultiViews"
-            ReferencedContainer = "container:MultiViews.xcodeproj">
+            ReferencedContainer = "container:Polar Pattern.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
