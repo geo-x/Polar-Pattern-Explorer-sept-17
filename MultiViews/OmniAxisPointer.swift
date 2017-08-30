@@ -9,8 +9,10 @@
 import Cocoa
 
 let omniPointerLayer = CAShapeLayer()
-var omniAngle:Float = 0
+let biPointerLayer =   CAShapeLayer()
 
+var omniAngle:Float = 0
+var biAngle:Float = 0
 
 
 class OmniAxisPointer: NSView {
@@ -22,9 +24,11 @@ class OmniAxisPointer: NSView {
         
         super.draw(dirtyRect)
         
-        
-        // note uses extension below to convert NSBesier to GCPath
-        omniPointerLayer.path = createBezierPath().CGPath
+        // ********************************************
+        // ***** set up omni pointer stuff ************
+        // ********************************************
+       
+        omniPointerLayer.path = createBezierPath().CGPath   // note uses extension below to convert NSBesier to GCPath
         
         centrePoint.x = CGFloat(frame.size.width) / 2.0
         centrePoint.y = CGFloat(frame.size.height) / 2.0
@@ -34,16 +38,66 @@ class OmniAxisPointer: NSView {
         omniPointerLayer.position = CGPoint(x: centrePoint.x, y: centrePoint.y)
         omniPointerLayer.bounds = NSRect(x: 0, y: 0, width: 360, height: 330)
         
-        
+        // ********************************************
+        // ***** stroke omni pointer ******************
+        // ********************************************
         omniPointerLayer.strokeColor = NSColor.green.cgColor
         omniPointerLayer.fillColor = NSColor.green.cgColor
         omniPointerLayer.lineWidth = 2.0
+         omniPointerLayer.speed = 10
+         self.layer?.addSublayer(omniPointerLayer)
         
+        
+        // ********************************************
+        // ***** control rotation omni pointer ********
+        // ********************************************
         omniPointerLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(Int(omniAngle).degreesToRadians) ))
         
         
+        //***********************************************************************************************************
+        //********** same process for bi pointer  *******************************************************************
+        //***********************************************************************************************************
+        
+        
+        // ********************************************
+        // ***** set up bi pointer stuff ************
+        // ********************************************
+        
+        biPointerLayer.path = createBezierPath().CGPath   // note uses extension below to convert NSBesier to GCPath
+        
+        centrePoint.x = CGFloat(frame.size.width) / 2.0
+        centrePoint.y = CGFloat(frame.size.height) / 2.0
+        biPointerLayer.path = createBezierPath().CGPath
+        
+        biPointerLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        biPointerLayer.position = CGPoint(x: centrePoint.x, y: centrePoint.y)
+        biPointerLayer.bounds = NSRect(x: 0, y: 0, width: 360, height: 330)
+        
+        // ********************************************
+        // ***** stroke omni pointer ******************
+        // ********************************************
+        biPointerLayer.strokeColor = NSColor.red.cgColor
+        biPointerLayer.fillColor = NSColor.red.cgColor
+        biPointerLayer.lineWidth = 2.0
+        biPointerLayer.speed = 10
+        self.layer?.addSublayer(biPointerLayer)
+        
+        
+        // ********************************************
+        // ***** control rotation omni pointer ********
+        // ********************************************
+        biPointerLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(Int(biAngle).degreesToRadians) ))
 
-        self.layer?.addSublayer(omniPointerLayer)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         // Drawing code here.
     }
@@ -68,7 +122,7 @@ class OmniAxisPointer: NSView {
 //        pointerShape.close()
         
         // **************************
-        // ***** cursor line ********
+        // ***** omni pointer ********
         // **************************
         
           let scaleFactor:CGFloat = 150

@@ -164,6 +164,9 @@ class ViewController: NSViewController {
             cartesianViewRes.setNeedsDisplay(cartesianViewRes.bounds)
             polarViewRes.setNeedsDisplay(polarViewRes.bounds)
         
+            biAngle = sender.floatValue
+            omniAxisPointerView.setNeedsDisplay(omniAxisPointerView.bounds) //this uses same view as omni angle pointer
+        
              }
  
     
