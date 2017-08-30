@@ -21,4 +21,10 @@ open class CustomLabel : NSTextField {
         }
         
     }
+    
+  
+    
+    
+    
+    
 }

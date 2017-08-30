@@ -52,7 +52,7 @@
 		5E1BE94E1F53DC3600DF8C98 /* a song for jennifer.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "a song for jennifer.ttf"; sourceTree = "<group>"; };
 		5E342AB21F3AC2BE007FA265 /* MultiViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E342AB51F3AC2BE007FA265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E342AB71F3AC2BE007FA265 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E342AB71F3AC2BE007FA265 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 1; };
 		5E342AB91F3AC2BE007FA265 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E342ABC1F3AC2BE007FA265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E342ABE1F3AC2BE007FA265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };

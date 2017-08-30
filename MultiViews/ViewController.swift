@@ -28,8 +28,9 @@ var radioButtonPressed: Bool = true
 class ViewController: NSViewController {
     
     
-
-    
+    //Text stuff
+    @IBOutlet weak var symbolDescriptions: NSTextField!
+  
     
     
     // View Outlets
@@ -77,6 +78,47 @@ class ViewController: NSViewController {
     
        override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        //**********************************************************************************************
+        //********** text formatting *******************************************************************
+        //**********************************************************************************************
+    
+        
+        let symbolLabelAtrributed = NSMutableAttributedString(string: "where \n S = sensitivity \n P = Pressure operated component\n G = Pressure gradient component\n ⍺ = Angle of arrival")
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        
+        // *** set LineSpacing property in points ***
+        paragraphStyle.lineSpacing = 1 // Whatever line spacing you want in points
+        //paragraphStyle.minimumLineHeight = 1
+        paragraphStyle.maximumLineHeight = 10
+        
+        // *** Apply attribute to string ***
+        symbolLabelAtrributed.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range:NSMakeRange(0, symbolLabelAtrributed.length))
+        symbolLabelAtrributed.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range:NSMakeRange(0, symbolLabelAtrributed.length))
+        
+        
+        symbolLabelAtrributed.addAttribute(NSKernAttributeName, value: 1, range: NSRange(location: 0, length: symbolLabelAtrributed.length - 1))
+
+        
+        // *** Set Attributed String to your label ***
+        symbolDescriptions.attributedStringValue =  symbolLabelAtrributed
+        
+        //**********************************************************************************************
+        //**********************************************************************************************
+        //**********************************************************************************************
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
       sensitivityAxis.frameRotation = 90
