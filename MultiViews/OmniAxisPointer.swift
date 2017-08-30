@@ -56,27 +56,28 @@ class OmniAxisPointer: NSView {
         let pointerShape = NSBezierPath()
         
         
-        // starting point for the path (bottom left)
-        
-        
-        let arrowStartPoint = NSPoint(x: centrePoint.x - 5, y: centrePoint.y)
-        let arrowTopPoint  = NSPoint(x: centrePoint.x, y: centrePoint.y + 30)
-        let arrowEndPoint = NSPoint(x: centrePoint.x + 5, y: centrePoint.y)
-        
-        pointerShape.move(to: arrowStartPoint)
-        pointerShape.line(to: arrowTopPoint)
-        pointerShape.line(to: arrowEndPoint)
-        pointerShape.close()
+//        // starting point for the path
+//        
+//        let arrowStartPoint = NSPoint(x: centrePoint.x - 5, y: centrePoint.y)
+//        let arrowTopPoint  = NSPoint(x: centrePoint.x, y: centrePoint.y + 30)
+//        let arrowEndPoint = NSPoint(x: centrePoint.x + 5, y: centrePoint.y)
+//        
+//        pointerShape.move(to: arrowStartPoint)
+//        pointerShape.line(to: arrowTopPoint)
+//        pointerShape.line(to: arrowEndPoint)
+//        pointerShape.close()
         
         // **************************
         // ***** cursor line ********
         // **************************
         
-        // segment 1: line
-//        let topLinePoint = CGPoint(x: centrePoint.x, y: 315)
-//        pointerShape.line(to: topLinePoint)
+          let scaleFactor:CGFloat = 150
+          let arrowTopPoint  = NSPoint(x: centrePoint.x , y: centrePoint.y + 163)
         
-       
+          pointerShape.appendArc(withCenter: centrePoint, radius: scaleFactor, startAngle: 87, endAngle: 93)
+          pointerShape.line(to: arrowTopPoint)
+          pointerShape.close()
+        
         
         
         return pointerShape
