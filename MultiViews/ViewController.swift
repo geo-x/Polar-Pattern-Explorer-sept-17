@@ -110,23 +110,17 @@ class ViewController: NSViewController {
         //**********************************************************************************************
         //**********************************************************************************************
       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        //**********************************************************************************************
+        //******** Rotated Text Labels  ****************************************************************
+ 
       sensitivityAxis.frameRotation = 90
-        //sensitivityAxis = CustomLabel()
+        // remember set labels to CustomLabel() in xib for @IBDesignable kerning / spacing attribute
         
      
         
-        //ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+        //**********************************************************************************************
+        //****** Set up Property Observer  *************************************************************
+        //**********************************************************************************************
         
         NotificationCenter.default.addObserver(forName: Notification.Name(rawValue:"orientBiNotification"), object: nil, queue: nil) {notification in
             Swift.print("notified")
@@ -146,8 +140,8 @@ class ViewController: NSViewController {
         }
         
         
-        //ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-    
+       //**********************************************************************************************
+       //*********************************************************************************************
        
     }
 //x-x-x--x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
@@ -160,9 +154,9 @@ class ViewController: NSViewController {
 
 
   
-    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    //XXXXXXXXXXXXX   Actions    XXXXXXXXXXXXXXXXX
-    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    //**********************************************************************************************
+    //********** ACTIONS ***************************************************************************
+    //**********************************************************************************************
     
     
     @IBAction func mic_1_orientation(_ sender: NSSlider) {
@@ -187,7 +181,7 @@ class ViewController: NSViewController {
         //Swift.print(biDirectional.micOrientationAngle.didSet)
     }
     
-//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    //**********************************************************************************************
 
     @IBAction func mic_2_orientation(_ sender: NSSlider) {
         
@@ -212,8 +206,8 @@ class ViewController: NSViewController {
              }
  
     
-    //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
-    //x-x-x-x-x-x- Preset Radio Buttons x-x-x-x-x-x-x-x-x-x-x
+    //**********************************************************************************************
+    //************** Preset Radio Buttons **********************************************************
     
     @IBAction func radioPatternSelected(_ sender: NSButton) {
         
@@ -230,8 +224,8 @@ class ViewController: NSViewController {
         print(Float(sender.identifier!)!)
     }
     
-    //x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
-    //x-x-x-x-x  Omni and Bi Sliders  x-x-x-x-x-x-x-x-x-x-x-x
+    //**********************************************************************************************
+    //************** Omni + Bi Sliders **********************************************************
     
     @IBAction func omniComponentSlider(_ sender: NSSlider) {
         
@@ -321,7 +315,7 @@ class ViewController: NSViewController {
     }
     
     
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    //**********************************************************************************************
     
     @IBAction func biComponentSlider(_ sender: NSSlider) {
         
@@ -332,7 +326,7 @@ class ViewController: NSViewController {
         
     }
   
-  //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    //**********************************************************************************************
     
 //    @IBAction func angleInputText(_ sender: NSTextField) {
 //        
