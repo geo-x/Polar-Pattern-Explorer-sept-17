@@ -27,6 +27,8 @@ class OmniAxisPointer: NSView {
         // ********************************************
         // ***** set up omni pointer stuff ************
         // ********************************************
+        
+        
        
         omniPointerLayer.path = createBezierPath().CGPath   // note uses extension below to convert NSBesier to GCPath
         
@@ -41,9 +43,12 @@ class OmniAxisPointer: NSView {
         // ********************************************
         // ***** stroke omni pointer ******************
         // ********************************************
-        omniPointerLayer.strokeColor = NSColor.green.cgColor
-        omniPointerLayer.fillColor = NSColor.green.cgColor
-        omniPointerLayer.lineWidth = 2.0
+        
+        omniPointerLayer.lineDashPattern = [2,3,2,3]
+        
+        omniPointerLayer.strokeColor = omniColor.cgColor
+        omniPointerLayer.fillColor = omniColor.cgColor
+        omniPointerLayer.lineWidth = 1.0
          omniPointerLayer.speed = 10
          self.layer?.addSublayer(omniPointerLayer)
         
@@ -63,7 +68,7 @@ class OmniAxisPointer: NSView {
         // ***** set up bi pointer stuff ************
         // ********************************************
         
-        biPointerLayer.path = createBezierPath().CGPath   // note uses extension below to convert NSBesier to GCPath
+       biPointerLayer.path = createBezierPath().CGPath   // note uses extension below to convert NSBesier to GCPath
         
         centrePoint.x = CGFloat(frame.size.width) / 2.0
         centrePoint.y = CGFloat(frame.size.height) / 2.0
@@ -74,17 +79,20 @@ class OmniAxisPointer: NSView {
         biPointerLayer.bounds = NSRect(x: 0, y: 0, width: 360, height: 330)
         
         // ********************************************
-        // ***** stroke omni pointer ******************
+        // ***** stroke bi pointer ******************
         // ********************************************
-        biPointerLayer.strokeColor = NSColor.red.cgColor
-        biPointerLayer.fillColor = NSColor.red.cgColor
-        biPointerLayer.lineWidth = 2.0
+        
+        biPointerLayer.lineDashPattern = [2,3,2,3]
+        
+        biPointerLayer.strokeColor =  biDirectionalColor.cgColor
+        biPointerLayer.fillColor = biDirectionalColor.cgColor
+        biPointerLayer.lineWidth = 1.0
         biPointerLayer.speed = 10
         self.layer?.addSublayer(biPointerLayer)
         
         
         // ********************************************
-        // ***** control rotation omni pointer ********
+        // ***** control rotation bi pointer ********
         // ********************************************
         biPointerLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(Int(biAngle).degreesToRadians) ))
 
@@ -126,13 +134,19 @@ class OmniAxisPointer: NSView {
         // **************************
         
           let scaleFactor:CGFloat = 150
-          let arrowTopPoint  = NSPoint(x: centrePoint.x , y: centrePoint.y + 163)
         
-          pointerShape.appendArc(withCenter: centrePoint, radius: scaleFactor, startAngle: 87, endAngle: 93)
+        
+          let arrowTopPoint  = NSPoint(x: centrePoint.x , y: centrePoint.y + 163)
+          pointerShape.move(to: centrePoint)
+          pointerShape.line(to: arrowTopPoint)
+        
+          pointerShape.appendArc(withCenter: centrePoint, radius: scaleFactor, startAngle: 89, endAngle: 91)
           pointerShape.line(to: arrowTopPoint)
           pointerShape.close()
         
-        
+//        let dashPattern : [CGFloat] = [3, 3]
+//        pointerShape.setLineDash(dashPattern, count: 2, phase: 0)
+//        pointerShape.stroke()
         
         return pointerShape
     }

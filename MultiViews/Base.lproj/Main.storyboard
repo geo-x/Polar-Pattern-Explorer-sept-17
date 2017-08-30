@@ -690,6 +690,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="769"/>
                         <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                         <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mD8-Bh-Nxo" userLabel="omniAxisPointerView" customClass="OmniAxisPointer" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="575" y="352" width="360" height="330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjq-YG-Pmf" userLabel="polarGridView" customClass="GridPolarView" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="575" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -707,10 +711,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9V1-hZ-nnZ" userLabel="polarDrag" customClass="PolarDragView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="575" y="352" width="360" height="330"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mD8-Bh-Nxo" userLabel="omniAxisPointerView" customClass="OmniAxisPointer" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="575" y="352" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
@@ -1140,7 +1140,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField identifier="angleLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEY-EY-w7h" userLabel="GcomponentLabel">
+                                        <textField identifier="GcomponentEquationLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEY-EY-w7h" userLabel="GcomponentLabel">
                                             <rect key="frame" x="93" y="73" width="29" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.5" id="vKz-cq-hF9" userLabel="360">
@@ -1149,7 +1149,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField identifier="angleLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shc-NY-Cdg" userLabel="PcomponentLabel">
+                                        <textField identifier="PcomponentEquationLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shc-NY-Cdg" userLabel="PcomponentLabel">
                                             <rect key="frame" x="48" y="73" width="29" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.5" id="qrg-Cj-CMh" userLabel="360">
@@ -1170,7 +1170,7 @@
                                                 <action selector="angleInputText:" target="XfG-lQ-9wD" id="PAY-e2-May"/>
                                             </connections>
                                         </textField>
-                                        <textField identifier="angleLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCL-qe-0PF" userLabel="angleLabel">
+                                        <textField identifier="InputAngleEquationLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCL-qe-0PF" userLabel="equationAngleLabel">
                                             <rect key="frame" x="184" y="72" width="29" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="iOj-vA-fRb" userLabel="360">
@@ -1179,7 +1179,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField identifier="angleLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yap-YV-EoO" userLabel="resultLabel">
+                                        <textField identifier="equationResultLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yap-YV-EoO" userLabel="resultLabel">
                                             <rect key="frame" x="239" y="72" width="37" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.00" id="8VQ-ZX-wS4" userLabel="360">
