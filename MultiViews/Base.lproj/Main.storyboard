@@ -680,7 +680,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="907" y="206"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -1251,6 +1251,52 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lt-1b-lLv" userLabel="PcomponentLabel">
+                                <rect key="frame" x="298" y="109" width="29" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="x9V-Yj-W2h" userLabel="360">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIk-FA-Z7R" userLabel="PcomponentLabel">
+                                <rect key="frame" x="298" y="69" width="29" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0" id="N03-Kd-bjR" userLabel="360">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvw-3S-gCD" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="330" y="108" width="53" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="degrees" id="3Ml-r6-TbQ">
+                                    <font key="font" size="10" name="Avenir-Book"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-G8-eRI" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="332" y="70" width="53" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="degrees" id="rdj-Y5-50W">
+                                    <font key="font" size="10" name="Avenir-Book"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -1259,6 +1305,7 @@
                         <outlet property="angleLabel" destination="xCL-qe-0PF" id="eBM-4c-Q6Z"/>
                         <outlet property="biComponentSliderOut" destination="Atj-on-b8q" id="xhs-2w-ir6"/>
                         <outlet property="biFaderLabel" destination="qDl-cE-pAJ" id="KXZ-L2-GVm"/>
+                        <outlet property="biOrientationLabel" destination="QIk-FA-Z7R" id="EYn-ai-ZJ0"/>
                         <outlet property="biRadio" destination="qYK-F3-QjZ" id="MEQ-96-wiq"/>
                         <outlet property="cardRadio" destination="Qex-re-7J9" id="VcH-1z-Qah"/>
                         <outlet property="cartesianDragView" destination="b9T-i5-N7h" id="uMt-7f-4d2"/>
@@ -1269,6 +1316,7 @@
                         <outlet property="omniAxisPointerView" destination="mD8-Bh-Nxo" id="Tbc-By-YIf"/>
                         <outlet property="omniComponentSliderOut" destination="M4G-nX-nFF" id="fVG-Tp-l77"/>
                         <outlet property="omniFaderLabel" destination="rQ1-Mn-sz5" id="jzo-G4-Nsq"/>
+                        <outlet property="omniOrientationLabel" destination="7lt-1b-lLv" id="zga-fd-xlN"/>
                         <outlet property="omniRadio" destination="jJz-N8-OAl" id="Nju-e1-8VL"/>
                         <outlet property="polarDragView" destination="9V1-hZ-nnZ" id="4sP-jW-dwD"/>
                         <outlet property="polarView" destination="Uhy-Ht-jdX" id="7ZD-Pt-S59"/>

@@ -62,17 +62,26 @@ class ViewController: NSViewController {
     @IBOutlet weak var biRadio: NSButton!
     
     
-    // Label Outlets
+    // Fader Label Outlets
     @IBOutlet weak var omniFaderLabel: NSTextField!
     @IBOutlet weak var biFaderLabel: NSTextField!
     
+    @IBOutlet weak var omniOrientationLabel: NSTextField!
+    @IBOutlet weak var biOrientationLabel: NSTextField!
+    
+    
+    // Equation Fields
     @IBOutlet weak var PcomponentLabel: NSTextField!
     @IBOutlet weak var GcomponentLabel: NSTextField!
     @IBOutlet weak var angleLabel: NSTextField!
     @IBOutlet weak var resultLabel: NSTextField!
     
+    
+   
+    
+    
     // cartesian grid labels
-    @IBOutlet weak var sensitivityAxis: NSTextField!
+    @IBOutlet weak var sensitivityAxis: NSTextField! //this one has outlet so it can rotated vertically (cartesian sensitivity)
     
     
     
@@ -177,7 +186,23 @@ class ViewController: NSViewController {
         polarViewRes.setNeedsDisplay(polarViewRes.bounds)
         
         omniAngle = sender.floatValue
+        Swift.print("omni angle from slider= \(omniAngle)")
+        
         omniAxisPointerView.setNeedsDisplay(omniAxisPointerView.bounds)
+        
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 0
+        //formatter.minimumFractionDigits = 2
+        formatter.minimumIntegerDigits = 1
+        formatter.roundingMode = .down
+        
+        let omniOrientationFaderLabel = formatter.string(from: NSNumber(value: sender.floatValue))
+        
+        
+        omniOrientationLabel.stringValue = omniOrientationFaderLabel!
+       
+
+        
         //Swift.print(biDirectional.micOrientationAngle.didSet)
     }
     
@@ -202,6 +227,16 @@ class ViewController: NSViewController {
         
             biAngle = sender.floatValue
             omniAxisPointerView.setNeedsDisplay(omniAxisPointerView.bounds) //this uses same view as omni angle pointer
+        
+            let formatter = NumberFormatter()
+            formatter.maximumFractionDigits = 0
+            formatter.minimumIntegerDigits = 1
+            formatter.roundingMode = .down
+        
+            let biOrientationFaderLabel = formatter.string(from: NSNumber(value: sender.floatValue))
+        
+        
+            biOrientationLabel.stringValue = biOrientationFaderLabel!
         
              }
  
@@ -255,7 +290,7 @@ class ViewController: NSViewController {
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
         formatter.minimumIntegerDigits = 1
-        formatter.roundingMode = .down
+        formatter.roundingMode = .up
         
         let omniLabel = formatter.string(from: NSNumber(value: omni.micGain))
         let biLabel = formatter.string(from: NSNumber(value: biDirectional.micGain))

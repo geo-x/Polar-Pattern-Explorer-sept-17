@@ -56,8 +56,10 @@ class OmniAxisPointer: NSView {
         // ********************************************
         // ***** control rotation omni pointer ********
         // ********************************************
-        omniPointerLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(Int(omniAngle).degreesToRadians) ))
+        omniPointerLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(Int(omniAngle ).degreesToRadians) ))
         
+        let debug = CGFloat(Int(omniAngle ))
+        Swift.print(" omni angle = \(debug)")
         
         //***********************************************************************************************************
         //********** same process for bi pointer  *******************************************************************
