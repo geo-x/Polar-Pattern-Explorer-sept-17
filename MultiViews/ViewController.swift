@@ -373,6 +373,11 @@ class ViewController: NSViewController {
 //    }
     
     @IBAction func angleInputText(_ sender: NSTextField) {
+        
+        guard (sender.floatValue) > 0 && (sender.floatValue)<360  else{
+          alertUser(theView: polarView )
+            return
+        }
         Swift.print(sender.stringValue)
         Swift.print(testShapeLayer.position.x)
         testShapeLayer.position.x = CGFloat(sender.floatValue)
@@ -398,6 +403,8 @@ class ViewController: NSViewController {
       
         
         polarDragView.setNeedsDisplay(polarDragView.bounds)
+            
+        
     }
     
     
@@ -405,4 +412,15 @@ class ViewController: NSViewController {
 }
 
 
-
+func alertUser(theView: PolarView) {
+    let alert = NSAlert()
+    
+    alert.messageText = "please try a value between 0 and 359"
+    alert.informativeText = "keep it real brother!"
+    //alert.informativeText = "info2"
+    //alert.addButton(withTitle: "NO")
+    alert.addButton(withTitle: "OK")
+    alert.beginSheetModal(for: theView.window!) { (returnCode: NSModalResponse) -> Void in
+        print ("returnCode: ", returnCode)
+}
+}

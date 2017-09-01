@@ -926,6 +926,10 @@
                                 <rect key="frame" x="58" y="163" width="45" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsq-Ol-p20" userLabel="showHideView" customClass="ShowHideView" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="395" y="98" width="65" height="286"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="XkC-ed-CXh">
                                 <rect key="frame" x="77" y="141" width="154" height="243"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
