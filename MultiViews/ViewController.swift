@@ -10,12 +10,7 @@ import Cocoa
 
 
 
-//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 
-
-
-
-//ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 
 var radioButtonPressed: Bool = true
 
@@ -47,6 +42,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var polarDragView: PolarDragView!
     @IBOutlet weak var omniAxisPointerView: OmniAxisPointer!
     
+    //@IBOutlet weak var showHideView: ShowHideView!
     
     
     // Slider outlets  - to update slider positions
@@ -83,12 +79,15 @@ class ViewController: NSViewController {
     // cartesian grid labels
     @IBOutlet weak var sensitivityAxis: NSTextField! //this one has outlet so it can rotated vertically (cartesian sensitivity)
     
+   
+    
     
     
        override func viewDidLoad() {
         super.viewDidLoad()
         
         
+       
         
         //**********************************************************************************************
         //********** text formatting *******************************************************************
@@ -362,19 +361,13 @@ class ViewController: NSViewController {
     }
   
     //**********************************************************************************************
-    
-//    @IBAction func angleInputText(_ sender: NSTextField) {
-//        
-//       let alert = NSAlert()
-//        alert.messageText = "Angle entered"
-//        alert.runModal()
-//        
-//        Swift.print(sender.stringValue)
-//    }
+    //******************** Angle Text Input ********************************************************
+
     
     @IBAction func angleInputText(_ sender: NSTextField) {
         
-        guard (sender.floatValue) > 0 && (sender.floatValue)<360  else{
+        guard (sender.floatValue) >= 0 && (sender.floatValue)<360  else{
+            Swift.print( "the text entry holds \(sender.floatValue)")
           alertUser(theView: polarView )
             return
         }
@@ -407,9 +400,10 @@ class ViewController: NSViewController {
         
     }
     
+
+   
     
-    
-}
+}//end viewcontroller class
 
 
 func alertUser(theView: PolarView) {
@@ -422,5 +416,11 @@ func alertUser(theView: PolarView) {
     alert.addButton(withTitle: "OK")
     alert.beginSheetModal(for: theView.window!) { (returnCode: NSModalResponse) -> Void in
         print ("returnCode: ", returnCode)
+        
 }
+    
+   
+    
+    
 }
+

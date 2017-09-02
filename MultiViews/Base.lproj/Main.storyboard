@@ -1197,7 +1197,7 @@
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-Ik-qmk" userLabel="input angle">
                                             <rect key="frame" x="149" y="49" width="49" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="pw1-HQ-1QN">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="pw1-HQ-1QN">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1329,6 +1329,7 @@
                         <outlet property="presetPointerView" destination="0Yy-GB-tLB" id="dJW-Zr-jYh"/>
                         <outlet property="resultLabel" destination="yap-YV-EoO" id="tzg-4D-srD"/>
                         <outlet property="sensitivityAxis" destination="4uT-dJ-YuC" id="LRE-T2-eLX"/>
+                        <outlet property="showHideView" destination="jsq-Ol-p20" id="MSQ-hY-Rha"/>
                         <outlet property="subRadio" destination="wa2-A0-AEK" id="65N-Bg-4zW"/>
                         <outlet property="superRadio" destination="Emc-WU-9MK" id="0CM-ZG-Gxr"/>
                         <outlet property="symbolDescriptions" destination="r2x-eI-HMV" id="ED2-3E-fPf"/>

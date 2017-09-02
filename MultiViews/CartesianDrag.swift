@@ -135,14 +135,4 @@ public extension NSBezierPath
     }
 }
 
-//@IBAction func dragCartesianAngle(_ sender: NSPanGestureRecognizer) {
-//
-//    Swift.print("dragging")
-//
-//    let t = sender.translation(in: cartesianDragView)
-//    sender.view?.frame = NSOffsetRect((sender.view?.frame)!, t.x, 0)
-//    sender.setTranslation(NSZeroPoint, in: nil)
-//    Swift.print(t.x)
-//
-//
-//}
+

@@ -16,6 +16,7 @@ import Cocoa
 var testColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.08) //background for graphs
 
 
+
 //************************************************
 //*******************  Global Colors *************
 
@@ -35,19 +36,28 @@ let pointerColor = NSColor(hue: 0.975, saturation: 1, brightness: 0.95, alpha: 0
 let omniRectHiStroke = NSColor(hue: 0.3861, saturation: 1, brightness: 0.96, alpha: 1.0)
 let omniRectHiFill = NSColor(hue: 0.3861, saturation: 1, brightness: 0.96, alpha: 1.0)
 let omniRectLoStroke = NSColor(hue: 0.3861, saturation: 1, brightness: 0.96, alpha: 1.0)
-let omniRectLoFill = NSColor(hue: 0.3861, saturation: 1, brightness: 0.96, alpha: 0.1)
+let omniRectLoFill = NSColor(hue: 0.3861, saturation: 1, brightness: 0.96, alpha: 0.2)
 //
-//let biRectHiStroke = NSColor
-//let biRectHiFill = NSColor
-//let biRectLoStroke = NSColor
-//let biRectLoFill = NSColor
+let biRectHiStroke  = NSColor(calibratedHue: 0.8, saturation: 0.9, brightness: 0.8, alpha: 1)
+let biRectHiFill  = NSColor(calibratedHue: 0.8, saturation: 0.9, brightness: 0.8, alpha: 1)
+let biRectLoStroke  = NSColor(calibratedHue: 0.8, saturation: 0.9, brightness: 0.8, alpha: 1)
+let biRectLoFill = NSColor(calibratedHue: 0.8, saturation: 0.9, brightness: 0.8, alpha: 0.2)
 //
 //let resRectHiStroke = NSColor
 //let resRectHiFill = NSColor
 //let resRectLoStroke = NSColor
 //let resRectLoFill = NSColor
 
+//************************************************
+//*********  Show Hide Rects ***************
 
+let omniRect = NSBezierPath()
+let biRect = NSBezierPath()
+let resultRect = NSBezierPath()
+//************************************************
+//*********  Show Hide States ***************
+var omniState = 1
+var biState = 1
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
