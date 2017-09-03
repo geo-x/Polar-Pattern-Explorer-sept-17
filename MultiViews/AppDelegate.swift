@@ -55,9 +55,6 @@ let omniRect = NSBezierPath()
 let biRect = NSBezierPath()
 let resultRect = NSBezierPath()
 //************************************************
-//*********  Show Hide States ***************
-var omniState = 1
-var biState = 1
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

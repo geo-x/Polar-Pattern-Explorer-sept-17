@@ -42,7 +42,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var polarDragView: PolarDragView!
     @IBOutlet weak var omniAxisPointerView: OmniAxisPointer!
     
-    //@IBOutlet weak var showHideView: ShowHideView!
+    @IBOutlet weak var showHideView: ShowHideView!
     
     
     // Slider outlets  - to update slider positions
@@ -80,14 +80,23 @@ class ViewController: NSViewController {
     @IBOutlet weak var sensitivityAxis: NSTextField! //this one has outlet so it can rotated vertically (cartesian sensitivity)
     
    
+ 
     
+   
     
     
        override func viewDidLoad() {
         super.viewDidLoad()
         
+         //**********************************************************************************************
+        //********** show hide notification handlers ****************************************************
+        //***********************************************************************************************
         
-       
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("omniShowNotification"), object: nil, queue: nil) {notification in
+            self.cartesianView.isHidden = true
+        }
+        
+        
         
         //**********************************************************************************************
         //********** text formatting *******************************************************************
@@ -202,7 +211,7 @@ class ViewController: NSViewController {
        
 
         
-        //Swift.print(biDirectional.micOrientationAngle.didSet)
+        
     }
     
     //**********************************************************************************************
@@ -400,7 +409,7 @@ class ViewController: NSViewController {
         
     }
     
-
+    
    
     
 }//end viewcontroller class
