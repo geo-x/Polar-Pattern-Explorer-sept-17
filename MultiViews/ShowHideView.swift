@@ -15,8 +15,8 @@ var omniState = 1
 var biState = 1
 
 
-let omniRectPosSize:NSRect = NSRect(x: 30, y: 200, width: 15, height: 15)
-let biRectPosSize:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
+let omniSwitchRect:NSRect = NSRect(x: 30, y: 200, width: 15, height: 15)
+let biSwitchRect:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
 
 class ShowHideView: NSView {
     
@@ -26,6 +26,11 @@ class ShowHideView: NSView {
     override func mouseDown(with event: NSEvent) {
         Swift.print("mouse down")
         
+        if omniSwitchRect.contains(convert(event.locationInWindow, to: self)) { Swift.print("inside rect")}
+        Swift.print(convert(event.locationInWindow, to: self))
+        Swift.print(" unconverted \(event.locationInWindow)")
+        
+        //convertPoint(touch.location(in: self))  /event.locationInWindow
         
         switch omniState {
         case 1: omniState = 0
@@ -36,9 +41,15 @@ class ShowHideView: NSView {
         default: omniState = 1
         }
                self.setNeedsDisplay(self.bounds)
-      NotificationCenter.default.post(name: NSNotification.Name("omniShowNotification"), object: nil)
-    }
+      NotificationCenter.default.post(name: NSNotification.Name("hideShowNotification"), object: nil)
+        
+    } //end mouseDown
 
+    
+    
+    
+    
+    
     override func draw(_ dirtyRect: NSRect) {
         
 
@@ -60,7 +71,7 @@ func drawSelectionBoxes() {
     Swift.print("redraw called")
 
     
-    omniRect.appendRoundedRect(omniRectPosSize, xRadius: 2, yRadius: 2)
+    omniRect.appendRoundedRect(omniSwitchRect, xRadius: 2, yRadius: 2)
     
     if omniState == 1{
     omniRectHiStroke.setStroke()
@@ -76,7 +87,7 @@ func drawSelectionBoxes() {
     omniRect.stroke()
     }
    
-    biRect.appendRoundedRect(biRectPosSize, xRadius: 2, yRadius: 2)
+    biRect.appendRoundedRect(biSwitchRect, xRadius: 2, yRadius: 2)
     
     if biState == 1{
         biRectHiStroke.setStroke()

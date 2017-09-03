@@ -23,6 +23,9 @@ var radioButtonPressed: Bool = true
 class ViewController: NSViewController {
     
     
+    
+    
+    
     //Text stuff
     @IBOutlet weak var symbolDescriptions: NSTextField!
   
@@ -82,7 +85,13 @@ class ViewController: NSViewController {
    
  
     
-   
+    func controlVis() {
+        Swift.print("executing selector")
+        
+        if omniState == 0{ cartesianView.isHidden = true} else { cartesianView.isHidden = false}
+        if omniState == 0{ polarView.isHidden = true} else { polarView.isHidden = false}
+       
+    }
     
     
        override func viewDidLoad() {
@@ -92,10 +101,21 @@ class ViewController: NSViewController {
         //********** show hide notification handlers ****************************************************
         //***********************************************************************************************
         
-        NotificationCenter.default.addObserver(forName: NSNotification.Name("omniShowNotification"), object: nil, queue: nil) {notification in
-            self.cartesianView.isHidden = true
-        }
+//        NotificationCenter.default.addObserver(forName: NSNotification.Name("hideShowNotification"), object: nil, queue: nil) {notification in
+//            self.cartesianView.isHidden = true
+//        }
         
+       
+
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.controlVis), name: NSNotification.Name("hideShowNotification"), object: nil)
+        
+        
+        
+        
+        controlVis()
+
         
         
         //**********************************************************************************************
@@ -141,6 +161,9 @@ class ViewController: NSViewController {
         
         NotificationCenter.default.addObserver(forName: Notification.Name(rawValue:"orientBiNotification"), object: nil, queue: nil) {notification in
             Swift.print("notified")
+       
+            
+            
             
             
             let resultFormatter = NumberFormatter()
