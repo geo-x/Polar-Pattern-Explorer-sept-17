@@ -45,12 +45,17 @@ class ViewController: NSViewController {
     @IBOutlet weak var polarDragView: PolarDragView!
     @IBOutlet weak var omniAxisPointerView: OmniAxisPointer!
     
+   
+    
+    
    // @IBOutlet weak var showHideView: ShowHideView!
     
     
     // Slider outlets  - to update slider positions
     @IBOutlet weak var omniComponentSliderOut: NSSlider!
     @IBOutlet weak var biComponentSliderOut: NSSlider!
+    
+   
     
     //Radio Button Outlets
     @IBOutlet weak var omniRadio: NSButton!
@@ -103,6 +108,10 @@ class ViewController: NSViewController {
     
        override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+      
+        
         
          //**********************************************************************************************
         //********** show hide notification handlers ****************************************************
@@ -157,7 +166,7 @@ class ViewController: NSViewController {
         //**********************************************************************************************
         
         NotificationCenter.default.addObserver(forName: Notification.Name(rawValue:"orientBiNotification"), object: nil, queue: nil) {notification in
-            Swift.print("notified")
+            //Swift.print("notified")
        
             
             
@@ -195,10 +204,12 @@ class ViewController: NSViewController {
     //********** ACTIONS ***************************************************************************
     //**********************************************************************************************
     
+    //**********************************************************************************************
+    //************** omni oreintation slider********************************************************
     
     @IBAction func mic_1_orientation(_ sender: NSSlider) {
         
-        omni.micOrientationAngle = Int(sender.floatValue)
+        omni.micOrientationAngle = Int(Float(sender.maxValue) - sender.floatValue)
         
         let slice1: ArraySlice<Float> = omni.rawSensitivityValues [omni.micOrientationAngle ... 359]
         let slice2: ArraySlice<Float> = omni.rawSensitivityValues [ 0 ..< omni.micOrientationAngle]
@@ -235,10 +246,11 @@ class ViewController: NSViewController {
     }
     
     //**********************************************************************************************
+    //************** bioreintation slider***********************************************************
 
     @IBAction func mic_2_orientation(_ sender: NSSlider) {
         
-            biDirectional.micOrientationAngle = Int(sender.floatValue)
+            biDirectional.micOrientationAngle = Int(Float(sender.maxValue) - sender.floatValue)
         
             let slice1: ArraySlice<Float> = biDirectional.rawSensitivityValues [biDirectional.micOrientationAngle ... 359]
             let slice2: ArraySlice<Float> = biDirectional.rawSensitivityValues [ 0 ..< biDirectional.micOrientationAngle]
