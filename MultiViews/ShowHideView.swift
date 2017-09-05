@@ -28,34 +28,39 @@ let biSwitchRect:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
         Swift.print("mouse down")
         
         
-        //if (omniSwitchRect).contains(event.locationInWindow) { Swift.print("inside rect")} else{ Swift.print("ouside rect")} // syntax looks good but not converting location correctly
-        
-        
-        var mouseLocation = convert(event.locationInWindow, to: self)
-        if NSMouseInRect(mouseLocation, convert(omniSwitchRect, to: self.superview), true) { Swift.print("inside omni rect")} else{ Swift.print("ouside rect")}
-        
-        
-     
-//       Swift.print("-converted location\(convert(event.locationInWindow, to: self))")
-//       Swift.print("-unconverted location \(event.locationInWindow)")
-//       Swift.print("-self.frame contains? \((self.frame).contains(event.locationInWindow))")
-//       Swift.print("-self.bounds \(self.bounds)")
-//       Swift.print("-self.frame \(self.frame)")
-//       Swift.print("**************")
-//       Swift.print("- omniSwitchRect\(self.omniSwitchRect)")
-//        Swift.print("- omniSwitchRect converted\(convert(omniSwitchRect, to: self.superview))")
        
         
-       
         
-        switch omniState {
-        case 1: omniState = 0
-            Swift.print("set to lo")
-   
-        case 0: omniState = 1
+        let mouseLocation = convert(event.locationInWindow, to: self)
+        if NSMouseInRect(mouseLocation, convert(omniSwitchRect, to: self.superview), true) {
+            
+            
+            if omniState == 1{ omniState = 0} else { omniState = 1}
+            Swift.print(" triggered inside omni rect - switched omniState Value to \(omniState)")
         
-        default: omniState = 1
-        }
+        
+        } //end omniState if
+        
+        
+      
+        if NSMouseInRect(mouseLocation, convert(biSwitchRect, to: self.superview), true) {
+            
+            if biState == 1{ biState = 0} else { biState = 1}
+            Swift.print("inside bi rect")
+        
+        } //end biState if
+
+        
+
+        
+//        switch omniState {
+//        case 1: omniState = 0
+//            Swift.print("set to lo")
+//   
+//        case 0: omniState = 1
+//        
+//        default: omniState = 1
+//        }
                self.setNeedsDisplay(self.bounds)
       NotificationCenter.default.post(name: NSNotification.Name("hideShowNotification"), object: nil)
         

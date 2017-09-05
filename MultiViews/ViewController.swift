@@ -45,7 +45,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var polarDragView: PolarDragView!
     @IBOutlet weak var omniAxisPointerView: OmniAxisPointer!
     
-    @IBOutlet weak var showHideView: ShowHideView!
+   // @IBOutlet weak var showHideView: ShowHideView!
     
     
     // Slider outlets  - to update slider positions
@@ -86,11 +86,17 @@ class ViewController: NSViewController {
  
     
     func controlVis() {
-        Swift.print("executing selector")
+        Swift.print("executing selector omniState is \(omniState)")
         
         if omniState == 0{ cartesianView.isHidden = true} else { cartesianView.isHidden = false}
         if omniState == 0{ polarView.isHidden = true} else { polarView.isHidden = false}
+        
+        if biState == 0{ cartesianViewBi.isHidden = true} else { cartesianViewBi.isHidden = false}
+        if biState == 0{ polarViewBi.isHidden = true} else { polarViewBi.isHidden = false}
        
+       
+
+        Swift.print( "is omni hidden \(cartesianView.isHidden)")
     }
     
     
@@ -101,14 +107,7 @@ class ViewController: NSViewController {
         //********** show hide notification handlers ****************************************************
         //***********************************************************************************************
         
-//        NotificationCenter.default.addObserver(forName: NSNotification.Name("hideShowNotification"), object: nil, queue: nil) {notification in
-//            self.cartesianView.isHidden = true
-//        }
-        
-       
-
-        
-        
+    
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.controlVis), name: NSNotification.Name("hideShowNotification"), object: nil)
         
         
