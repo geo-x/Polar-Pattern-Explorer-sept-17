@@ -13,7 +13,7 @@ import Cocoa
 
 
 
-let testShapeLayer = CAShapeLayer()
+let testShapeLayer = CAShapeLayer() //angle select cursor
 
 class CartesianDrag: NSView {
     
@@ -38,7 +38,7 @@ class CartesianDrag: NSView {
         //Swift.print(self)
         
         
-       //let testShapeLayer = CAShapeLayer()
+       let testShapeLayer = CAShapeLayer()
         
         // The Bezier path that we made needs to be converted to
         // a CGPath before it can be used on a layer.
@@ -135,4 +135,14 @@ public extension NSBezierPath
     }
 }
 
-
+//@IBAction func dragCartesianAngle(_ sender: NSPanGestureRecognizer) {
+//
+//    Swift.print("dragging")
+//
+//    let t = sender.translation(in: cartesianDragView)
+//    sender.view?.frame = NSOffsetRect((sender.view?.frame)!, t.x, 0)
+//    sender.setTranslation(NSZeroPoint, in: nil)
+//    Swift.print(t.x)
+//
+//
+//}

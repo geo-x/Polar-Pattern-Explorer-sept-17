@@ -45,8 +45,8 @@ class PolarDragView: NSView {
         cursorShapeLayer.lineWidth = 2.0
        
         
-        Swift.print("anchor point is \(cursorShapeLayer.anchorPoint)")
-        Swift.print("frame is \(cursorShapeLayer.bounds)")
+        //Swift.print("anchor point is \(cursorShapeLayer.anchorPoint)")
+        //Swift.print("frame is \(cursorShapeLayer.bounds)")
         
         cursorShapeLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(Int(-rotationAngle).degreesToRadians) ))
         

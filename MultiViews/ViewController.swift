@@ -48,7 +48,7 @@ class ViewController: NSViewController {
    
     
     
-   // @IBOutlet weak var showHideView: ShowHideView!
+    @IBOutlet weak var showHideView: ShowHideView!
     
     
     // Slider outlets  - to update slider positions
@@ -91,7 +91,7 @@ class ViewController: NSViewController {
  
     
     func controlVis() {
-        Swift.print("executing selector omniState is \(omniState)")
+        //Swift.print("executing selector omniState is \(omniState)")
         
         if omniState == 0{ cartesianView.isHidden = true} else { cartesianView.isHidden = false}
         if omniState == 0{ polarView.isHidden = true} else { polarView.isHidden = false}
@@ -102,7 +102,7 @@ class ViewController: NSViewController {
         if resultState == 0{ cartesianViewRes.isHidden = true} else { cartesianViewRes.isHidden = false}
         if resultState == 0{ polarViewRes.isHidden = true} else { polarViewRes.isHidden = false}
 
-        Swift.print( "is omni hidden \(cartesianView.isHidden)")
+        //Swift.print( "is omni hidden \(cartesianView.isHidden)")
     }
     
     
@@ -225,7 +225,7 @@ class ViewController: NSViewController {
         polarViewRes.setNeedsDisplay(polarViewRes.bounds)
         
         omniAngle = sender.floatValue
-        Swift.print("omni angle from slider= \(omniAngle)")
+        //Swift.print("omni angle from slider= \(omniAngle)")
         
         omniAxisPointerView.setNeedsDisplay(omniAxisPointerView.bounds)
         
@@ -296,7 +296,7 @@ class ViewController: NSViewController {
         
         
         
-        print(Float(sender.identifier!)!)
+        //print(Float(sender.identifier!)!)
     }
     
     //**********************************************************************************************
@@ -408,12 +408,13 @@ class ViewController: NSViewController {
     @IBAction func angleInputText(_ sender: NSTextField) {
         
         guard (sender.floatValue) >= 0 && (sender.floatValue)<360  else{
-            Swift.print( "the text entry holds \(sender.floatValue)")
+            //Swift.print( "the text entry holds \(sender.floatValue)")
           alertUser(theView: polarView )
             return
         }
-        Swift.print(sender.stringValue)
-        Swift.print(testShapeLayer.position.x)
+        
+        //Swift.print(sender.stringValue)
+        //Swift.print(testShapeLayer.position.x)
         testShapeLayer.position.x = CGFloat(sender.floatValue)
         rotationAngle = sender.floatValue
         
@@ -456,7 +457,7 @@ func alertUser(theView: PolarView) {
     //alert.addButton(withTitle: "NO")
     alert.addButton(withTitle: "OK")
     alert.beginSheetModal(for: theView.window!) { (returnCode: NSModalResponse) -> Void in
-        print ("returnCode: ", returnCode)
+        //print ("returnCode: ", returnCode)
         
 }
     

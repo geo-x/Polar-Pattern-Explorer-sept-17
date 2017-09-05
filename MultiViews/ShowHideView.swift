@@ -28,7 +28,7 @@ let biSwitchRect:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
 let resultSwitchRect:NSRect = NSRect(x: 30, y: 120, width: 15, height: 15)
      
     override func mouseDown(with event: NSEvent) {
-        Swift.print("mouse down")
+        //Swift.print("mouse down")
         
         
        
@@ -39,7 +39,7 @@ let resultSwitchRect:NSRect = NSRect(x: 30, y: 120, width: 15, height: 15)
             
         //*****************  mouse down in omni ***************************
             if omniState == 1{ omniState = 0} else { omniState = 1}
-            Swift.print(" triggered inside omni rect - switched omniState Value to \(omniState)")
+           // Swift.print(" triggered inside omni rect - switched omniState Value to \(omniState)")
         
         
         } //end omniState if
@@ -49,7 +49,7 @@ let resultSwitchRect:NSRect = NSRect(x: 30, y: 120, width: 15, height: 15)
         if NSMouseInRect(mouseLocation, convert(biSwitchRect, to: self.superview), true) {
             
             if biState == 1{ biState = 0} else { biState = 1}
-            Swift.print("inside bi rect")
+           // Swift.print("inside bi rect")
         
         } //end biState if
 
@@ -58,7 +58,7 @@ let resultSwitchRect:NSRect = NSRect(x: 30, y: 120, width: 15, height: 15)
         if NSMouseInRect(mouseLocation, convert(resultSwitchRect, to: self.superview), true) {
             
             if resultState == 1{ resultState = 0} else { resultState = 1}
-            Swift.print("inside result rect")
+            //Swift.print("inside result rect")
             
         } //end resState if
 
