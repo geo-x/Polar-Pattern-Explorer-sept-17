@@ -110,10 +110,7 @@ class ViewController: NSViewController {
         
     
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.controlVis), name: NSNotification.Name("hideShowNotification"), object: nil)
-        
-        
-        
-        
+      
         controlVis()
 
         

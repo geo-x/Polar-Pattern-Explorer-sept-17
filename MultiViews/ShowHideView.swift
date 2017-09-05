@@ -9,6 +9,7 @@
 import Cocoa
 
 
+
 //*********  Show Hide States ***************
 var omniState = 1
 
@@ -17,16 +18,15 @@ var biState = 1
 var resultState = 1
 
 
-//let omniSwitchRect:NSRect = NSRect(x: 30, y: 200, width: 15, height: 15)
 
 
+@IBDesignable
 class ShowHideView: NSView {
     
 let omniSwitchRect:NSRect = NSRect(x: 30, y: 200, width: 15, height: 15)
 let biSwitchRect:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
 let resultSwitchRect:NSRect = NSRect(x: 30, y: 120, width: 15, height: 15)
-
-    
+     
     override func mouseDown(with event: NSEvent) {
         Swift.print("mouse down")
         
@@ -62,8 +62,10 @@ let resultSwitchRect:NSRect = NSRect(x: 30, y: 120, width: 15, height: 15)
             
         } //end resState if
 
-        
+        // refresh view to redraw select rect states
               self.setNeedsDisplay(self.bounds)
+       
+      // post notification ...goes to
       NotificationCenter.default.post(name: NSNotification.Name("hideShowNotification"), object: nil)
         
     } //end mouseDown
@@ -142,15 +144,9 @@ let resultSwitchRect:NSRect = NSRect(x: 30, y: 120, width: 15, height: 15)
         
         }
         
-        
-        
-        
-        
-        
-        
-        
-        // Drawing code here.
-    }
+  
+      
+    } //end draw method of view
     
     
   
