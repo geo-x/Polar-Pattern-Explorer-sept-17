@@ -94,7 +94,8 @@ class ViewController: NSViewController {
         if biState == 0{ cartesianViewBi.isHidden = true} else { cartesianViewBi.isHidden = false}
         if biState == 0{ polarViewBi.isHidden = true} else { polarViewBi.isHidden = false}
        
-       
+        if resultState == 0{ cartesianViewRes.isHidden = true} else { cartesianViewRes.isHidden = false}
+        if resultState == 0{ polarViewRes.isHidden = true} else { polarViewRes.isHidden = false}
 
         Swift.print( "is omni hidden \(cartesianView.isHidden)")
     }

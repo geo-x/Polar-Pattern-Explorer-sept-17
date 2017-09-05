@@ -43,10 +43,10 @@ let biRectHiFill  = NSColor(calibratedHue: 0.8, saturation: 0.9, brightness: 0.8
 let biRectLoStroke  = NSColor(calibratedHue: 0.8, saturation: 0.9, brightness: 0.8, alpha: 1)
 let biRectLoFill = NSColor(calibratedHue: 0.8, saturation: 0.9, brightness: 0.8, alpha: 0.2)
 //
-//let resRectHiStroke = NSColor
-//let resRectHiFill = NSColor
-//let resRectLoStroke = NSColor
-//let resRectLoFill = NSColor
+let resRectHiStroke = NSColor(hue: 0.1167, saturation: 1, brightness: 0.96, alpha: 1.0) /* #f4ab00 */
+let resRectHiFill = NSColor(hue: 0.1167, saturation: 1, brightness: 0.96, alpha: 1.0) /* #f4ab00 */
+let resRectLoStroke = NSColor(hue: 0.1167, saturation: 1, brightness: 0.96, alpha: 1.0) /* #f4ab00 */
+let resRectLoFill = NSColor(hue: 0.1167, saturation: 1, brightness: 0.96, alpha: 0.2) /* #f4ab00 */
 
 //************************************************
 //*********  Show Hide Rects ***************

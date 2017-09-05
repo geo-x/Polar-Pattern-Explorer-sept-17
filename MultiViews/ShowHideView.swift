@@ -14,6 +14,8 @@ var omniState = 1
 
 var biState = 1
 
+var resultState = 1
+
 
 //let omniSwitchRect:NSRect = NSRect(x: 30, y: 200, width: 15, height: 15)
 
@@ -22,26 +24,27 @@ class ShowHideView: NSView {
     
 let omniSwitchRect:NSRect = NSRect(x: 30, y: 200, width: 15, height: 15)
 let biSwitchRect:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
-    
+let resultSwitchRect:NSRect = NSRect(x: 30, y: 120, width: 15, height: 15)
+
     
     override func mouseDown(with event: NSEvent) {
         Swift.print("mouse down")
         
         
        
-        
+      //***************** check mouse down location ***********************
         
         let mouseLocation = convert(event.locationInWindow, to: self)
         if NSMouseInRect(mouseLocation, convert(omniSwitchRect, to: self.superview), true) {
             
-            
+        //*****************  mouse down in omni ***************************
             if omniState == 1{ omniState = 0} else { omniState = 1}
             Swift.print(" triggered inside omni rect - switched omniState Value to \(omniState)")
         
         
         } //end omniState if
         
-        
+        //*****************  mouse down in bi ***************************
       
         if NSMouseInRect(mouseLocation, convert(biSwitchRect, to: self.superview), true) {
             
@@ -50,18 +53,17 @@ let biSwitchRect:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
         
         } //end biState if
 
+        //*****************  mouse down in result ***************************
         
+        if NSMouseInRect(mouseLocation, convert(resultSwitchRect, to: self.superview), true) {
+            
+            if resultState == 1{ resultState = 0} else { resultState = 1}
+            Swift.print("inside result rect")
+            
+        } //end resState if
 
         
-//        switch omniState {
-//        case 1: omniState = 0
-//            Swift.print("set to lo")
-//   
-//        case 0: omniState = 1
-//        
-//        default: omniState = 1
-//        }
-               self.setNeedsDisplay(self.bounds)
+              self.setNeedsDisplay(self.bounds)
       NotificationCenter.default.post(name: NSNotification.Name("hideShowNotification"), object: nil)
         
     } //end mouseDown
@@ -74,6 +76,8 @@ let biSwitchRect:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
     override func draw(_ dirtyRect: NSRect) {
         
 
+        //***************************************************************
+        //************ draw omni rect select ****************************
         
         omniRect.appendRoundedRect(omniSwitchRect, xRadius: 2, yRadius: 2)
         
@@ -90,6 +94,9 @@ let biSwitchRect:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
             omniRect.fill()
             omniRect.stroke()
         }
+        
+        //***************************************************************
+        //************ draw bi rect select ******************************
         
         biRect.appendRoundedRect(biSwitchRect, xRadius: 2, yRadius: 2)
         
@@ -111,8 +118,37 @@ let biSwitchRect:NSRect = NSRect(x: 30, y: 160, width: 15, height: 15)
         }
 
         
-      
-
+        //***************************************************************
+        //************ draw result rect select **************************
+        
+        
+        resultRect.appendRoundedRect(resultSwitchRect, xRadius: 2, yRadius: 2)
+        
+        if resultState == 1{
+            resRectHiStroke.setStroke()
+            resRectHiFill.setFill()
+            resultRect.lineWidth = 1.0
+            resultRect.fill()
+            resultRect.stroke()}
+        else{
+            
+            
+            resRectHiStroke.setStroke()
+            resRectLoFill.setFill()
+            resultRect.lineWidth = 1.0
+            resultRect.fill()
+            resultRect.stroke()
+          
+        
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         // Drawing code here.
     }
     
