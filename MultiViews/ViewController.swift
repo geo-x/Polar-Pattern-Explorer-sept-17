@@ -7,12 +7,15 @@
 //
 
 import Cocoa
+import AppKit
 
 
 
 
 
 var radioButtonPressed: Bool = true
+
+var showToolTips = false
 
  //Create PolarPattern instances - omni, bidirectional, resultant
  var omni: PolarPattern = PolarPattern(pressureOp: 1.0, pressureGrad: 0, gain: 0.5, orientation: 0)
@@ -106,11 +109,20 @@ class ViewController: NSViewController {
     }
     
     
+    
+    
        override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-     
+      
+        if showToolTips == false{
+        for subview in self.view.subviews {
+            
+            subview.removeAllToolTips()
+            
+        }
+    } //end if
+        
         
         
          //**********************************************************************************************
@@ -209,7 +221,8 @@ class ViewController: NSViewController {
     
     @IBAction func mic_1_orientation(_ sender: NSSlider) {
         
-        omni.micOrientationAngle = Int(Float(sender.maxValue) - sender.floatValue)
+        //omni.micOrientationAngle = Int(Float(sender.maxValue) - sender.floatValue)
+        omni.micOrientationAngle = Int(sender.floatValue)
         
         let slice1: ArraySlice<Float> = omni.rawSensitivityValues [omni.micOrientationAngle ... 359]
         let slice2: ArraySlice<Float> = omni.rawSensitivityValues [ 0 ..< omni.micOrientationAngle]
@@ -225,7 +238,7 @@ class ViewController: NSViewController {
         polarViewRes.setNeedsDisplay(polarViewRes.bounds)
         
         omniAngle = sender.floatValue
-        //Swift.print("omni angle from slider= \(omniAngle)")
+        Swift.print("omni angle from slider= \(omniAngle)")
         
         omniAxisPointerView.setNeedsDisplay(omniAxisPointerView.bounds)
         
@@ -251,6 +264,7 @@ class ViewController: NSViewController {
     @IBAction func mic_2_orientation(_ sender: NSSlider) {
         
             biDirectional.micOrientationAngle = Int(Float(sender.maxValue) - sender.floatValue)
+            //.micOrientationAngle = Int( sender.floatValue)
         
             let slice1: ArraySlice<Float> = biDirectional.rawSensitivityValues [biDirectional.micOrientationAngle ... 359]
             let slice2: ArraySlice<Float> = biDirectional.rawSensitivityValues [ 0 ..< biDirectional.micOrientationAngle]

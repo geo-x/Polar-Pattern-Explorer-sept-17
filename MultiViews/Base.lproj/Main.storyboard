@@ -1217,7 +1217,7 @@
                                 <rect key="frame" x="78" y="108" width="216" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <string key="toolTip">Adjust the oreintation of the omni directional component - tracked by green pointer in polar display. Note this has no impact on the resultant polar pattern as by definition an omni microphone is the same regardless of it's 0 axis orientation.</string>
-                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" sliderType="linear" id="Fml-py-5dQ"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" allowsTickMarkValuesOnly="YES" sliderType="linear" id="Fml-py-5dQ"/>
                                 <connections>
                                     <action selector="mic_1_orientation:" target="XfG-lQ-9wD" id="WcC-qu-buP"/>
                                 </connections>
@@ -1225,12 +1225,12 @@
                             <slider toolTip="Adjust the oreintation of the bi  directional component - tracked by purple pointer in polar display." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-ki-bgb" userLabel="mic2_orientation">
                                 <rect key="frame" x="78" y="68" width="216" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" sliderType="linear" id="cFu-Py-dTW"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" allowsTickMarkValuesOnly="YES" sliderType="linear" id="cFu-Py-dTW"/>
                                 <connections>
                                     <action selector="mic_2_orientation:" target="XfG-lQ-9wD" id="B3X-us-CiV"/>
                                 </connections>
                             </slider>
-                            <slider identifier="omSlider" toolTip="Adjust the proportion of the pressure operated component for the microphone. Refer to the &quot;P&quot; in the polar equation" horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4G-nX-nFF">
+                            <slider toolTip="Adjust the proportion of the pressure operated component for the microphone. Refer to the &quot;P&quot; in the polar equation" horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4G-nX-nFF">
                                 <rect key="frame" x="270" y="170" width="19" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" continuous="YES" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="right" sliderType="linear" id="E8s-zA-HoB"/>
@@ -1449,7 +1449,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField identifier="angleOfArrivalLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5S-Rk-RdK" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5S-Rk-RdK" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="98" y="60" width="196" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bi Orientation Angle" id="mUt-T0-mQe">
