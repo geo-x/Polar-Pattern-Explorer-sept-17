@@ -43,6 +43,8 @@ class CartesianView: NSView {
         
         let omniPath = NSBezierPath()
         
+//****************************************************************************************************
+        
     
         omniPath.move(to: omniStartPoint)
         
