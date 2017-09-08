@@ -22,11 +22,10 @@ class PolarView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        let centreOfView: CGPoint = CGPoint(x:self.bounds.width / 2 , y: self.bounds.height / 2)
-
+       
         
-        var omniPath = NSBezierPath()
-        var omniPoints = NSPointArray.allocate(capacity: 360)
+        let omniPath = NSBezierPath()
+        let omniPoints = NSPointArray.allocate(capacity: 360)
         
      
         for i in stride(from: 0, through: 359, by: 1){
@@ -37,7 +36,7 @@ class PolarView: NSView {
         omniPoints [i].x = CGFloat(CGFloat(scaleFactor) * thisOmniArrayValue ) * CGFloat(sin(radianValue))
         omniPoints [i].y = CGFloat(CGFloat(scaleFactor) * thisOmniArrayValue ) * CGFloat(cos(radianValue))
         
-        }
+        } // end for loop
         
        omniPath.appendPoints(omniPoints, count: 360)  // an array of points for polar diagram
     
@@ -48,28 +47,7 @@ class PolarView: NSView {
         
         
         
-//        let startOmniArrayValue = CGFloat((omni.sensitivityValues [0]) as Float)
-//        let firstPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * startOmniArrayValue ) * 0 + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * startOmniArrayValue ) * 1 + centreOfView.y)
-//            
-//        omniPath.move(to: firstPoint)
-//
-//        
-//        for i in stride(from: 1, through: 359, by: 1){
-//            
-//            let radianValue: Float = i.degreesToRadians
-//        
-//            let thisOmniArrayValue = CGFloat(abs((omni.sensitivityValues [i]) as Float))
-//            
-//            let nextPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * thisOmniArrayValue ) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * thisOmniArrayValue ) * CGFloat(cos(radianValue)) + centreOfView.y )
-//
-//            omniPath.line(to: nextPoint)
-//           
-//// Swift.print(" for point \(i) -> \(nextPoint)")
-//// Swift.print("------------cos radian value \(CGFloat(cos(radianValue)))")
-//// Swift.print("------------this omniArrayValue \(thisOmniArrayValue)")
-//        } //end of for loop
 
-        //let omniColor = NSColor(calibratedHue: 0.5, saturation: 0.8, brightness: 0.8, alpha: 1)
         
         omniColor.setStroke()
         omniPath.lineWidth = 2
