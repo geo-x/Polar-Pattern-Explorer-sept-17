@@ -105,14 +105,14 @@ class ViewController: NSViewController {
         if resultState == 0{ cartesianViewRes.isHidden = true} else { cartesianViewRes.isHidden = false}
         if resultState == 0{ polarViewRes.isHidden = true} else { polarViewRes.isHidden = false}
 
-        //Swift.print( "is omni hidden \(cartesianView.isHidden)")
+        
     }
     
-    
-    
+   
     
        override func viewDidLoad() {
         super.viewDidLoad()
+        
         
       
         if showToolTips == false{
@@ -221,6 +221,9 @@ class ViewController: NSViewController {
     
     @IBAction func mic_1_orientation(_ sender: NSSlider) {
         
+        
+       
+        
         //omni.micOrientationAngle = Int(Float(sender.maxValue) - sender.floatValue)
         omni.micOrientationAngle = Int(sender.floatValue)
         
@@ -263,16 +266,33 @@ class ViewController: NSViewController {
 
     @IBAction func mic_2_orientation(_ sender: NSSlider) {
         
-            biDirectional.micOrientationAngle = Int(Float(sender.maxValue) - sender.floatValue)
+             biDirectional.micOrientationAngle = Int(Float(sender.maxValue) - sender.floatValue)
+    
+        
             //.micOrientationAngle = Int( sender.floatValue)
         
             let slice1: ArraySlice<Float> = biDirectional.rawSensitivityValues [biDirectional.micOrientationAngle ... 359]
             let slice2: ArraySlice<Float> = biDirectional.rawSensitivityValues [ 0 ..< biDirectional.micOrientationAngle]
+        
+        
+        Swift.print(" sender angle is INT------------ \(Int(sender.floatValue))")
+        Swift.print(" sender angle is Float------------ \(sender.floatValue)")
+        Swift.print(" reversed angle is------------ \(biDirectional.micOrientationAngle)")
 
+        Swift.print(" slice 1 count \(slice1.count)")
+        Swift.print(" slice 2 count \(slice2.count)")
         
             biDirectional.sensitivityValues.removeAll(keepingCapacity: true)
             biDirectional.sensitivityValues = Array(slice1 + slice2)
+    //Swift.print(" temporary count \(biDirectional.sensitivityValues.count)")
             biDirectional.sensitivityValues = biDirectional.sensitivityValues.map { $0 * biDirectional.micGain }
+        
+//    for i in 1...359 {
+//        
+//        
+//        Swift.print(" array index \(i) =  \(biDirectional.sensitivityValues[i])")
+//        
+//        }
         
             cartesianViewBi.setNeedsDisplay(cartesianView.bounds)
             polarViewBi.setNeedsDisplay(polarView.bounds)
@@ -448,8 +468,14 @@ class ViewController: NSViewController {
         let resultForLabel = resultFormatter.string(from:NSNumber(value: resultantArray[Int(sender.floatValue)] ))
         resultLabel.stringValue = resultForLabel!
         //resultLabel.stringValue = String(resultantArray[Int(sender.floatValue)])
-        
       
+        
+        for i in stride(from: 1, through: 359, by: 1){
+                Swift.print("\(i) = \(resultantArray[i])")
+            
+        
+        }
+        Swift.print(" angle value from input = \(Int(sender.floatValue))")
         
         polarDragView.setNeedsDisplay(polarDragView.bounds)
             

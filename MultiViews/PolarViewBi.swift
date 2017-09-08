@@ -48,7 +48,7 @@ class PolarViewBi: NSView {
             
             biDirectionalPath.line(to: nextPoint)
             
-            // Swift.print(" for point \(i) -> \(nextPoint)")
+            //Swift.print(" for point \(i) -> \(nextPoint)")
             // Swift.print("------------cos radian value \(CGFloat(cos(radianValue)))")
             // Swift.print("------------this omniArrayValue \(thisOmniArrayValue)")
         }
