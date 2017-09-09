@@ -36,7 +36,7 @@ class ViewController: NSViewController {
     
     // View Outlets
     @IBOutlet weak var cartesianView: CartesianView!
-    @IBOutlet weak var cartesianViewBi: cartesianViewBi!
+    @IBOutlet weak var cartesianViewBi: CartesianViewBi!
     @IBOutlet weak var cartesianViewRes: CartesianViewRes!
     @IBOutlet weak var cartesianDragView: CartesianDrag!
     
