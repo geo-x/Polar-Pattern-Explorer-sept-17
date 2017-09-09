@@ -57,8 +57,10 @@ class PolarViewBi: NSView {
         biDirectionalPath.lineWidth = 2
         biDirectionalPath.stroke()
         
-        
-        
+        for i in stride(from: 0, through: 359, by: 1){
+// Swift.print("point \(i) \(biPoints[i])")
+        }
+      
         // Drawing code here.
     }
     

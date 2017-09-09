@@ -241,7 +241,7 @@ class ViewController: NSViewController {
         polarViewRes.setNeedsDisplay(polarViewRes.bounds)
         
         omniAngle = sender.floatValue
-        Swift.print("omni angle from slider= \(omniAngle)")
+//Swift.print("omni angle from slider= \(omniAngle)")
         
         omniAxisPointerView.setNeedsDisplay(omniAxisPointerView.bounds)
         
@@ -467,10 +467,10 @@ class ViewController: NSViewController {
         
         let resultForLabel = resultFormatter.string(from:NSNumber(value: resultantArray[Int(sender.floatValue)] ))
         resultLabel.stringValue = resultForLabel!
-        //resultLabel.stringValue = String(resultantArray[Int(sender.floatValue)])
+       
       
         
-        for i in stride(from: 1, through: 359, by: 1){
+        for i in stride(from: 0, through: 359, by: 1){
                 Swift.print("\(i) = \(resultantArray[i])")
             
         

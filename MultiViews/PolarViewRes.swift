@@ -20,7 +20,11 @@ class PolarViewRes: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        let centreOfView: CGPoint = CGPoint(x:self.bounds.width / 2 , y: self.bounds.height / 2)
+        let resultantPath = NSBezierPath()
+        let resultantPoints = NSPointArray.allocate(capacity: 360)
+        
+        //************************************************************************
+        //******** make resultantArray from omni and bi patterns  ****************
         
         var resultantArray: Array = [Float](repeating: 0.0, count: 360)
         
@@ -30,44 +34,46 @@ class PolarViewRes: NSView {
             
         }
         
-        let resultantPath = NSBezierPath()
+        //************************************************************************
+        //**************  create array of points for drawing *********************
         
-        let startResultantArrayValue = CGFloat((resultantArray [0]) as Float)
-        let firstPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * abs(startResultantArrayValue) ) * 0 + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * abs(startResultantArrayValue) ) * 1 + centreOfView.y)
-        
-        
-        resultantPath.move(to: firstPoint)
-        
-       
-        
-        
-        for i in stride(from: 1, through: 359, by: 1){
+        for i in stride(from: 0, through: 359, by: 1){
             
             let radianValue: Float = i.degreesToRadians
-            
             let thisResultantArrayValue = CGFloat(abs((resultantArray [i]) as Float))
             
-            let nextPoint = NSPoint(x: CGFloat(CGFloat(scaleFactor) * abs(thisResultantArrayValue) ) * CGFloat(sin(radianValue)) + centreOfView.x  , y: CGFloat(CGFloat(scaleFactor) * abs(thisResultantArrayValue) ) * CGFloat(cos(radianValue)) + centreOfView.y )
             
-            resultantPath.line(to: nextPoint)
+            resultantPoints [i].x = CGFloat(CGFloat(scaleFactor) * abs(thisResultantArrayValue) ) * CGFloat(sin(radianValue))
+            resultantPoints [i].y = CGFloat(CGFloat(scaleFactor) * abs(thisResultantArrayValue) ) * CGFloat(cos(radianValue))
             
-            // Swift.print(" for point \(i) -> \(nextPoint)")
-            // Swift.print("------------cos radian value \(CGFloat(cos(radianValue)))")
-            // Swift.print("------------this omniArrayValue \(thisOmniArrayValue)")
-        }
+            
+        } //end for loop
         
-        //let resultantlColor = NSColor(calibratedHue: 0.1, saturation: 0.9, brightness: 0.8, alpha: 1)
+        
+        //************************************************************************
+        //**************  load array points into path ****************************
+        
+        resultantPath.appendPoints(resultantPoints, count: 360)  // an array of points for polar diagram
+        //************************************************************************
+        //*************** translate path to correct to center of view ************
+        let transform = NSAffineTransform()
+        transform.translateX(by: self.bounds.width / 2, yBy: self.bounds.height / 2)
+        resultantPath.transform(using: transform as AffineTransform)
+ 
+        
+        //************************************************************************
+        //*************** stroke the path ****************************************
         
         resultantlColor.setStroke()
         resultantPath.lineWidth = 2
         resultantPath.stroke()
         
-        // round the view corners
+        // round the view corners of view
         self.layer?.cornerRadius = 15
         
         
         
         // Drawing code here.
-    }
+    } //end draw rect
     
 }
