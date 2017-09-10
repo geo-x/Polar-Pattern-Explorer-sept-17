@@ -1067,7 +1067,7 @@
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField identifier="angleOfArrivalLabel" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-Se-Nbt" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-Se-Nbt" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
                                                     <rect key="frame" x="136" y="0.0" width="196" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ANGLE OF ARRIVAL" id="DOk-4T-TpC">
@@ -1250,14 +1250,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <slider toolTip="Adjust the oreintation of the bi  directional component - tracked by purple pointer in polar display." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-ki-bgb" userLabel="mic2_orientation">
-                                <rect key="frame" x="80" y="70" width="216" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" allowsTickMarkValuesOnly="YES" sliderType="linear" id="cFu-Py-dTW"/>
-                                <connections>
-                                    <action selector="mic_2_orientation:" target="XfG-lQ-9wD" id="B3X-us-CiV"/>
-                                </connections>
-                            </slider>
                             <slider toolTip="Adjust the proportion of the pressure operated component for the microphone. Refer to the &quot;P&quot; in the polar equation" horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M4G-nX-nFF">
                                 <rect key="frame" x="272" y="179" width="19" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1503,7 +1495,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fF-FE-VuZ" customClass="CustomLabel" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="447" y="277" width="42" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bi Plot" id="f2w-Yn-n9q">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Bi Plot" id="f2w-Yn-n9q">
                                     <font key="font" size="10" name="Avenir-Book"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1568,6 +1560,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <slider toolTip="Adjust the oreintation of the bi  directional component - tracked by purple pointer in polar display." verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-ki-bgb" userLabel="mic2_orientation">
+                                <rect key="frame" x="80" y="72" width="216" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="359" tickMarkPosition="above" allowsTickMarkValuesOnly="YES" sliderType="linear" id="cFu-Py-dTW"/>
+                                <connections>
+                                    <action selector="mic_2_orientation:" target="XfG-lQ-9wD" id="B3X-us-CiV"/>
+                                </connections>
+                            </slider>
                         </subviews>
                     </view>
                     <connections>

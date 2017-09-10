@@ -164,11 +164,14 @@ class ViewController: NSViewController {
         //**********************************************************************************************
         //**********************************************************************************************
         //**********************************************************************************************
+        
+        
       
         //**********************************************************************************************
         //******** Rotated Text Labels  ****************************************************************
- 
-      sensitivityAxis.frameRotation = 90
+        //**********************************************************************************************
+        
+        sensitivityAxis.frameRotation = 90
         // remember set labels to CustomLabel() in xib for @IBDesignable kerning / spacing attribute
         
      
@@ -189,7 +192,7 @@ class ViewController: NSViewController {
             resultFormatter.maximumFractionDigits = 2
             
             let resultForLabel = resultFormatter.string(from:NSNumber(value: resultantArray[Int(self.angleLabel.stringValue)!] ))
-            //let resultForLabel = resultFormatter.string(from:NSNumber(value: resultantArray[Int(biDirectional.micOrientationAngle)] ))
+
             self.resultLabel.stringValue = resultForLabel!
             
             
@@ -266,10 +269,14 @@ class ViewController: NSViewController {
 
     @IBAction func mic_2_orientation(_ sender: NSSlider) {
         
-             biDirectional.micOrientationAngle = Int(Float(sender.maxValue) - sender.floatValue)
-    
         
-            //.micOrientationAngle = Int( sender.floatValue)
+            biDirectional.micOrientationAngle = Int(sender.floatValue)
+        
+        if biDirectional.micOrientationAngle == 0 { biDirectional.micOrientationAngle = 0}
+        else {
+        
+           biDirectional.micOrientationAngle = Int(360 - Int(sender.floatValue))
+        }
         
             let slice1: ArraySlice<Float> = biDirectional.rawSensitivityValues [biDirectional.micOrientationAngle ... 359]
             let slice2: ArraySlice<Float> = biDirectional.rawSensitivityValues [ 0 ..< biDirectional.micOrientationAngle]
@@ -282,9 +289,11 @@ class ViewController: NSViewController {
         Swift.print(" slice 1 count \(slice1.count)")
         Swift.print(" slice 2 count \(slice2.count)")
         
+//        Swift.print("slice 1 \(slice1)")
+//        Swift.print("slice 2 \(slice2)")
+        
             biDirectional.sensitivityValues.removeAll(keepingCapacity: true)
             biDirectional.sensitivityValues = Array(slice1 + slice2)
-    //Swift.print(" temporary count \(biDirectional.sensitivityValues.count)")
             biDirectional.sensitivityValues = biDirectional.sensitivityValues.map { $0 * biDirectional.micGain }
         
 //    for i in 1...359 {
