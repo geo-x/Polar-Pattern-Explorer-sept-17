@@ -10,7 +10,7 @@ import Cocoa
 
 @IBDesignable
 
-class cartesianViewBi: NSView {
+class CartesianViewBi: NSView {
 
   
     

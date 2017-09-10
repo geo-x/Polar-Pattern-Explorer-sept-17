@@ -481,13 +481,7 @@ class ViewController: NSViewController {
         resultLabel.stringValue = resultForLabel!
        
       
-        
-        for i in stride(from: 0, through: 359, by: 1){
-                Swift.print("\(i) = \(resultantArray[i])")
-            
-        
-        }
-        Swift.print(" angle value from input = \(Int(sender.floatValue))")
+
         
         polarDragView.setNeedsDisplay(polarDragView.bounds)
             
