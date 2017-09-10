@@ -718,7 +718,7 @@
                                         <rect key="frame" x="179" y="7" width="30" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1.00" id="fRD-rT-yCk">
-                                            <font key="font" metaFont="system" size="9"/>
+                                            <font key="font" metaFont="miniSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -763,7 +763,7 @@
                                         <rect key="frame" x="179" y="83" width="30" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0.5" id="UJt-C0-lnA">
-                                            <font key="font" metaFont="system" size="9"/>
+                                            <font key="font" metaFont="miniSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -923,10 +923,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-Zc-7nf" userLabel="cartesianView" customClass="CartesianView" customModule="MultiViews" customModuleProvider="target">
-                                <rect key="frame" x="80" y="453" width="360" height="330"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="May-mV-Dar" userLabel="cartesianViewBi" customClass="CartesianViewBi" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="80" y="453" width="360" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
@@ -1121,6 +1117,10 @@
                                         </textFieldCell>
                                     </textField>
                                 </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="May-mV-Dar" userLabel="cartesianViewBi" customClass="CartesianViewBi" customModule="MultiViews" customModuleProvider="target">
+                                <rect key="frame" x="80" y="453" width="360" height="330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Yy-GB-tLB" userLabel="presetPointerView" customClass="PresetPointerView" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="60" y="172" width="45" height="196"/>
@@ -1571,6 +1571,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="CartesianBiView" destination="May-mV-Dar" id="Bse-Lw-Xni"/>
                         <outlet property="GcomponentLabel" destination="VEY-EY-w7h" id="qJM-xy-c9j"/>
                         <outlet property="PcomponentLabel" destination="shc-NY-Cdg" id="t28-oq-8cD"/>
                         <outlet property="angleLabel" destination="xCL-qe-0PF" id="eBM-4c-Q6Z"/>
@@ -1581,7 +1582,7 @@
                         <outlet property="cardRadio" destination="Qex-re-7J9" id="VcH-1z-Qah"/>
                         <outlet property="cartesianDragView" destination="b9T-i5-N7h" id="uMt-7f-4d2"/>
                         <outlet property="cartesianView" destination="aYr-Zc-7nf" id="ZLy-o3-Vbj"/>
-                        <outlet property="cartesianViewBi" destination="May-mV-Dar" id="kjJ-Sr-VF5"/>
+                        <outlet property="cartesianViewBi" destination="May-mV-Dar" id="37b-Yn-vQL"/>
                         <outlet property="cartesianViewRes" destination="JBf-Ky-GGN" id="b5j-ua-dZc"/>
                         <outlet property="hyperRadio" destination="qYd-Fc-biN" id="wpm-24-gOG"/>
                         <outlet property="omniAxisPointerView" destination="mD8-Bh-Nxo" id="Tbc-By-YIf"/>
