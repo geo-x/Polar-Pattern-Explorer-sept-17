@@ -38,7 +38,7 @@ class CartesianDrag: NSView {
         //Swift.print(self)
         
         
-       let testShapeLayer = CAShapeLayer()
+       //let testShapeLayer = CAShapeLayer()
         
         // The Bezier path that we made needs to be converted to
         // a CGPath before it can be used on a layer.
