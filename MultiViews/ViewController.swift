@@ -285,12 +285,12 @@ class ViewController: NSViewController {
             let slice2: ArraySlice<Float> = biDirectional.rawSensitivityValues [ 0 ..< biDirectional.micOrientationAngle]
         
         
-        Swift.print(" sender angle is INT------------ \(Int(sender.floatValue))")
-        Swift.print(" sender angle is Float------------ \(sender.floatValue)")
-        Swift.print(" reversed angle is------------ \(biDirectional.micOrientationAngle)")
-
-        Swift.print(" slice 1 count \(slice1.count)")
-        Swift.print(" slice 2 count \(slice2.count)")
+//        Swift.print(" sender angle is INT------------ \(Int(sender.floatValue))")
+//        Swift.print(" sender angle is Float------------ \(sender.floatValue)")
+//        Swift.print(" reversed angle is------------ \(biDirectional.micOrientationAngle)")
+//
+//        Swift.print(" slice 1 count \(slice1.count)")
+//        Swift.print(" slice 2 count \(slice2.count)")
         
 //        Swift.print("slice 1 \(slice1)")
 //        Swift.print("slice 2 \(slice2)")

@@ -49,7 +49,7 @@ class PolarViewBi: NSView {
         transform.translateX(by: self.bounds.width / 2, yBy: self.bounds.height / 2)
         biDirectionalPath.transform(using: transform as AffineTransform)
   
- 
+        biDirectionalPath.close()
         
 
         

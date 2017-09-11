@@ -45,7 +45,7 @@ class PolarView: NSView {
         transform.translateX(by: self.bounds.width / 2, yBy: self.bounds.height / 2)
         omniPath.transform(using: transform as AffineTransform)
         
-        
+        omniPath.close()
         
 
         

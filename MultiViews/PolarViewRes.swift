@@ -60,13 +60,15 @@ class PolarViewRes: NSView {
         transform.translateX(by: self.bounds.width / 2, yBy: self.bounds.height / 2)
         resultantPath.transform(using: transform as AffineTransform)
  
-        
+        resultantPath.close()
         //************************************************************************
         //*************** stroke the path ****************************************
         
         resultantlColor.setStroke()
+        resultantlColorFill.setFill()
         resultantPath.lineWidth = 2
         resultantPath.stroke()
+        resultantPath.fill()
         
         // round the view corners of view
         self.layer?.cornerRadius = 15
