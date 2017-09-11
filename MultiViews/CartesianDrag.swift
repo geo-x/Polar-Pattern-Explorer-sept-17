@@ -49,9 +49,9 @@ class CartesianDrag: NSView {
        
         
         // apply  properties related to the path
-        testShapeLayer.strokeColor = NSColor.red.cgColor
+        testShapeLayer.strokeColor = NSColor.green.cgColor
         testShapeLayer.fillColor = NSColor.white.cgColor
-        testShapeLayer.lineWidth = 2.0
+        testShapeLayer.lineWidth = 1.0
         testShapeLayer.position = CGPoint(x: 0, y: 0)
         
          self.layer?.addSublayer(testShapeLayer)

@@ -15,7 +15,7 @@ import AppKit
 
 var radioButtonPressed: Bool = true
 
-var showToolTips = false
+var showToolTips = true
 
  //Create PolarPattern instances - omni, bidirectional, resultant
  var omni: PolarPattern = PolarPattern(pressureOp: 1.0, pressureGrad: 0, gain: 0.5, orientation: 0)

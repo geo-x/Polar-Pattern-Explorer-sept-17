@@ -88,7 +88,7 @@ class GridCartesianView: NSView {
         
         //let axisColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 1)
         axisColor.setStroke()
-        axisPath.lineWidth = 0.75
+        axisPath.lineWidth = 0.5
         axisPath.stroke()
         
         //x-x-x-x-x-x-x-x-x-x--x

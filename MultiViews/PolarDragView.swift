@@ -40,9 +40,9 @@ class PolarDragView: NSView {
         
         
         // apply  properties related to the path
-        cursorShapeLayer.strokeColor = NSColor.red.cgColor
+        cursorShapeLayer.strokeColor = NSColor.green.cgColor
         cursorShapeLayer.fillColor = NSColor.white.cgColor
-        cursorShapeLayer.lineWidth = 2.0
+        cursorShapeLayer.lineWidth = 1.0
        
         
         //Swift.print("anchor point is \(cursorShapeLayer.anchorPoint)")
