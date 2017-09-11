@@ -20,9 +20,9 @@ class CartesianView: NSView {
   
     
     
-    //var endPoint: CGFloat = 20 //used in slider testing
     
-    //var testColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.08) //background cartesian
+    
+   
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)

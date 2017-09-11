@@ -16,15 +16,12 @@ class GridCartesianView: NSView {
    
     
     
-    func someFunction(name: String) -> Bool {
-        return false
-    }
+    
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
-        self.layer?.backgroundColor = testColor
-
+        self.layer?.backgroundColor = graphBackgroundColor
         
         let yDivisions:Int = 22 // 20 plus 1 space at top and bottom
         let xDivisions:Int = 24  //15 degrees each
