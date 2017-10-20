@@ -1126,7 +1126,7 @@
                                 <rect key="frame" x="61" y="135" width="45" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsq-Ol-p20" userLabel="showHideView" customClass="ShowHideView" customModule="MultiViews" customModuleProvider="target">
+                            <customView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsq-Ol-p20" userLabel="showHideView" customClass="ShowHideView" customModule="MultiViews" customModuleProvider="target">
                                 <rect key="frame" x="326" y="114" width="141" height="286"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
