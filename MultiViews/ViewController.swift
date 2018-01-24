@@ -116,6 +116,18 @@ class ViewController: NSViewController {
        override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.view.layer?.backgroundColor = NSColor.white.cgColor   //window background color
+        
+        let win = NSWindow(contentRect: NSMakeRect(100, 100, 600, 200),
+                           styleMask: NSResizableWindowMask,
+                           backing: NSBackingStoreType.buffered, defer: false)
+        
+        win.makeKeyAndOrderFront(win)
+        let controller = NSWindowController(window: win)
+        controller.showWindow(self)
+        
+        
+        
         
       
         if showToolTips == false{
